@@ -125,13 +125,17 @@ jobs:
       - name: Insert API Keys
         run: |
           mkdir -p ~/.enso-keys
-          echo "${{ secrets.ENSO_SAFEBROWSING_API_KEY }}" > ~/.enso-keys/safebrowsing.dat
+          KEY="${{ secrets.ENSO_SAFEBROWSING_API_KEY }}"
+          if [ -z "$KEY" ]; then
+            echo "no-safebrowsing-key" > ~/.enso-keys/safebrowsing.dat
+          else
+            echo "$KEY" > ~/.enso-keys/safebrowsing.dat
+          fi
 
       - name: Build
         env:
           SURFER_COMPAT: ${{ matrix.arch }}
           ENSO_RELEASE_BRANCH: ${{ inputs.release-branch }}
-        continue-on-error: true
         run: |
           export SURFER_PLATFORM="linux"
           if [[ -n ${{ inputs.MOZ_BUILD_DATE }} ]];then

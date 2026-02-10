@@ -230,7 +230,12 @@ jobs:
       - name: Insert API Keys
         run: |
           mkdir -p ~/.enso-keys
-          echo "${{ secrets.ENSO_SAFEBROWSING_API_KEY }}" > ~/.enso-keys/safebrowsing.dat
+          KEY="${{ secrets.ENSO_SAFEBROWSING_API_KEY }}"
+          if [ -z "$KEY" ]; then
+            echo "no-safebrowsing-key" > ~/.enso-keys/safebrowsing.dat
+          else
+            echo "$KEY" > ~/.enso-keys/safebrowsing.dat
+          fi
 
       - name: Build
         if: ${{ !(inputs.generate-gpo && matrix.arch == 'aarch64') }}
