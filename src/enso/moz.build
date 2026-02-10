@@ -11,9 +11,9 @@ DIRS += [
     "drag-and-drop",
     "glance",
     "mods",
-    "tests",
-    "urlbar",
-    "toolkit",
     "sessionstore",
     "share",
+    "tests",
+    "toolkit",
+    "urlbar",
 ]

@@ -13,13 +13,13 @@ XPIDL_SOURCES += [
 ]
 
 EXPORTS.mozilla += [
-    "nsEnsoModsBackend.h",
     "EnsoStyleSheetCache.h",
+    "nsEnsoModsBackend.h",
 ]
 
 SOURCES += [
-    "nsEnsoModsBackend.cpp",
     "EnsoStyleSheetCache.cpp",
+    "nsEnsoModsBackend.cpp",
 ]
 
 XPCOM_MANIFESTS += [
