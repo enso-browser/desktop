@@ -4,15 +4,15 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 XPIDL_SOURCES += [
-    "nsIEnsoAndDrop.idl",
+    "nsIEnsoDragAndDrop.idl",
 ]
 
 EXPORTS.mozilla += [
-    "nsEnsoAndDrop.h",
+    "nsEnsoDragAndDrop.h",
 ]
 
 SOURCES += [
-    "nsEnsoAndDrop.cpp",
+    "nsEnsoDragAndDrop.cpp",
 ]
 
 XPCOM_MANIFESTS += [

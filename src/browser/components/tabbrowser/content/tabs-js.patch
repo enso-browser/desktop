@@ -7,7 +7,7 @@ index a61b4e7af40f1404bf3555a7011c6211de917635..69e3e360b3040dfcb4541bda57e88b0d
        )
          ? new window.TabStacking(this)
 -        : new window.TabDragAndDrop(this);
-+        : Services.prefs.getBoolPref("enso.tabs.use-legacy-drag-and-drop") ? new window.TabDragAndDrop(this) : new window.EnsoAndDrop(this);
++        : Services.prefs.getBoolPref("enso.tabs.use-legacy-drag-and-drop") ? new window.TabDragAndDrop(this) : new window.EnsoDragAndDrop(this);
        this.tabDragAndDrop.init();
      }
  

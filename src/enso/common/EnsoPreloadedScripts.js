@@ -14,5 +14,5 @@
   ChromeUtils.importESModule("chrome://browser/content/enso-components/EnsoKeyboardShortcuts.mjs", { global: "current" });
   ChromeUtils.importESModule("chrome://browser/content/enso-components/EnsoSessionStore.mjs", { global: "current" });
 
-  Services.scriptloader.loadSubScript("chrome://browser/content/enso-components/EnsoAndDrop.js", this);
+  Services.scriptloader.loadSubScript("chrome://browser/content/enso-components/EnsoDragAndDrop.js", this);
 }

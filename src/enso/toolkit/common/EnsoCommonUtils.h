@@ -18,7 +18,7 @@ namespace enso {
  */
 class EnsoCommonUtils final : public nsIEnsoCommonUtils {
   NS_DECL_ISUPPORTS
-  NS_DECL_NSIZENCOMMONUTILS
+  NS_DECL_NSIENSOCOMMONUTILS
 
  public:
   explicit EnsoCommonUtils() = default;

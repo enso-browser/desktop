@@ -8,7 +8,7 @@
  * @brief Interface for Enso.s drag and drop functionality.
  */
 [scriptable, uuid(f8714110-1fb1-4129-abad-887a64e4085e)]
-interface nsIEnsoAndDrop : nsISupports {
+interface nsIEnsoDragAndDrop : nsISupports {
   /**
    * @brief Indicate that a drag operation has started. Note
    * that this should only be called for enso.s drag and drop

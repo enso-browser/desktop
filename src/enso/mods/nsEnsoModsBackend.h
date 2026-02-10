@@ -15,7 +15,7 @@ namespace enso {
 
 class nsEnsoModsBackend final : public nsIEnsoModsBackend {
   NS_DECL_ISUPPORTS
-  NS_DECL_NSIZENMODSBACKEND
+  NS_DECL_NSIENSOMODSBACKEND
 
  public:
   explicit nsEnsoModsBackend();

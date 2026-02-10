@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-#include "nsEnsoAndDrop.h"
+#include "nsEnsoDragAndDrop.h"
 #include "nsBaseDragService.h"
 
 namespace enso {
@@ -23,24 +23,24 @@ static constexpr auto kZenDefaultDragImageOpacity =
 } // namespace: <empty>
 
 // Use the macro to inject all of the definitions for nsISupports.
-NS_IMPL_ISUPPORTS(nsEnsoAndDrop, nsIEnsoAndDrop)
+NS_IMPL_ISUPPORTS(nsEnsoDragAndDrop, nsIEnsoDragAndDrop)
 
-nsEnsoAndDrop::nsEnsoAndDrop() {
+nsEnsoDragAndDrop::nsEnsoDragAndDrop() {
   (void)this->OnDragEnd();
 }
 
-auto nsEnsoAndDrop::GetEnsoAndDropInstance() -> nsCOMPtr<nsEnsoAndDrop> {
+auto nsEnsoDragAndDrop::GetEnsoDragAndDropInstance() -> nsCOMPtr<nsEnsoDragAndDrop> {
   return do_GetService(ENSO_BOOSTS_BACKEND_CONTRACTID);
 }
 
 NS_IMETHODIMP
-nsEnsoAndDrop::OnDragStart(float opacity) {
+nsEnsoDragAndDrop::OnDragStart(float opacity) {
   mDragImageOpacity = opacity;
   return NS_OK;
 }
 
 NS_IMETHODIMP
-nsEnsoAndDrop::OnDragEnd() {
+nsEnsoDragAndDrop::OnDragEnd() {
   mDragImageOpacity = kZenDefaultDragImageOpacity;
   return NS_OK;
 }

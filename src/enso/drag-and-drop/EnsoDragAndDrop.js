@@ -59,7 +59,7 @@
     throw new Error(`Element "${element.tagName}" is not expected to move`);
   };
 
-  window.EnsoAndDrop = class extends window.TabDragAndDrop {
+  window.EnsoDragAndDrop = class extends window.TabDragAndDrop {
     #dragOverBackground = null;
     #lastDropTarget = null;
     originalDragImageArgs = [];
@@ -73,9 +73,9 @@
 
       XPCOMUtils.defineLazyServiceGetter(
         this,
-        "EnsoAndDropService",
+        "EnsoDragAndDropService",
         "@mozilla.org/enso/drag-and-drop;1",
-        Ci.nsIEnsoAndDrop
+        Ci.nsIEnsoDragAndDrop
       );
 
       XPCOMUtils.defineLazyPreferenceGetter(
@@ -104,7 +104,7 @@
     }
 
     startTabDrag(event, tab, ...args) {
-      this.EnsoAndDropService.onDragStart(1);
+      this.EnsoDragAndDropService.onDragStart(1);
       gEnsoCompactModeManager._isTabBeingDragged = true;
       super.startTabDrag(event, tab, ...args);
       const dt = event.dataTransfer;
@@ -146,7 +146,7 @@
         } else if (AppConstants.platform !== "macosx" && !tab.isEnsoFolder) {
           // On windows and linux, we still don't add some extra opaqueness
           // for the tab to be more visible. This is a hacky workaround.
-          // TODO: Make windows and linux DnD use nsEnsoAndDrop::mDragImageOpacity
+          // TODO: Make windows and linux DnD use nsEnsoDragAndDrop::mDragImageOpacity
           tabClone.style.colorScheme = "light";
           tabClone.style.color = "black";
         }
@@ -868,7 +868,7 @@
       // We also call it here to ensure we clear any highlight if the drop happened
       // outside of a valid drop target.
       ownerGlobal.gEnsoFolders.highlightGroupOnDragOver(null);
-      this.EnsoAndDropService.onDragEnd();
+      this.EnsoDragAndDropService.onDragEnd();
       super.handle_dragend(event);
       this.#removeDragOverBackground();
       ownerGlobal.gEnsoPinnedTabManager.removeTabContainersDragoverClass();
