@@ -1,0 +1,141 @@
+name: Android Release Build
+
+on:
+  workflow_call:
+    inputs:
+      build-version:
+        description: "The version to build"
+        required: true
+        type: string
+      release-branch:
+        description: "The branch to build"
+        required: true
+        type: string
+      MOZ_BUILD_DATE:
+        type: string
+        required: true
+        default: ""
+
+jobs:
+  android-build:
+    permissions:
+      contents: write
+    runs-on: blacksmith-8vcpu-ubuntu-2404
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [arm64-v8a, armeabi-v7a, x86_64]
+    env:
+      CARGO_TERM_COLOR: always
+      CARGO_INCREMENTAL: 0
+    name: Build Android - ${{ matrix.arch }}
+
+    steps:
+      - name: Free Disk Space (Ubuntu)
+        uses: jlumbroso/free-disk-space@54081f138730dfa15788a46383842cd2f914a1be # main
+        with:
+          tool-cache: false
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          token: ${{ secrets.DEPLOY_KEY }}
+
+      - name: Setup Node.js
+        uses: useblacksmith/setup-node@v5
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Setup Git
+        run: |
+          git config --global user.email "enso-browser-auto@users.noreply.github.com"
+          git config --global user.name "Enso Browser Robot"
+
+      - name: Install system dependencies
+        run: |
+          set -x
+          sudo apt-get update --fix-missing
+          sudo apt-get install -y python3 python3-pip dos2unix yasm nasm build-essential m4 uuid lld llvm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Load Surfer CI setup
+        run: npm run surfer -- ci --brand ${{ inputs.release-branch }} --display-version ${{ inputs.build-version }}
+
+      - name: Download Firefox source and dependencies
+        run: npm run download
+
+      - name: Setup Rust
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain $(cat .rust-toolchain)
+          source $HOME/.cargo/env
+          rustup target add aarch64-linux-android armv7-linux-androideabi x86_64-linux-android i686-linux-android
+
+      - name: Import
+        env:
+          SURFER_COMPAT: ${{ matrix.arch == 'arm64-v8a' && 'aarch64' || (matrix.arch == 'armeabi-v7a' && 'arm' || 'x86_64') }}
+        run: |
+          . "$HOME/.cargo/env"
+          npm run import
+
+      - name: Bootstrap
+        run: |
+          cd engine
+          export SURFER_PLATFORM="android"
+          ./mach --no-interactive bootstrap --application-choice geckoview_example
+          cd ..
+
+      - name: Build GeckoView
+        env:
+          SURFER_COMPAT: ${{ matrix.arch == 'arm64-v8a' && 'aarch64' || (matrix.arch == 'armeabi-v7a' && 'arm' || 'x86_64') }}
+          ENSO_RELEASE_BRANCH: ${{ inputs.release-branch }}
+        run: |
+          export SURFER_PLATFORM="android"
+          export ENSO_RELEASE=1
+          if [[ -n ${{ inputs.MOZ_BUILD_DATE }} ]]; then
+            export MOZ_BUILD_DATE=${{ inputs.MOZ_BUILD_DATE }}
+          fi
+          cd engine
+          ./mach build
+          cd ..
+
+      - name: Build Fenix APK
+        env:
+          SURFER_COMPAT: ${{ matrix.arch == 'arm64-v8a' && 'aarch64' || (matrix.arch == 'armeabi-v7a' && 'arm' || 'x86_64') }}
+        run: |
+          cd engine
+          ./mach package
+          cd ..
+
+      - name: Sign APK
+        if: ${{ inputs.release-branch == 'release' }}
+        run: |
+          echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 --decode > keystore.jks
+          jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256 \
+            -keystore keystore.jks \
+            -storepass "${{ secrets.ANDROID_KEYSTORE_PASSWORD }}" \
+            -keypass "${{ secrets.ANDROID_KEY_PASSWORD }}" \
+            engine/obj-*/dist/*.apk enso
+          rm keystore.jks
+
+      - name: Rename artifacts
+        run: |
+          mv engine/obj-*/dist/*.apk "enso-android-${{ matrix.arch }}.apk"
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          retention-days: 5
+          name: enso-android-${{ matrix.arch }}.apk
+          path: ./enso-android-${{ matrix.arch }}.apk
