@@ -44,11 +44,11 @@ jobs:
           git config --global user.email "mauro-balades@users.noreply.github.com"
           git config --global user.name "mauro-balades"
 
-      - name: Install Surfer
-        run: npm i -g @enso-browser/surfer
+      - name: Install enso-build
+        run: npm i -g @enso-browser/build
 
-      - name: Load Surfer CI setup
-        run: npm run surfer -- ci --brand ${{ inputs.release-branch }} --display-version ${{ inputs.build-version }}
+      - name: Load enso-build CI setup
+        run: npm run enso-build -- ci --brand ${{ inputs.release-branch }} --display-version ${{ inputs.build-version }}
 
       - name: Download artifact
         if: ${{ matrix.arch == 'x86_64' }}

@@ -148,32 +148,32 @@ jobs:
         run: |
           npm ci
 
-      - name: Setup Surfer
+      - name: Setup enso-build
         run: |
-          npm i -g @enso-browser/surfer
+          npm i -g @enso-browser/build
 
       - name: Bump version
         if: ${{ inputs.update_version && inputs.update_branch == 'release' }}
         run: |
-          npm run surfer -- ci --brand ${{ inputs.update_branch }} --bump prerelease
+          npm run enso-build -- ci --brand ${{ inputs.update_branch }} --bump prerelease
 
       - name: Bump version without new version
         if: ${{ !inputs.update_version || inputs.update_branch == 'twilight' }}
         run: |
-          npm run surfer -- ci --brand ${{ inputs.update_branch }}
+          npm run enso-build -- ci --brand ${{ inputs.update_branch }}
 
       - name: Debug
         run: |
-          surfer get version
-          surfer get version | xargs
-          echo "$(surfer get version | xargs)"
+          enso-build get version
+          enso-build get version | xargs
+          echo "$(enso-build get version | xargs)"
 
       - name: Export release date
         id: data
         shell: bash
         run: |
           echo "builddate=$(date +"%Y-%m-%d")" >> $GITHUB_OUTPUT
-          echo "version=$(surfer get version | xargs)" >> $GITHUB_OUTPUT
+          echo "version=$(enso-build get version | xargs)" >> $GITHUB_OUTPUT
           echo "buildtime=$(date +"%H:%M:%S")" >> $GITHUB_OUTPUT
 
       - name: Commit
@@ -208,20 +208,20 @@ jobs:
         run: |
           npm ci
 
-      - name: Setup Surfer
+      - name: Setup enso-build
         run: |
-          npm i -g @enso-browser/surfer
+          npm i -g @enso-browser/build
 
-      - name: Activate Surfer CLI
+      - name: Activate enso-build CLI
         run: |
-          npm run surfer -- ci --brand ${{ inputs.update_branch }} --display-version ${{ needs.build-data.outputs.version }}
+          npm run enso-build -- ci --brand ${{ inputs.update_branch }} --display-version ${{ needs.build-data.outputs.version }}
 
       - name: Check version
         run: |
           echo "$(pwd)"
-          echo $(npm run --silent surfer -- get version | xargs)
-          echo "version=$(npm run --silent surfer -- get version | xargs)" >> $GITHUB_OUTPUT
-          if [[ $(npm run --silent surfer -- get version | xargs) == ${{ needs.build-data.outputs.version }} ]]; then
+          echo $(npm run --silent enso-build -- get version | xargs)
+          echo "version=$(npm run --silent enso-build -- get version | xargs)" >> $GITHUB_OUTPUT
+          if [[ $(npm run --silent enso-build -- get version | xargs) == ${{ needs.build-data.outputs.version }} ]]; then
             echo ">>> Version matches"
           else
             echo ">>> Version mismatch"
@@ -255,8 +255,8 @@ jobs:
         run: |
           npm ci
 
-      - name: Load Surfer CI setup
-        run: npm run surfer -- ci --brand ${{ inputs.update_branch }} --display-version ${{ needs.build-data.outputs.version }}
+      - name: Load enso-build CI setup
+        run: npm run enso-build -- ci --brand ${{ inputs.update_branch }} --display-version ${{ needs.build-data.outputs.version }}
 
       - name: Download Firefox source and dependencies
         run: npm run download --verbose

@@ -53,11 +53,11 @@ jobs:
           git config --global user.email "mr-cheffy@users.noreply.github.com"
           git config --global user.name "mr-cheffy"
 
-      - name: Setup surfer CI
+      - name: Setup enso-build CI
         if: steps.check-upstream-branch.outputs.branch_exists == 'false'
         run: |
           if [ "${{ github.event.inputs.release_candidate }}" = "false" ]; then
-            npm run surfer -- ci --brand release 
+            npm run enso-build -- ci --brand release
           fi
 
       - name: Download Firefox and dependencies

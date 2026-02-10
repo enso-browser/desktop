@@ -72,8 +72,8 @@ jobs:
         run: |
           npm ci
 
-      - name: Load surfer CI setup
-        run: npm run surfer -- ci --brand ${{ inputs.release-branch }} --display-version ${{ inputs.build-version }}
+      - name: Load enso-build CI setup
+        run: npm run enso-build -- ci --brand ${{ inputs.release-branch }} --display-version ${{ inputs.build-version }}
 
       - name: Download Firefox source and dependencies
         run: npm run download

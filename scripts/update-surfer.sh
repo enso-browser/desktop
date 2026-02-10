@@ -9,5 +9,5 @@ if [ ! -f "package.json" ]; then
   exit 1
 fi
 
-npm update @enso-browser/surfer
-npm i @enso-browser/surfer@latest -D
+npm update @enso-browser/build
+npm i @enso-browser/build@latest -D
