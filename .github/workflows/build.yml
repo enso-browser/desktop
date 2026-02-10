@@ -255,6 +255,9 @@ jobs:
         run: |
           npm ci
 
+      - name: Setup enso-build
+        run: npm i -g @enso-browser/build
+
       - name: Load enso-build CI setup
         run: npm run enso-build -- ci --brand ${{ inputs.update_branch }} --display-version ${{ needs.build-data.outputs.version }}
 
@@ -396,6 +399,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
+          npm i -g @enso-browser/build
           sudo apt-get update
           sudo apt-get -y install libfuse2 desktop-file-utils appstream
 

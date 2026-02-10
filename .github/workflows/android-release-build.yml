@@ -70,6 +70,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Setup enso-build
+        run: npm i -g @enso-browser/build
+
       - name: Load enso-build CI setup
         run: npm run enso-build -- ci --brand ${{ inputs.release-branch }} --display-version ${{ inputs.build-version }}
 

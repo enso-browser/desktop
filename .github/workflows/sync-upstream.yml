@@ -47,7 +47,11 @@ jobs:
         if: steps.check-upstream-branch.outputs.branch_exists == 'false'
         run: npm ci
 
-      - name: Install dependencies
+      - name: Setup enso-build
+        if: steps.check-upstream-branch.outputs.branch_exists == 'false'
+        run: npm i -g @enso-browser/build
+
+      - name: Setup Git
         if: steps.check-upstream-branch.outputs.branch_exists == 'false'
         run: |
           git config --global user.email "mr-cheffy@users.noreply.github.com"
