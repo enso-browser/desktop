@@ -7,7 +7,7 @@ index 49779b7cc79a602e764c8346e17a02310808aab8..1b1000cf7177bd83ca6d6c484a1c3b48
       nsIAboutModule::IS_SECURE_CHROME_UI},
  #endif
 -    {"credits", "https://www.mozilla.org/credits/",
-+    {"credits", "https://zen-browser.app/about/",
++    {"credits", "https://enso-browser.app/about/",
       nsIAboutModule::URI_SAFE_FOR_UNTRUSTED_CONTENT |
           nsIAboutModule::URI_MUST_LOAD_IN_CHILD},
      {"fingerprintingprotection",

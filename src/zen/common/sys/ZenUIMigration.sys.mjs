@@ -122,7 +122,7 @@ class nsZenUIMigration {
         );
         // User has clicked on "Learn More"
         if (buttonPressed === 0) {
-          win.openTrustedLinkIn("https://docs.zen-browser.app/user-manual/window-sync", "tab");
+          win.openTrustedLinkIn("https://docs.enso-browser.app/user-manual/window-sync", "tab");
         }
       }, 1000);
     });

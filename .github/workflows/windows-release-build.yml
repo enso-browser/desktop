@@ -228,21 +228,21 @@ jobs:
 
       - name: Insert API Keys
         run: |
-          mkdir -p ~/.zen-keys
-          echo "${{ secrets.ZEN_SAFEBROWSING_API_KEY }}" > ~/.zen-keys/safebrowsing.dat
+          mkdir -p ~/.enso-keys
+          echo "${{ secrets.ENSO_SAFEBROWSING_API_KEY }}" > ~/.enso-keys/safebrowsing.dat
 
       - name: Build
         if: ${{ !(inputs.generate-gpo && matrix.arch == 'aarch64') }}
         env:
           SURFER_COMPAT: ${{ matrix.arch }}
-          ZEN_RELEASE_BRANCH: ${{ inputs.release-branch }}
+          ENSO_RELEASE_BRANCH: ${{ inputs.release-branch }}
         run: |
           set -x
           dos2unix configs/windows/mozconfig
           export SURFER_PLATFORM="win32"
-          export ZEN_CROSS_COMPILING=1
+          export ENSO_CROSS_COMPILING=1
           if test ${{ inputs.generate-gpo }} = true; then
-            export ZEN_GA_GENERATE_PROFILE=1
+            export ENSO_GA_GENERATE_PROFILE=1
           fi
           if [[ -n ${{ inputs.MOZ_BUILD_DATE }} ]];then
             export MOZ_BUILD_DATE=${{ inputs.MOZ_BUILD_DATE }}
@@ -253,12 +253,12 @@ jobs:
         if: ${{ !(inputs.generate-gpo && matrix.arch == 'aarch64') }}
         env:
           SURFER_COMPAT: ${{ matrix.arch }}
-          ZEN_GA_DISABLE_PGO: true
+          ENSO_GA_DISABLE_PGO: true
         run: |
           set -x
           export SURFER_PLATFORM="win32"
-          export ZEN_CROSS_COMPILING=1
-          export ZEN_RELEASE=1
+          export ENSO_CROSS_COMPILING=1
+          export ENSO_RELEASE=1
           npm run package
           mv ./dist/zen-$(npm run --silent surfer -- get version | xargs).en-US.win64${{ matrix.arch == 'aarch64' && '-aarch64' || '' }}.zip zen.win64.zip
           ls ./dist
@@ -266,7 +266,7 @@ jobs:
 
       - name: Remove API Keys
         run: |
-          rm -rf ~/.zen-keys
+          rm -rf ~/.enso-keys
 
       - name: Move package for PGO upload
         if: ${{ inputs.generate-gpo && matrix.arch == 'x86_64' }}

@@ -92,7 +92,7 @@ jobs:
       - name: Populate mozconfig
         env:
           SURFER_MOZCONFIG_ONLY: true
-          ZEN_RELEASE: 1
+          ENSO_RELEASE: 1
         run: |
           npm run build
           cd engine
@@ -158,7 +158,7 @@ jobs:
 
       - name: Import provisioning profile for .app
         run: |
-          echo "${{ secrets.macOS_PROVISIONING_PROFILE }}" | base64 --decode > ./engine/Zen_Browser.provisionprofile
+          echo "${{ secrets.macOS_PROVISIONING_PROFILE }}" | base64 --decode > ./engine/Enso_Browser.provisionprofile
           ls -la
 
       - name: Unify architectures
@@ -177,7 +177,7 @@ jobs:
         run: |
           cd engine
           echo "Copying provisioning profile for .app on both architectures (${{ env.APP_NAME }})"
-          cp ./Zen_Browser.provisionprofile "./embedded.provisionprofile"
+          cp ./Enso_Browser.provisionprofile "./embedded.provisionprofile"
 
       - name: Sign .app
         run: |
@@ -197,7 +197,7 @@ jobs:
 
       - name: Remove sensitive information
         run: |
-          rm -f ./engine/Zen_Browser.provisionprofile
+          rm -f ./engine/Enso_Browser.provisionprofile
 
       - name: Sign .dmg
         run: |
@@ -239,7 +239,7 @@ jobs:
           mkdir -p ./engine/obj-x86_64-apple-darwin/dist/bin
           mv ./platform.ini ./engine/obj-x86_64-apple-darwin/dist/bin/platform.ini
           export SURFER_PLATFORM="darwin"
-          export ZEN_RELEASE=1
+          export ENSO_RELEASE=1
           # full path to zen-macos-host-mar
           export MAR=$(pwd)/zen-macos-host-mar
           chmod +x $MAR

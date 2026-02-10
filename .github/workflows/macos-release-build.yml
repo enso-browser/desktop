@@ -135,13 +135,13 @@ jobs:
 
       - name: Insert API Keys
         run: |
-          mkdir -p ~/.zen-keys
-          echo "${{ secrets.ZEN_SAFEBROWSING_API_KEY }}" > ~/.zen-keys/safebrowsing.dat
+          mkdir -p ~/.enso-keys
+          echo "${{ secrets.ENSO_SAFEBROWSING_API_KEY }}" > ~/.enso-keys/safebrowsing.dat
 
       - name: Build Zen
         env:
           SURFER_COMPAT: ${{ matrix.arch }}
-          ZEN_RELEASE_BRANCH: ${{ inputs.release-branch }}
+          ENSO_RELEASE_BRANCH: ${{ inputs.release-branch }}
         run: |
           export SURFER_PLATFORM="darwin"
           if [[ -n ${{ inputs.MOZ_BUILD_DATE }} ]];then
@@ -152,15 +152,15 @@ jobs:
       - name: Package
         env:
           SURFER_COMPAT: ${{ matrix.arch }}
-          ZEN_GA_DISABLE_PGO: true
+          ENSO_GA_DISABLE_PGO: true
         run: |
           export SURFER_PLATFORM="darwin"
-          export ZEN_RELEASE=1
+          export ENSO_RELEASE=1
           npm run package
 
       - name: Remove API Keys
         run: |
-          rm -rf ~/.zen-keys
+          rm -rf ~/.enso-keys
 
       - name: Rename artifacts
         run: |

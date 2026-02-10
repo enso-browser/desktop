@@ -1,8 +1,8 @@
 {
-  "name": "Zen Browser",
-  "vendor": "Zen OSS Team",
-  "appId": "zen",
-  "binaryName": "zen",
+  "name": "Enso Browser",
+  "vendor": "Enso Browser Team",
+  "appId": "enso",
+  "binaryName": "enso",
   "version": {
     "product": "firefox",
     "version": "147.0.3",
@@ -15,14 +15,14 @@
   "addons": {},
   "brands": {
     "release": {
-      "backgroundColor": "#282A33",
-      "brandShorterName": "Zen",
-      "brandShortName": "Zen",
-      "brandFullName": "Zen Browser",
+      "backgroundColor": "#1a1a1a",
+      "brandShorterName": "Enso",
+      "brandShortName": "Enso",
+      "brandFullName": "Enso Browser",
       "release": {
-        "displayVersion": "1.18.5b",
+        "displayVersion": "1.0.0",
         "github": {
-          "repo": "zen-browser/desktop"
+          "repo": "enso-browser/desktop"
         },
         "archives": {
           "windows": "windows.mar",
@@ -35,14 +35,14 @@
       }
     },
     "twilight": {
-      "backgroundColor": "#282A33",
-      "brandShorterName": "Zen",
+      "backgroundColor": "#1a1a1a",
+      "brandShorterName": "Enso",
       "brandShortName": "Twilight",
-      "brandFullName": "Zen Twilight",
+      "brandFullName": "Enso Twilight",
       "release": {
-        "displayVersion": "1.19t",
+        "displayVersion": "1.1t",
         "github": {
-          "repo": "zen-browser/desktop"
+          "repo": "enso-browser/desktop"
         }
       }
     }
@@ -53,5 +53,5 @@
     ],
     "licenseType": "MPL-2.0"
   },
-  "updateHostname": "updates.zen-browser.app"
+  "updateHostname": "updates.enso-browser.app"
 }

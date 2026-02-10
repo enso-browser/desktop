@@ -196,7 +196,7 @@ class nsZenWindowSync {
     // to avoid confusing the old private window behavior.
     let forcedSync = !aWindow.gZenWorkspaces?.privateWindowOrDisabled;
     let hasUnsyncedArg = false;
-    // See issue https://github.com/zen-browser/desktop/issues/12211
+    // See issue https://github.com/enso-browser/desktop/issues/12211
     if (lazy.PrivateBrowsingUtils.isWindowPrivate(aWindow)) {
       aWindow._zenStartupSyncFlag = "synced";
     }
@@ -706,7 +706,7 @@ class nsZenWindowSync {
       );
       return null;
     }
-    // See https://github.com/zen-browser/desktop/issues/11851, swapping the browsers
+    // See https://github.com/enso-browser/desktop/issues/11851, swapping the browsers
     // don't seem to update the state's cache properly, leading to issues when restoring
     // the session later on.
     let tabStateEntries = this.#getTabEntriesFromCache(aOtherTab);

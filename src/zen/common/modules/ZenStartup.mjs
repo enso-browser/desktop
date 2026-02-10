@@ -21,10 +21,10 @@ class ZenStartup {
 
   #initBrowserBackground() {
     const background = document.createXULElement("box");
-    background.id = "zen-browser-background";
-    background.classList.add("zen-browser-generic-background");
+    background.id = "enso-browser-background";
+    background.classList.add("enso-browser-generic-background");
     const grain = document.createXULElement("box");
-    grain.classList.add("zen-browser-grain");
+    grain.classList.add("enso-browser-grain");
     background.appendChild(grain);
     document.getElementById("browser").prepend(background);
     const toolbarBackground = background.cloneNode(true);
@@ -88,7 +88,7 @@ class ZenStartup {
       await SessionStore.promiseAllWindowsRestored;
       delete gZenUIManager.promiseInitialized;
       gZenCompactModeManager.init();
-      // Fix for https://github.com/zen-browser/desktop/issues/7605, specially in compact mode
+      // Fix for https://github.com/enso-browser/desktop/issues/7605, specially in compact mode
       if (gURLBar.hasAttribute("breakout-extend")) {
         gURLBar.focus();
       }

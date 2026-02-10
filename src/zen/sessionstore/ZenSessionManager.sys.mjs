@@ -409,7 +409,7 @@ export class nsZenSessionManager {
 
   onRestoringClosedWindow(aWinData) {
     // We only want to save all pinned tabs if the user preference allows it.
-    // See https://github.com/zen-browser/desktop/issues/12307
+    // See https://github.com/enso-browser/desktop/issues/12307
     if (this.#shouldRestoreOnlyPinned && aWinData?.tabs?.length) {
       this.log("Restoring only pinned tabs for closed window");
       this.#filterUnpinnedTabs(aWinData);

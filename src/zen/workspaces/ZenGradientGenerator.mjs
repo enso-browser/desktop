@@ -1587,7 +1587,7 @@ export class nsZenThemePicker extends nsZenMultiWindowFeature {
     let rgb;
     if (accentColor === "AccentColor") {
       const rawRgb = window.getComputedStyle(
-        document.getElementById("zen-browser-background")
+        document.getElementById("enso-browser-background")
       ).color;
       rgb = rawRgb.match(/\d+/g).map(Number);
       // Match our theme a bit more, since we can't always expect the OS

@@ -45,7 +45,7 @@ jobs:
           git config --global user.name "mauro-balades"
 
       - name: Install Surfer
-        run: npm i -g @zen-browser/surfer
+        run: npm i -g @enso-browser/surfer
 
       - name: Load Surfer CI setup
         run: npm run surfer -- ci --brand ${{ inputs.release-branch }} --display-version ${{ inputs.build-version }}

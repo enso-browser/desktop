@@ -26,7 +26,7 @@ jobs:
 
       - name: Download Firefox and dependencies
         env:
-          ZEN_DOWNLOAD_DONT_INIT_GIT: "1"
+          ENSO_DOWNLOAD_DONT_INIT_GIT: "1"
         run: npm run download
 
       - name: Import patches

@@ -1214,7 +1214,7 @@ class nsZenViewSplitter extends nsZenDOMOperatedFeature {
       this.updateSplitView(tab);
       tab.linkedBrowser.docShellIsActive = true;
       if (isGlanceTab) {
-        // See issues https://github.com/zen-browser/desktop/issues/11641
+        // See issues https://github.com/enso-browser/desktop/issues/11641
         this.removeSplitters();
       }
     }

@@ -1,4 +1,4 @@
-name: Zen Twilight Scheduled Releases
+name: Enso Twilight Scheduled Releases
 
 on:
   schedule:

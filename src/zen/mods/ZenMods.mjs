@@ -292,7 +292,7 @@ class nsZenMods extends nsZenPreloadedFeature {
 
   #composeModApiUrl(modId) {
     // keeping theme here as it would require changes to CI to change the name
-    return `https://zen-browser.github.io/theme-store/themes/${modId}/theme.json`;
+    return `https://enso-browser.github.io/theme-store/themes/${modId}/theme.json`;
   }
 
   async #downloadUrlToFile(url, path, maxRetries = 3, retryDelayMs = 500) {

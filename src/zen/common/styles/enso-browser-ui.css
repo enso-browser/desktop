@@ -36,7 +36,7 @@
   width: 100%;
 }
 
-.zen-browser-generic-background {
+.enso-browser-generic-background {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -84,11 +84,11 @@
     transition: background-color var(--inactive-window-transition);
   }
 
-  & .zen-browser-grain {
+  & .enso-browser-grain {
     display: none;
   }
 
-  :root[zen-show-grainy-background="true"] & .zen-browser-grain {
+  :root[zen-show-grainy-background="true"] & .enso-browser-grain {
     display: flex;
     width: 100%;
     height: 100%;
@@ -104,7 +104,7 @@
   }
 }
 
-#zen-browser-background {
+#enso-browser-background {
   /* This is conceptually a background, but putting this on a pseudo-element
     * avoids it from suppressing the chrome-content separator border, etc.
     *

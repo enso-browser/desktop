@@ -304,7 +304,7 @@
   &,
   & panel,
   & menupopup,
-  & .zen-browser-generic-background,
+  & .enso-browser-generic-background,
   & #urlbar[breakout-extend='true'],
   & #tabbrowser-tabpanels browser[type='content'],
   &:not([zen-should-be-dark-mode]) #zen-toast-container {

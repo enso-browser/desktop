@@ -19,7 +19,7 @@ mkdir windsign-temp -ErrorAction SilentlyContinue
 #Start-Job -Name "DownloadGitObjectsRepo" -ScriptBlock {
 #    param($PWD)
 #    echo "Downloading git objects repo to $PWD\windsign-temp\windows-binaries"
-#    git clone https://github.com/zen-browser/windows-binaries.git $PWD\windsign-temp\windows-binaries
+#    git clone https://github.com/enso-browser/windows-binaries.git $PWD\windsign-temp\windows-binaries
 #    echo "Downloaded git objects repo to"
 #} -Verbose -ArgumentList $PWD -Debug
 
@@ -41,7 +41,7 @@ Start-Job -Name "SurferInit" -ScriptBlock {
 } -Verbose -ArgumentList $PWD -Debug
 
 echo "Downloading artifacts info"
-$artifactsInfo=gh api repos/zen-browser/desktop/actions/runs/$GithubRunId/artifacts
+$artifactsInfo=gh api repos/enso-browser/desktop/actions/runs/$GithubRunId/artifacts
 $token = gh auth token
 
 function New-TemporaryDirectory {

@@ -1,5 +1,5 @@
 {
-  "name": "zen-desktop",
+  "name": "enso-desktop",
   "version": "1.0.0",
   "description": "",
   "lint-staged": {
@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zen-browser/desktop.git"
+    "url": "git+https://github.com/enso-browser/desktop.git"
   },
   "hooks": {
     "pre-commit": "npm run prepare"
@@ -46,15 +46,15 @@
   "author": "",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/zen-browser/desktop/issues"
+    "url": "https://github.com/enso-browser/desktop/issues"
   },
-  "homepage": "https://github.com/zen-browser/desktop#readme",
+  "homepage": "https://github.com/enso-browser/desktop#readme",
   "devDependencies": {
     "@babel/preset-typescript": "^7.27.0",
     "@eslint/js": "^9.39.2",
     "@eslint/json": "^0.14.0",
     "@microsoft/eslint-plugin-sdl": "^1.1.0",
-    "@zen-browser/surfer": "^1.13.1",
+    "@enso-browser/surfer": "^1.13.1",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-eslint-plugin": "^7.3.0",

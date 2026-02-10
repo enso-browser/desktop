@@ -1,4 +1,4 @@
-name: Zen Release builds
+name: Enso Release builds
 
 on:
   workflow_dispatch:
@@ -150,7 +150,7 @@ jobs:
 
       - name: Setup Surfer
         run: |
-          npm i -g @zen-browser/surfer
+          npm i -g @enso-browser/surfer
 
       - name: Bump version
         if: ${{ inputs.update_version && inputs.update_branch == 'release' }}
@@ -181,8 +181,8 @@ jobs:
         if: ${{ inputs.update_version }}
         with:
           commit_message: 🔖 Update version to ${{ steps.data.outputs.version }}
-          commit_user_name: Zen Browser Robot
-          commit_user_email: zen-browser-auto@users.noreply.github.com
+          commit_user_name: Enso Browser Robot
+          commit_user_email: enso-browser-auto@users.noreply.github.com
 
   lint:
     uses: ./.github/workflows/code-linter.yml
@@ -210,7 +210,7 @@ jobs:
 
       - name: Setup Surfer
         run: |
-          npm i -g @zen-browser/surfer
+          npm i -g @enso-browser/surfer
 
       - name: Activate Surfer CLI
         run: |
@@ -402,7 +402,7 @@ jobs:
           cp configs/branding/${{ inputs.update_branch }}/logo128.png build/AppDir/zen.png && ln -s zen.png build/AppDir/.DirIcon
 
           if [ "${{ inputs.update_branch }}" = "twilight" ]; then
-            sed -i -e 's/Name=Zen Browser/Name=Zen Twilight/g' build/AppDir/zen.desktop
+            sed -i -e 's/Name=Enso Browser/Name=Enso Twilight/g' build/AppDir/zen.desktop
             sed -i -e 's/StartupWMClass=zen/StartupWMClass=zen-twilight/g' build/AppDir/zen.desktop
           fi
 
@@ -500,14 +500,14 @@ jobs:
       - name: Checkout updates repository
         uses: actions/checkout@v4
         with:
-          repository: zen-browser/updates-server
+          repository: enso-browser/updates-server
           path: updates-server
           token: ${{ secrets.DEPLOY_KEY }}
 
       - name: Download object files
         if: ${{ inputs.update_branch == 'release' }}
         run: |
-          git clone https://github.com/zen-browser/windows-binaries.git .github/workflows/object --depth 1
+          git clone https://github.com/enso-browser/windows-binaries.git .github/workflows/object --depth 1
 
       - name: Copy update manifests
         env:
@@ -532,8 +532,8 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 🚀 Update update manifests
-          commit_user_name: Zen Browser Robot
-          commit_user_email: zen-browser-auto@users.noreply.github.com
+          commit_user_name: Enso Browser Robot
+          commit_user_email: enso-browser-auto@users.noreply.github.com
           repository: ./updates-server
 
       - name: Generate Release Notes
@@ -616,7 +616,7 @@ jobs:
       - name: Checkout Flatpak repository
         uses: actions/checkout@v4
         with:
-          repository: zen-browser/release-utils
+          repository: enso-browser/release-utils
           token: ${{ secrets.DEPLOY_KEY }}
 
       - name: Install dependencies
@@ -634,13 +634,13 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 🚀 Update releases for Flatpak
-          commit_user_name: Zen Browser Robot
-          commit_user_email: zen-browser-auto@users.noreply.github.com
+          commit_user_name: Enso Browser Robot
+          commit_user_email: enso-browser-auto@users.noreply.github.com
 
       - name: Checkout Flatpak repository
         uses: actions/checkout@v4
         with:
-          repository: zen-browser/flatpak
+          repository: enso-browser/flatpak
           token: ${{ secrets.DEPLOY_KEY }}
           path: flatpak
 
@@ -649,7 +649,7 @@ jobs:
           pwd
           ls .
           ls ..
-          mv releases.xml ./flatpak/app.zen_browser.zen.metainfo.xml
+          mv releases.xml ./flatpak/app.enso_browser.zen.metainfo.xml
           # output the version to the file
           echo -n ${{ needs.build-data.outputs.version }} > ./flatpak/version
 
@@ -657,8 +657,8 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "[release]: Update Flatpak manifest"
-          commit_user_name: Zen Browser Robot
-          commit_user_email: zen-browser-auto@users.noreply.github.com
+          commit_user_name: Enso Browser Robot
+          commit_user_email: enso-browser-auto@users.noreply.github.com
           repository: ./flatpak
 
       - name: Wait 2 minutes for the Flatpak repo to update
@@ -675,7 +675,7 @@ jobs:
       - name: Checkout Flatpak repository
         uses: actions/checkout@v4
         with:
-          repository: flathub/app.zen_browser.zen
+          repository: flathub/app.enso_browser.zen
           token: ${{ secrets.DEPLOY_KEY }}
 
       - name: Download Linux x86_64 build
@@ -691,12 +691,12 @@ jobs:
       - name: Update repository
         uses: actions/checkout@v4
         with:
-          path: zen-browser
+          path: enso-browser
           token: ${{ secrets.DEPLOY_KEY }}
 
       - name: Download Flatpak archive
         run: |
-          wget https://github.com/zen-browser/flatpak/releases/latest/download/archive.tar -O archive.tar
+          wget https://github.com/enso-browser/flatpak/releases/latest/download/archive.tar -O archive.tar
 
       - name: Setup Git
         run: |
@@ -705,22 +705,22 @@ jobs:
 
       - name: Prepare Flatpak manifest
         run: |
-          python3 ./zen-browser/scripts/prepare-flatpak-release.py \
+          python3 ./enso-browser/scripts/prepare-flatpak-release.py \
             --flatpak-archive archive.tar \
             --version ${{ needs.build-data.outputs.version }} \
             --linux-archive zen.linux-x86_64.tar.xz \
             --linux-aarch64-archive zen.linux-aarch64.tar.xz \
-            --output app.zen_browser.zen.yml \
-            --template-root ./zen-browser/build/flatpak
+            --output app.enso_browser.zen.yml \
+            --template-root ./enso-browser/build/flatpak
 
       - name: Commit changes
         run: |
-          git add app.zen_browser.zen.yml
+          git add app.enso_browser.zen.yml
           git commit -m "Update to version ${{ needs.build-data.outputs.version }}"
 
       - name: Clean up
         run: |
-          rm -rf zen-browser
+          rm -rf enso-browser
           rm -rf archive.tar
           rm -rf zen.linux-x86_64.tar.xz
           rm -rf zen.linux-aarch64.tar.xz
@@ -729,8 +729,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           retention-days: 5
-          name: app.zen_browser.zen.yml
-          path: ./app.zen_browser.zen.yml
+          name: app.enso_browser.zen.yml
+          path: ./app.enso_browser.zen.yml
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v7
@@ -742,7 +742,7 @@ jobs:
           commit-message: Update to version `${{ needs.build-data.outputs.version }}`
           title: Update to version `${{ needs.build-data.outputs.version }}`
           body: |
-            This PR updates the Zen Browser Flatpak package to version ${{ needs.build-data.outputs.version }}.
+            This PR updates the Enso Browser Flatpak package to version ${{ needs.build-data.outputs.version }}.
 
             @${{ github.actor }} please review and merge this PR.
           branch: update-to-${{ needs.build-data.outputs.version }}

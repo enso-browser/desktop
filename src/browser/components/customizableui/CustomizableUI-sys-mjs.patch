@@ -249,7 +249,7 @@ index 9a98f56d83ee38e0f1aa41467b4ddf215c3d90f7..c50781a1e8fd1a71baf497ba64d85292
        }
        case "mousedown": {
 -        if (aEvent.button != 0) {
-+        if (aEvent.button != 0 || this.#toolbar.id == "zen-sidebar-top-buttons") { // Fix https://github.com/zen-browser/desktop/issues/7718
++        if (aEvent.button != 0 || this.#toolbar.id == "zen-sidebar-top-buttons") { // Fix https://github.com/enso-browser/desktop/issues/7718
            break;
          }
          if (aEvent.target == this.#defaultListButton) {
