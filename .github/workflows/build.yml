@@ -126,7 +126,7 @@ jobs:
     permissions:
       contents: write
     name: Generate build data
-    runs-on: blacksmith-2vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
     needs: buildid
     outputs:
       build_date: ${{ steps.data.outputs.builddate }}
@@ -140,7 +140,7 @@ jobs:
           token: ${{ secrets.DEPLOY_KEY }}
 
       - name: Setup Node.js
-        uses: useblacksmith/setup-node@v5
+        uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
 
@@ -200,7 +200,7 @@ jobs:
           token: ${{ secrets.DEPLOY_KEY }}
 
       - name: Setup Node.js
-        uses: useblacksmith/setup-node@v5
+        uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
 
@@ -242,7 +242,7 @@ jobs:
           token: ${{ secrets.DEPLOY_KEY }}
 
       - name: Setup Node.js
-        uses: useblacksmith/setup-node@v5
+        uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
 
@@ -376,7 +376,7 @@ jobs:
     name: AppImage build - Linux ${{ matrix.arch }}
     permissions:
       contents: write
-    runs-on: blacksmith-2vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         arch: [x86_64, aarch64]
@@ -389,7 +389,7 @@ jobs:
           token: ${{ secrets.DEPLOY_KEY }}
 
       - name: Setup Node.js
-        uses: useblacksmith/setup-node@v5
+        uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
 
@@ -415,7 +415,7 @@ jobs:
 
           if [ "${{ inputs.update_branch }}" = "twilight" ]; then
             sed -i -e 's/Name=Enso Browser/Name=Enso Twilight/g' build/AppDir/enso.desktop
-            sed -i -e 's/StartupWMClass=zen/StartupWMClass=enso-twilight/g' build/AppDir/enso.desktop
+            sed -i -e 's/StartupWMClass=enso/StartupWMClass=enso-twilight/g' build/AppDir/enso.desktop
           fi
 
           APPDIR=build/AppDir
@@ -454,7 +454,7 @@ jobs:
           path: ./dist/enso-${{ matrix.arch }}.AppImage.zsync
 
   stop-self-hosted:
-    runs-on: blacksmith-2vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
     needs: [windows-step-3, linux]
     if: always()
     steps:
@@ -495,7 +495,7 @@ jobs:
         lint,
         stop-self-hosted,
       ]
-    runs-on: blacksmith-2vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
     environment:
       name: ${{ inputs.update_branch == 'release' && 'Deploy-Release' || 'Deploy-Twilight' }}
 
@@ -622,7 +622,7 @@ jobs:
     permissions: write-all
     name: Prepare Flatpak
     needs: [release, linux, build-data]
-    runs-on: blacksmith-2vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout Flatpak repository
@@ -661,7 +661,7 @@ jobs:
           pwd
           ls .
           ls ..
-          mv releases.xml ./flatpak/app.enso_browser.zen.metainfo.xml
+          mv releases.xml ./flatpak/app.enso_browser.enso.metainfo.xml
           # output the version to the file
           echo -n ${{ needs.build-data.outputs.version }} > ./flatpak/version
 
@@ -681,13 +681,13 @@ jobs:
     permissions: write-all
     name: Release Flatpak
     needs: [prepare-flatpak, build-data]
-    runs-on: blacksmith-2vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout Flatpak repository
         uses: actions/checkout@v4
         with:
-          repository: flathub/app.enso_browser.zen
+          repository: flathub/app.enso_browser.enso
           token: ${{ secrets.DEPLOY_KEY }}
 
       - name: Download Linux x86_64 build

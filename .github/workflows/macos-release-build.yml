@@ -138,7 +138,7 @@ jobs:
           mkdir -p ~/.enso-keys
           echo "${{ secrets.ENSO_SAFEBROWSING_API_KEY }}" > ~/.enso-keys/safebrowsing.dat
 
-      - name: Build Zen
+      - name: Build Enso
         env:
           SURFER_COMPAT: ${{ matrix.arch }}
           ENSO_RELEASE_BRANCH: ${{ inputs.release-branch }}
