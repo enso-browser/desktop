@@ -7,7 +7,7 @@ index cfb6b8dd5443966d0635c3d7b477a68eca8fa9e0..c876890706b1a314c7760bbe1ff5e9eb
        hideClose: true,
        popupOptions: {
 -        position: "bottomright topright",
-+        position: gZenUIManager.panelUIPosition(),
++        position: gEnsoUIManager.panelUIPosition(),
        },
      };
  
@@ -16,7 +16,7 @@ index cfb6b8dd5443966d0635c3d7b477a68eca8fa9e0..c876890706b1a314c7760bbe1ff5e9eb
        timeout: Date.now() + 30000,
        popupOptions: {
 -        position: "bottomright topright",
-+        position: gZenUIManager.panelUIPosition(),
++        position: gEnsoUIManager.panelUIPosition(),
        },
      };
  
@@ -25,7 +25,7 @@ index cfb6b8dd5443966d0635c3d7b477a68eca8fa9e0..c876890706b1a314c7760bbe1ff5e9eb
    // in the "PopupNotificationsBeforeAnchor" handler elsewhere in this file.
    getPopupAnchorID(aBrowser, aWindow) {
 -    const anchorID = "unified-extensions-button";
-+    const anchorID = "zen-site-data-icon-button";
++    const anchorID = "enso-site-data-icon-button";
      const attr = anchorID + "popupnotificationanchor";
  
      if (!aBrowser[attr]) {
@@ -166,7 +166,7 @@ index cfb6b8dd5443966d0635c3d7b477a68eca8fa9e0..c876890706b1a314c7760bbe1ff5e9eb
 -        PanelMultiView.openPopup(panel, this._button, {
 -          position: "bottomright topright",
 +        PanelMultiView.openPopup(panel, button, {
-+          position: gZenUIManager.panelUIPosition(panel, button),
++          position: gEnsoUIManager.panelUIPosition(panel, button),
            triggerEvent: aEvent,
          });
        }
@@ -184,12 +184,12 @@ index cfb6b8dd5443966d0635c3d7b477a68eca8fa9e0..c876890706b1a314c7760bbe1ff5e9eb
        ? CustomizableUI.AREA_NAVBAR
        : CustomizableUI.AREA_ADDONS;
      let newPosition = shouldPinToToolbar ? undefined : 0;
-+    await gZenVerticalTabsManager._preCustomize();
++    await gEnsoVerticalTabsManager._preCustomize();
  
      CustomizableUI.addWidgetToArea(widgetId, newArea, newPosition);
      // addWidgetToArea() will trigger onWidgetAdded or onWidgetMoved as needed,
      // and our handlers will call updateAttention() as needed.
-+    await gZenVerticalTabsManager._postCustomize();
++    await gEnsoVerticalTabsManager._postCustomize();
    },
  
    async moveWidget(menu, direction) {

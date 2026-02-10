@@ -6,7 +6,7 @@ index 288a79e5fb4da24cffcb30fb4b8adc9604b15d26..bf9bd3e666dfb6298dbeec0546cae223
    },
  
    onLoad() {
-+    Services.scriptloader.loadSubScript("chrome://browser/content/zenThemeModifier.js", window);
++    Services.scriptloader.loadSubScript("chrome://browser/content/ensoThemeModifier.js", window);
      gBrowser.addEventListener("DOMUpdateBlockedPopups", e =>
        PopupAndRedirectBlockerObserver.handleEvent(e)
      );
@@ -14,7 +14,7 @@ index 288a79e5fb4da24cffcb30fb4b8adc9604b15d26..bf9bd3e666dfb6298dbeec0546cae223
  
      this._handleURIToLoad();
  
-+    gZenWorkspaces.selectStartPage();
++    gEnsoWorkspaces.selectStartPage();
      Services.obs.addObserver(gIdentityHandler, "perm-changed");
      Services.obs.addObserver(gRemoteControl, "devtools-socket");
      Services.obs.addObserver(gRemoteControl, "marionette-listening");

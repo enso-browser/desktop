@@ -17,7 +17,7 @@ index 098742100858b266aebc8f764f918c85815f3c5f..71b8f8d71d48229fc96d6c84c635d090
      tab.ownerGlobal.focus();
  
 -    gBrowser.selectedTab = tab;
-+    browser?.ownerGlobal?.gZenWorkspaces.switchIfNeeded(browser);
++    browser?.ownerGlobal?.gEnsoWorkspaces.switchIfNeeded(browser);
      await this.closeSinglePipWindow({ reason: "Unpip", actorRef: pipActor });
    },
  

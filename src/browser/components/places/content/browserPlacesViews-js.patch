@@ -13,7 +13,7 @@ index bbfbe9c703dff25bf939369f5b99cdaa76a5ae24..c28688d488960c1de73baf4c0e69b9f8
 +      let child = resultNode.getChild(i);
 +      // Skip nodes that don't belong in current workspace
 +      if (PlacesUtils.nodeIsURI(child) || PlacesUtils.containerTypes.includes(child.type)) {
-+        if (typeof gZenWorkspaces !== 'undefined' && gZenWorkspaces.isBookmarkInAnotherWorkspace(child)) {
++        if (typeof gEnsoWorkspaces !== 'undefined' && gEnsoWorkspaces.isBookmarkInAnotherWorkspace(child)) {
 +          continue;
 +        }
 +      }
@@ -33,7 +33,7 @@ index bbfbe9c703dff25bf939369f5b99cdaa76a5ae24..c28688d488960c1de73baf4c0e69b9f8
            "scheme",
            PlacesUIUtils.guessUrlSchemeForUI(aPlacesNode.uri)
          );
-+        element.addEventListener("command", (e) => window.gZenGlanceManager.openGlanceForBookmark(e));
++        element.addEventListener("command", (e) => window.gEnsoGlanceManager.openGlanceForBookmark(e));
        } else if (PlacesUtils.containerTypes.includes(type)) {
          element = document.createXULElement("menu");
          element.setAttribute("container", "true");
@@ -52,7 +52,7 @@ index bbfbe9c703dff25bf939369f5b99cdaa76a5ae24..c28688d488960c1de73baf4c0e69b9f8
 +    for (let i = 0; i < cc; i++) {
 +      let child = this._resultNode.getChild(i);
 +      if (PlacesUtils.nodeIsURI(child) || PlacesUtils.containerTypes.includes(child.type)) {
-+        if (!(typeof gZenWorkspaces !== 'undefined' && gZenWorkspaces.isBookmarkInAnotherWorkspace(child))) {
++        if (!(typeof gEnsoWorkspaces !== 'undefined' && gEnsoWorkspaces.isBookmarkInAnotherWorkspace(child))) {
 +          visibleNodes.push(child);
 +        }
 +      } else {
@@ -115,7 +115,7 @@ index bbfbe9c703dff25bf939369f5b99cdaa76a5ae24..c28688d488960c1de73baf4c0e69b9f8
            PlacesUIUtils.guessUrlSchemeForUI(aChild.uri)
          );
 +
-+        button.addEventListener("command", gZenGlanceManager.openGlanceForBookmark.bind(gZenGlanceManager));
++        button.addEventListener("command", gEnsoGlanceManager.openGlanceForBookmark.bind(gEnsoGlanceManager));
        }
      }
  
@@ -124,7 +124,7 @@ index bbfbe9c703dff25bf939369f5b99cdaa76a5ae24..c28688d488960c1de73baf4c0e69b9f8
        );
        element.setAttribute("label", PlacesUIUtils.getBestTitle(placesNode));
 -
-+      element.addEventListener("command", gZenGlanceManager.openGlanceForBookmark.bind(gZenGlanceManager));
++      element.addEventListener("command", gEnsoGlanceManager.openGlanceForBookmark.bind(gEnsoGlanceManager));
        let icon = placesNode.icon;
        if (icon) {
          element.setAttribute("image", icon);

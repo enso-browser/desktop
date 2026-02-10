@@ -260,7 +260,7 @@ jobs:
           export ENSO_CROSS_COMPILING=1
           export ENSO_RELEASE=1
           npm run package
-          mv ./dist/zen-$(npm run --silent surfer -- get version | xargs).en-US.win64${{ matrix.arch == 'aarch64' && '-aarch64' || '' }}.zip zen.win64.zip
+          mv ./dist/enso-$(npm run --silent surfer -- get version | xargs).en-US.win64${{ matrix.arch == 'aarch64' && '-aarch64' || '' }}.zip enso.win64.zip
           ls ./dist
           ls .
 
@@ -272,14 +272,14 @@ jobs:
         if: ${{ inputs.generate-gpo && matrix.arch == 'x86_64' }}
         run: |
           set -x
-          mv ./zen.win64.zip ./zen.win64-pgo-stage-1.zip
+          mv ./enso.win64.zip ./enso.win64-pgo-stage-1.zip
 
       - name: Rename artifacts
         if: ${{ !inputs.generate-gpo }}
         run: |
-          mv ./zen.win64.zip zen.win-${{ matrix.arch == 'aarch64' && 'arm64' || matrix.arch }}.zip
+          mv ./enso.win64.zip enso.win-${{ matrix.arch == 'aarch64' && 'arm64' || matrix.arch }}.zip
           mv ./dist/output.mar windows${{ matrix.arch == 'aarch64' && '-arm64' || '' }}.mar
-          mv ./dist/zen.installer.exe ./zen.installer${{ matrix.arch == 'aarch64' && '-arm64' || '' }}.exe
+          mv ./dist/enso.installer.exe ./enso.installer${{ matrix.arch == 'aarch64' && '-arm64' || '' }}.exe
 
       - name: Upload artifact (PGO)
         uses: actions/upload-artifact@v4
@@ -287,7 +287,7 @@ jobs:
         with:
           retention-days: 5
           name: ${{ matrix.arch == 'aarch64' && 'arm64' || matrix.arch }}-${{ inputs.profile-data-path-archive }}
-          path: ./zen.win64-pgo-stage-1.zip
+          path: ./enso.win64-pgo-stage-1.zip
 
       - name: Remove unnecessary files from obj
         if: ${{ !inputs.generate-gpo }}
@@ -317,16 +317,16 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           retention-days: 5
-          name: zen.win-${{ matrix.arch == 'aarch64' && 'arm64' || matrix.arch }}.zip
-          path: ./zen.win-${{ matrix.arch == 'aarch64' && 'arm64' || matrix.arch }}.zip
+          name: enso.win-${{ matrix.arch == 'aarch64' && 'arm64' || matrix.arch }}.zip
+          path: ./enso.win-${{ matrix.arch == 'aarch64' && 'arm64' || matrix.arch }}.zip
 
       - name: Upload artifact (if Twilight branch, installer)
         if: ${{ inputs.release-branch == 'twilight' && !inputs.generate-gpo }}
         uses: actions/upload-artifact@v4
         with:
           retention-days: 5
-          name: zen.installer${{ matrix.arch == 'aarch64' && '-arm64' ||  '' }}.exe
-          path: ./zen.installer${{ matrix.arch == 'aarch64' && '-arm64' || '' }}.exe
+          name: enso.installer${{ matrix.arch == 'aarch64' && '-arm64' ||  '' }}.exe
+          path: ./enso.installer${{ matrix.arch == 'aarch64' && '-arm64' || '' }}.exe
 
       - name: Upload artifact (if Twilight branch, .mar)
         if: ${{ inputs.release-branch == 'twilight' && !inputs.generate-gpo }}

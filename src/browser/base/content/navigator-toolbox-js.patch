@@ -15,7 +15,7 @@ index 15469e9d9b91c1eaef2578c9e43b6999edac3392..553402b41bc15f7cd99bf87c54416dc6
          #forward-button,
          #reload-button ,
          #reader-mode-button,
-+        #zen-tabs-wrapper,
++        #enso-tabs-wrapper,
          #picture-in-picture-button,
          #urlbar-zoom-button,
          #star-button-box,
@@ -23,7 +23,7 @@ index 15469e9d9b91c1eaef2578c9e43b6999edac3392..553402b41bc15f7cd99bf87c54416dc6
          case "vertical-tabs-newtab-button":
          case "tabs-newtab-button":
          case "new-tab-button":
-+        case "zen-tabs-wrapper":
++        case "enso-tabs-wrapper":
            gBrowser.handleNewTabMiddleClick(element, event);
            break;
  
@@ -31,7 +31,7 @@ index 15469e9d9b91c1eaef2578c9e43b6999edac3392..553402b41bc15f7cd99bf87c54416dc6
          #downloads-button,
          #fxa-toolbar-menu-button,
          #unified-extensions-button,
-+        #zen-site-data-icon-button,
++        #enso-site-data-icon-button,
          #library-button,
          #split-view-button
        `);
@@ -39,13 +39,13 @@ index 15469e9d9b91c1eaef2578c9e43b6999edac3392..553402b41bc15f7cd99bf87c54416dc6
            gUnifiedExtensions.togglePanel(event);
            break;
  
-+        case "zen-site-data-icon-button":
++        case "enso-site-data-icon-button":
 +          gUnifiedExtensions.togglePanel(
 +            event,
 +            null,
-+            window.gZenSiteDataPanel.unifiedPanel,
-+            window.gZenSiteDataPanel.unifiedPanelView,
-+            window.gZenSiteDataPanel.anchor,
++            window.gEnsoSiteDataPanel.unifiedPanel,
++            window.gEnsoSiteDataPanel.unifiedPanelView,
++            window.gEnsoSiteDataPanel.anchor,
 +          );
 +          break;
 +

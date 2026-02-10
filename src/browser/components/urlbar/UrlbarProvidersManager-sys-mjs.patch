@@ -6,7 +6,7 @@ index 3a9cb4735185691df021157e42f8b9cc93f14aa1..00d7eaf3177d27df1e0db5303405ce28
      if (
        result.heuristic &&
        this.context.searchMode &&
-+      !(this.context.searchMode.source === lazy.UrlbarUtils.RESULT_SOURCE.ZEN_ACTIONS && result.payload?.zenAction) &&
++      !(this.context.searchMode.source === lazy.UrlbarUtils.RESULT_SOURCE.ENSO_ACTIONS && result.payload?.ensoAction) &&
        (!this.context.trimmedSearchString ||
          (!this.context.searchMode.engineName && !result.autofill))
      ) {

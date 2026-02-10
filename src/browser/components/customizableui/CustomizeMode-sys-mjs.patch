@@ -24,7 +24,7 @@ index 52e93e9d9d77f6e410d72bee707fccf26f728004..1142f096e1221213195453d60507ba1b
      return (
        aNode.localName == "toolbarbutton" ||
        aNode.localName == "toolbaritem" ||
-+      aNode.localName == "zen-workspace-icons" ||
++      aNode.localName == "enso-workspace-icons" ||
        aNode.localName == "toolbarseparator" ||
        aNode.localName == "toolbarspring" ||
        aNode.localName == "toolbarspacer"

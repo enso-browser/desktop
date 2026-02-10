@@ -1,0 +1,20 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+#include ../../../enso/common/jar.inc.mn
+#include ../../../enso/compact-mode/jar.inc.mn
+#include ../../../enso/drag-and-drop/jar.inc.mn
+#include ../../../enso/split-view/jar.inc.mn
+#include ../../../enso/mods/jar.inc.mn
+#include ../../../enso/workspaces/jar.inc.mn
+#include ../../../enso/tabs/jar.inc.mn
+#include ../../../enso/kbs/jar.inc.mn
+#include ../../../enso/glance/jar.inc.mn
+#include ../../../enso/folders/jar.inc.mn
+#include ../../../enso/welcome/jar.inc.mn
+#include ../../../enso/media/jar.inc.mn
+#include ../../../enso/downloads/jar.inc.mn
+#include ../../../enso/images/jar.inc.mn
+#include ../../../enso/vendor/jar.inc.mn
+#include ../../../enso/fonts/jar.inc.mn

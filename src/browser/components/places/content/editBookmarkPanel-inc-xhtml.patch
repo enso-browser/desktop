@@ -7,7 +7,7 @@ index 40366677b60123c66bf0739d1b2374b423d3061c..a2774e99726407d95011126ea2a272f0
                class="editBMPanel_nameRow hideable"
                type="text"/>
 -
-+<hbox flex="1" class="zenEditBMPanel_fieldContainer">
++<hbox flex="1" class="ensoEditBMPanel_fieldContainer">
    <label data-l10n-id="bookmark-overlay-url"
           class="editBMPanel_locationRow hideable"
           control="editBMPanel_locationField"/>
@@ -16,7 +16,7 @@ index 40366677b60123c66bf0739d1b2374b423d3061c..a2774e99726407d95011126ea2a272f0
                type="text"/>
 -
 +</hbox>
-+<hbox flex="1" class="zenEditBMPanel_fieldContainer">
++<hbox flex="1" class="ensoEditBMPanel_fieldContainer">
    <label data-l10n-id="bookmark-overlay-location-2"
           class="editBMPanel_folderRow hideable"
           control="editBMPanel_folderMenuList"/>
@@ -25,8 +25,8 @@ index 40366677b60123c66bf0739d1b2374b423d3061c..a2774e99726407d95011126ea2a272f0
              data-l10n-id="bookmark-overlay-folders-expander2"/>
    </hbox>
 +  </hbox>
-+    <hbox flex="1" class="zenEditBMPanel_fieldContainer">
-+      <label data-l10n-id="zen-bookmark-edit-panel-workspace-selector"
++    <hbox flex="1" class="ensoEditBMPanel_fieldContainer">
++      <label data-l10n-id="enso-bookmark-edit-panel-workspace-selector"
 +             class="hideable"
 +             control="editBMPanel_workspacesSelectorExpander"/>
 +      <div id="editBMPanel_workspaceDropdown"

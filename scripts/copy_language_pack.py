@@ -43,10 +43,10 @@ def copy_browser_locales(lang_id: str):
 
   # If the language is 'en-US', handle special processing
   if lang_id == "en-US":
-    # Remove files starting with "zen" in the 'en-US' directory
+    # Remove files starting with "enso" in the 'en-US' directory
     for root, _, files in os.walk(lang_path):
       for file in files:
-        if file.startswith("zen"):
+        if file.startswith("enso"):
           os.remove(os.path.join(root, file))
 
     # Copy files from the source directory

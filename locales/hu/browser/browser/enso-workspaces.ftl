@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Más munkakörnyezetek
+enso-panel-ui-spaces-label = 
+    .label = Környezetek
+enso-panel-ui-workspaces-create = 
+    .label = Környezet létrehozása
+enso-panel-ui-folder-create = 
+    .label = Mappa létrehozása
+enso-panel-ui-new-empty-split = 
+    .label = Új osztott nézet
+enso-workspaces-panel-context-delete = 
+    .label = Környezet törlése
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Átnevezés
+enso-workspaces-panel-change-icon = 
+    .label = Ikon módosítása
+enso-workspaces-panel-context-default-profile = 
+    .label = Profil beállítása
+enso-workspaces-panel-unload = 
+    .label = Környezet ürítése
+enso-workspaces-how-to-reorder-title = Hogyan rendezhetők át a munkakörnyezetek
+enso-workspaces-how-to-reorder-desc = Húzza az oldalsáv alján lévő ikonokat az átrendezéshez
+enso-workspaces-change-theme = 
+    .label = Téma szerkesztése
+enso-workspaces-panel-context-open = 
+    .label = Munkakörnyezet megnyitása
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Környezet módosítása
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Környezetek
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Komplementer
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Szétválasztás
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Analóg
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Triád
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Lebegő
+enso-panel-ui-gradient-click-to-add = Kattintson egy szín hozzáadásához
+enso-workspace-creation-name = 
+    .placeholder = Környezet neve
+enso-move-tab-to-workspace-button = 
+    .label = Áthelyezés...
+    .tooltiptext = Az ablak összes lapjának áthelyezése egy környezetbe
+enso-workspaces-panel-context-reorder = 
+    .label = Környezetek átrendezése
+enso-workspace-creation-profile = Profil
+    .tooltiptext = A profilok arra szolgálnak, hogy a sütiket és a webhelyadatokat elkülönítsék a munkakörnyezetek között.
+enso-workspace-creation-header = Környezet létrehozása
+enso-workspace-creation-label = A munkakörnyezetek a lapok és munkamenetek rendszerezésére szolgálnak.
+enso-workspaces-delete-workspace-title = Munkakörnyezet törlése?
+enso-workspaces-delete-workspace-body = Biztosan törölni szeretnéd ezt: { $name }? Ez a művelet visszafordíthatatlan.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Lapok bezárva! A visszavonáshoz használd a(z) <span>{ $shortcut }</span>.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Törlés
+    .tooltiptext = Összes rögzítetlen lap bezárása
+enso-panel-ui-workspaces-change-forward = 
+    .label = Következő környezet
+enso-panel-ui-workspaces-change-back = 
+    .label = Előző környezet

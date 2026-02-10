@@ -6,7 +6,7 @@ index b97fa81cef276e4bb22414b7c182e00b4bb835dc..1f489eceead0aa331ace59281cb777db
      RESTRICT_SEARCH_KEYWORD: "restrictSearchKeyword",
      SUGGESTED_INDEX: "suggestedIndex",
      TAIL_SUGGESTION: "tailSuggestion",
-+    ZEN_ACTION: "zenAction",
++    ENSO_ACTION: "ensoAction",
    }),
  
    // Defines provider types.
@@ -14,7 +14,7 @@ index b97fa81cef276e4bb22414b7c182e00b4bb835dc..1f489eceead0aa331ace59281cb777db
      OTHER_NETWORK: 6,
      ADDON: 7,
      ACTIONS: 8,
-+    ZEN_ACTIONS: 9,
++    ENSO_ACTIONS: 9,
    }),
  
    // Per-result exposure telemetry.
@@ -23,7 +23,7 @@ index b97fa81cef276e4bb22414b7c182e00b4bb835dc..1f489eceead0aa331ace59281cb777db
          case "UrlbarProviderHistoryUrlHeuristic":
            return this.RESULT_GROUP.HEURISTIC_HISTORY_URL;
 +        case "ZenUrlbarProviderGlobalActions":
-+          return this.RESULT_GROUP.ZEN_ACTION;
++          return this.RESULT_GROUP.ENSO_ACTION;
          case "UrlbarProviderOmnibox":
            return this.RESULT_GROUP.HEURISTIC_OMNIBOX;
          case "UrlbarProviderRestrictKeywordsAutofill":

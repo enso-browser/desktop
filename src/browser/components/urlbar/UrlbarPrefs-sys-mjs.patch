@@ -6,7 +6,7 @@ index 41e8aa0ee37fef0d24d41f2c4e776c39ed3895f6..293e993175bbbd67fa1541db6b9419b6
     */
    let rootGroup = {
      children: [
-+      { children: [{ group: lazy.UrlbarUtils.RESULT_GROUP.ZEN_ACTION }] },
++      { children: [{ group: lazy.UrlbarUtils.RESULT_GROUP.ENSO_ACTION }] },
        // heuristic
        {
          maxResultCount: 1,

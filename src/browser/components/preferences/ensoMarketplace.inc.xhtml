@@ -1,0 +1,42 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+<html:template id="template-paneZenMarketplace">
+<hbox id="ZenMarketplaceCategory"
+      class="subcategory"
+      hidden="true"
+      data-category="paneZenMarketplace">
+<html:h1 data-l10n-id="pane-enso-marketplace-title"/>
+</hbox>
+
+<groupbox id="ensoMarketplaceGroup" data-category="paneZenMarketplace" hidden="true" class="highlighting-group">
+
+      <hbox id="ensoMarketplaceHeader">
+        <html:h2 data-l10n-id="enso-theme-marketplace-header"/>
+      </hbox>
+      <description class="description-deemphasized" data-l10n-id="enso-theme-marketplace-description" />
+      <hbox class="indent">
+            <html:a id="ensoThemeMarketplaceLink" href="https://enso-browser.app/mods/" target="_blank" data-l10n-id="enso-theme-marketplace-link" />
+            <button id="ensoThemeMarketplaceImport" data-l10n-id="enso-theme-marketplace-import-button" />
+            <button id="ensoThemeMarketplaceExport" data-l10n-id="enso-theme-marketplace-export-button" />
+            <button id="ensoThemeMarketplaceCheckForUpdates" data-l10n-id="enso-theme-marketplace-check-for-updates-button" />
+      </hbox>
+
+      <checkbox id="ensoThemeMarketplaceAutoUpdate"
+            data-l10n-id="enso-themes-auto-update"
+            preference="enso.mods.auto-update"/>
+
+      <description class="description-deemphasized" data-l10n-id="enso-theme-marketplace-updates-success" hidden="true" id="ensoThemeMarketplaceUpdatesSuccess" />
+      <description class="description-deemphasized" data-l10n-id="enso-theme-marketplace-updates-failure" hidden="true" id="ensoThemeMarketplaceUpdatesFailure" />
+
+      <description class="description-deemphasized" data-l10n-id="enso-theme-marketplace-import-success" hidden="true" id="ensoThemeMarketplaceImportSuccess" />
+      <description class="description-deemphasized" data-l10n-id="enso-theme-marketplace-import-failure" hidden="true" id="ensoThemeMarketplaceImportFailure" />
+
+      <description class="description-deemphasized" data-l10n-id="enso-theme-marketplace-export-success" hidden="true" id="ensoThemeMarketplaceExportSuccess" />
+      <description class="description-deemphasized" data-l10n-id="enso-theme-marketplace-export-failure" hidden="true" id="ensoThemeMarketplaceExportFailure" />
+
+      <vbox id="ensoThemeMarketplaceList"></vbox>
+</groupbox>
+
+</html:template>

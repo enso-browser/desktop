@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Χώροι Εργασίας
+enso-panel-ui-spaces-label = 
+    .label = Spaces
+enso-panel-ui-workspaces-create = 
+    .label = Δημιουργία Χώρου
+enso-panel-ui-folder-create = 
+    .label = Create Folder
+enso-panel-ui-new-empty-split = 
+    .label = New Split
+enso-workspaces-panel-context-delete = 
+    .label = Διαγραφή Χώρου Εργασίας
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Αλλαγή Ονόματος
+enso-workspaces-panel-change-icon = 
+    .label = Αλλαγή Εικονιδίου
+enso-workspaces-panel-context-default-profile = 
+    .label = Ορισμός Προφίλ
+enso-workspaces-panel-unload = 
+    .label = Unload Space
+enso-workspaces-how-to-reorder-title = Πώς να αναδιατάξετε τους χώρους
+enso-workspaces-how-to-reorder-desc = Σύρετε τα εικονίδια χώρου στο κάτω μέρος της πλαϊνής μπάρας για να τα αναδιατάξετε
+enso-workspaces-change-theme = 
+    .label = Επεξεργασία Θέματος
+enso-workspaces-panel-context-open = 
+    .label = Άνοιγμα Χώρου Εργασίας
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Επεξεργασία Χώρου Εργασίας
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Spaces
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Συμπληρωματικό
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Διάσπαση
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Ανάλογο
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Τριαδικό
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Αιωρούμενο
+enso-panel-ui-gradient-click-to-add = Κλικ για προσθήκη χρώματος
+enso-workspace-creation-name = 
+    .placeholder = Όνομα Χώρου
+enso-move-tab-to-workspace-button = 
+    .label = Move To...
+    .tooltiptext = Move all tabs in this window to a Space
+enso-workspaces-panel-context-reorder = 
+    .label = Αναδιάταξη Χώρων
+enso-workspace-creation-profile = Προφίλ
+    .tooltiptext = Τα προφίλ χρησιμοποιούνται για να διαχωρίζουν τα cookies και τα δεδομένα του ιστότοπου μεταξύ των χώρων.
+enso-workspace-creation-header = Δημιουργία Χώρου
+enso-workspace-creation-label = Οι χώροι χρησιμοποιούνται για την οργάνωση των καρτελών και των συνεδριών σας.
+enso-workspaces-delete-workspace-title = Διαγραφή Χώρου Εργασίας;
+enso-workspaces-delete-workspace-body = Are you sure you want to delete { $name }? This action cannot be undone.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Tabs Closed! Use <span>{ $shortcut }</span> to undo.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Clear
+    .tooltiptext = Close all unpinned tabs
+enso-panel-ui-workspaces-change-forward = 
+    .label = Next Space
+enso-panel-ui-workspaces-change-back = 
+    .label = Previous Space

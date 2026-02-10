@@ -1,0 +1,6 @@
+enso-new-web-panel-url = 
+    .value = URL d’origine
+    .accesskey = I
+enso-new-web-panel-user-agent = 
+    .value = Afficher ce panneau web en mode mobile
+    .accesskey = m

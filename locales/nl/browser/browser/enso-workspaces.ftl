@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Ruimtes
+enso-panel-ui-spaces-label = 
+    .label = Spaces
+enso-panel-ui-workspaces-create = 
+    .label = Ruimte aanmaken
+enso-panel-ui-folder-create = 
+    .label = Map aanmaken
+enso-panel-ui-new-empty-split = 
+    .label = Nieuwe splitsing
+enso-workspaces-panel-context-delete = 
+    .label = Ruimte verwijderen
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Naam wijzigen
+enso-workspaces-panel-change-icon = 
+    .label = Icoon wijzigen
+enso-workspaces-panel-context-default-profile = 
+    .label = Profiel instellen
+enso-workspaces-panel-unload = 
+    .label = Ruimte ontladen
+enso-workspaces-how-to-reorder-title = Hoe ruimtes te herschikken
+enso-workspaces-how-to-reorder-desc = Sleep het ruimte icoon onderaan de zijbalk om ze te herschikken
+enso-workspaces-change-theme = 
+    .label = Thema bewerken
+enso-workspaces-panel-context-open = 
+    .label = Ruimte openen
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Ruimte bewerken
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Spaces
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Aanvullend
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Splitsen
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Vergelijkbaar
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Driezijdig
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Zwevend
+enso-panel-ui-gradient-click-to-add = Klik om een kleur toe te voegen
+enso-workspace-creation-name = 
+    .placeholder = Ruimte naam
+enso-move-tab-to-workspace-button = 
+    .label = Move To...
+    .tooltiptext = Move all tabs in this window to a Space
+enso-workspaces-panel-context-reorder = 
+    .label = Ruimtes herschikken
+enso-workspace-creation-profile = Profiel
+    .tooltiptext = Profielen worden gebruikt om cookies en site-gegevens tussen ruimtes te scheiden.
+enso-workspace-creation-header = Maak een ruimte
+enso-workspace-creation-label = Ruimtes worden gebruikt om je tabbladen en sessies te organiseren.
+enso-workspaces-delete-workspace-title = Ruimte verwijderen?
+enso-workspaces-delete-workspace-body = Weet je zeker dat je { $name } wilt verwijderen? Deze actie kan niet ongedaan gemaakt worden.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Tabbladen gesloten! Gebruik <span>{ $shortcut }</span> om ongedaan te maken.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Wissen
+    .tooltiptext = Alle niet-vastgezette tabbladen sluiten
+enso-panel-ui-workspaces-change-forward = 
+    .label = Next Space
+enso-panel-ui-workspaces-change-back = 
+    .label = Previous Space

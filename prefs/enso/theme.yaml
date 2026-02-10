@@ -1,0 +1,47 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+- name: enso.theme.accent-color
+  value: "AccentColor"
+
+- name: enso.theme.content-element-separation
+  value: 8
+
+- name: enso.theme.dark-mode-bias
+  value: 0.3
+
+- name: enso.theme.gradient.show-custom-colors
+  value: false
+
+- name: enso.theme.essentials-favicon-bg
+  value: true
+
+- name: enso.theme.acrylic-elements
+  value: false
+
+- name: enso.theme.disable-lightweight
+  value: true
+
+- name: enso.theme.use-system-colors
+  value: false
+
+- name: enso.theme.hide-tab-throbber
+  value: true
+
+- name: enso.theme.styled-status-panel
+  value: "@IS_TWILIGHT@"
+
+- name: enso.theme.styled-status-panel
+  value: true
+  condition: "defined(XP_MACOSX)"
+
+- name: enso.theme.hide-unified-extensions-button
+  value: true
+
+# ==== Mark: border radius ====
+
+# -1 will use platform-native values
+# Set to a positive value to override with a custom radius
+- name: enso.theme.border-radius
+  value: -1

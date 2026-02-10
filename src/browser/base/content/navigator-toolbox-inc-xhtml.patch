@@ -26,9 +26,9 @@ index 68c24f730d56f548cf1e286198a04f8363529378..eb9aa5e77cf549062d8d3770f8057cea
            <html:sidebar-pins-promo id="drag-to-pin-promo-card"></html:sidebar-pins-promo>
            <arrowscrollbox id="pinned-tabs-container" orient="horizontal" clicktoscroll=""></arrowscrollbox>
            <splitter orient="vertical" id="vertical-pinned-tabs-splitter" resizebefore="sibling" resizeafter="none" hidden="true"/>
-+<html:div id="zen-overflow-extensions-list" skipintoolbarset="true"></html:div>
-+<html:div id="zen-essentials" skipintoolbarset="true"></html:div>
-+<html:div id="zen-tabs-wrapper">
++<html:div id="enso-overflow-extensions-list" skipintoolbarset="true"></html:div>
++<html:div id="enso-essentials" skipintoolbarset="true"></html:div>
++<html:div id="enso-tabs-wrapper">
            <hbox class="tab-drop-indicator" hidden="true"/>
            <arrowscrollbox id="tabbrowser-arrowscrollbox" orient="horizontal" flex="1" clicktoscroll="" scrolledtostart="" scrolledtoend="">
              <tab is="tabbrowser-tab" class="tabbrowser-tab" selected="true" visuallyselected="" fadein=""/>
@@ -45,7 +45,7 @@ index 68c24f730d56f548cf1e286198a04f8363529378..eb9aa5e77cf549062d8d3770f8057cea
      <toolbarbutton class="content-analysis-indicator toolbarbutton-1 content-analysis-indicator-icon"/>
  
 -#include titlebar-items.inc.xhtml
-+#include zen-sidebar-icons.inc.xhtml
++#include enso-sidebar-icons.inc.xhtml
  
    </toolbar>
 +</hbox>

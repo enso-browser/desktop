@@ -6,7 +6,7 @@ index ee8c5fc6399092cbb45657bb3ee49178f797349e..f30ff2db77854fb4acca6279369e313d
  /* ::::: tree ::::: */
  
  tree {
-+  --color-accent-primary: var(--zen-primary-color, inherit);
++  --color-accent-primary: var(--enso-primary-color, inherit);
    margin: 0 4px;
    background-color: Field;
    color: FieldText;

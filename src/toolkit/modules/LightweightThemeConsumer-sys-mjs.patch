@@ -7,7 +7,7 @@ index c12ba1cd3891dab6ccf07e0ee069d44cc11f3c8f..d7e35aa2dc93629f74e62d6437e3a064
        processColor(rgbaChannels) {
          if (!rgbaChannels || rgbaChannels.a == 0) {
 -          return "white";
-+          return "var(--zen-colors-primary)";
++          return "var(--enso-colors-primary)";
          }
          // Remove the alpha channel
          const { r, g, b } = rgbaChannels;
@@ -16,7 +16,7 @@ index c12ba1cd3891dab6ccf07e0ee069d44cc11f3c8f..d7e35aa2dc93629f74e62d6437e3a064
        this.FORCED_COLORS_OVERRIDE_ENABLED &&
        this.forcedColorsMediaQuery?.matches;
 -    if (!theme || forcedColorsThemeOverride) {
-+    if (!theme || forcedColorsThemeOverride || Services.prefs.getBoolPref("zen.theme.disable-lightweight")) {
++    if (!theme || forcedColorsThemeOverride || Services.prefs.getBoolPref("enso.theme.disable-lightweight")) {
        theme = { id: DEFAULT_THEME_ID };
      }
      let builtinThemeConfig = lazy.BuiltInThemeConfig.get(theme.id);

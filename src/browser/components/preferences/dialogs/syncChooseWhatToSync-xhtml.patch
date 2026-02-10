@@ -8,7 +8,7 @@ index ef127a1bc2e3ea4221b641156c38a74edb3b44ae..acd39fe7f6dc7ec03ea50928e2d00279
        />
 +      <html:link
 +        rel="localization"
-+        href="browser/preferences/zen-preferences.ftl"
++        href="browser/preferences/enso-preferences.ftl"
 +      />
      </linkset>
      <script src="chrome://global/content/preferencesBindings.js" />

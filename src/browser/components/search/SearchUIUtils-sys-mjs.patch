@@ -7,7 +7,7 @@ index 65daa1402a52e252360386e60471f726c1387bb3..be8f588316a8a4d7f33a324bf11f9e1f
        },
      });
 -
-+    window.gZenGlanceManager?.onSearchSelectCommand(where);
++    window.gEnsoGlanceManager?.onSearchSelectCommand(where);
      return { engine, url: submission.uri };
    },
  

@@ -1,0 +1,53 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+#include enso-locales.inc.xhtml
+
+# Styles used all over the browser
+<linkset>
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-animations.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-sidebar.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-toolbar.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-tabs.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-browser-ui.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-gradient-generator.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-panel-ui.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-single-components.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-browser-container.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-omnibox.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-workspaces.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-decks.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-folders.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-glance.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-popup.css" />
+
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-compact-mode.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/skin/enso-icons/icons.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-branding.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-welcome.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-media-controls.css" />
+<link rel="stylesheet" type="text/css" href="chrome://browser/content/enso-styles/enso-download-box-animation.css" />
+</linkset>
+
+# Startup "preloaded" scripts that requre globals such as gBrowser and gURLBar
+# JS files which are needed by browser.xhtml but no other top level windows to
+# support MacOS specific features should be loaded directly from browser-main.js
+# rather than this file.
+#
+# If you update this list, you may need to add a mapping within the following
+# file so that ESLint works correctly:
+# tools/lint/eslint/eslint-plugin-mozilla/lib/environments/browser-window.js
+<script type="text/javascript" src="chrome://browser/content/EnsoPreloadedScripts.js"></script>
+
+# Scripts used all over the browser
+<script type="module" src="chrome://browser/content/enso-components/ZenFolder.mjs"></script>
+
+<script type="module" src="chrome://browser/content/enso-components/EnsoMediaController.mjs"></script>
+<script type="module" src="chrome://browser/content/enso-components/EnsoWorkspaceCreation.mjs"></script>
+<script type="module" src="chrome://browser/content/enso-components/EnsoGlanceManager.mjs"></script>
+<script type="module" src="chrome://browser/content/enso-components/EnsoPinnedTabManager.mjs"></script>
+<script type="module" src="chrome://browser/content/enso-components/EnsoViewSplitter.mjs"></script>
+<script type="module" src="chrome://browser/content/enso-components/EnsoFolders.mjs"></script>
+<script type="module" src="chrome://browser/content/enso-components/EnsoDownloadAnimation.mjs"></script>
+<script type="module" src="chrome://browser/content/enso-components/EnsoEmojiPicker.mjs"></script>

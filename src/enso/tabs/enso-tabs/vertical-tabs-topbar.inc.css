@@ -1,0 +1,43 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+--enso-toolbar-height: 34px;
+
+height: var(--enso-toolbar-height);
+z-index: 1;
+
+#enso-appcontent-navbar-container {
+  display: flex;
+  min-height: var(--enso-toolbar-height);
+}
+
+@media -moz-pref('enso.view.hide-window-controls') {
+  transition: height var(--enso-hidden-toolbar-transition), opacity var(--enso-hidden-toolbar-transition);
+  will-change: height, opacity;
+  transition-delay: 0.2s;
+  overflow: clip;
+
+%include ../../compact-mode/windows-captions-fix-active.inc.css
+
+  &:not([enso-has-hover='true']):not([has-popup-menu]):not([enso-compact-mode-active]) {
+    height: var(--enso-element-separation);
+    opacity: 0;
+    & #enso-appcontent-navbar-container {
+      pointer-events: none;
+    }
+
+%include ../../compact-mode/windows-captions-fix-default.inc.css
+  }
+
+  @media -moz-pref('enso.view.experimental-no-window-controls') {
+    :root:not([enso-has-bookmarks]) & {
+      max-height: 0 !important;
+      overflow: hidden;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+}

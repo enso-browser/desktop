@@ -7,13 +7,13 @@ index 4fe6aaa127d12bfebb9b246cf1bcaeb78aeef506..879831ff1f979f38c677b941fae447f8
          ITEM_STATUS: addonStatus,
          APP_ID: Services.appinfo.ID,
 -        APP_VERSION: aAppVersion ? aAppVersion : Services.appinfo.version,
-+        APP_VERSION: AppConstants.ZEN_FIREFOX_VERSION,
++        APP_VERSION: AppConstants.ENSO_FIREFOX_VERSION,
          REQ_VERSION: UPDATE_REQUEST_VERSION,
          APP_OS: Services.appinfo.OS,
          APP_ABI: Services.appinfo.XPCOMABI,
          APP_LOCALE: getLocale(),
 -        CURRENT_APP_VERSION: Services.appinfo.version,
-+        CURRENT_APP_VERSION: AppConstants.ZEN_FIREFOX_VERSION,
++        CURRENT_APP_VERSION: AppConstants.ENSO_FIREFOX_VERSION,
        })
      );
  

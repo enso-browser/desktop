@@ -1,0 +1,118 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+<script type="text/javascript" src="chrome://browser/content/preferences/enso-settings.js"/>
+<html:template id="template-paneEnsoLooks">
+
+<hbox id="ensoVerticalTabsCategory"
+      class="subcategory"
+      hidden="true"
+      data-category="paneEnsoLooks">
+<html:h1 data-l10n-id="enso-vertical-tabs-title"/>
+</hbox>
+
+<groupbox id="ensoVerticalTabsGroup" data-category="paneEnsoLooks" hidden="true" class="highlighting-group">
+  <label><html:h2 data-l10n-id="enso-vertical-tabs-layout-header"/></label>
+    <description class="description-deemphasized" data-l10n-id="enso-vertical-tabs-layout-description" />
+    <hbox id="ensoLayoutList">
+      <hbox layout="single">
+        <html:img src="chrome://browser/content/enso-images/layouts/single-toolbar.png" />
+        <label data-l10n-id="enso-layout-single-toolbar"></label>
+      </hbox>
+      <hbox layout="multiple">
+        <html:img src="chrome://browser/content/enso-images/layouts/multiple-toolbar.png" />
+        <label data-l10n-id="enso-layout-multiple-toolbar"></label>
+      </hbox>
+      <hbox layout="collapsed">
+        <html:img src="chrome://browser/content/enso-images/layouts/collapsed.png" />
+        <label data-l10n-id="enso-layout-collapsed-toolbar"></label>
+      </hbox>
+    </hbox>
+  <label><html:h2 data-l10n-id="enso-vertical-tabs-header"/></label>
+      <description class="description-deemphasized" data-l10n-id="enso-vertical-tabs-description" />
+
+      <checkbox id="ensoLooksAndFeelNewtabUnderLastTab"
+            data-l10n-id="enso-vertical-tabs-newtab-on-tab-list"
+            preference="enso.tabs.show-newtab-vertical"/>
+    <vbox class="indent">
+        <checkbox id="ensoLooksAndFeelMoveNewtabToTop"
+                data-l10n-id="enso-vertical-tabs-newtab-top-button-up"
+                preference="enso.view.show-newtab-button-top"/>
+    </vbox>
+    <html:div data-l10n-id="preferences-web-appearance-footer">
+        <html:a id="web-appearance-manage-themes-link" class="text-link" data-l10n-name="themes-link" href="about:addons" target="_blank" />
+    </html:div>
+</groupbox>
+
+<hbox id="ensoThemeCategory"
+      class="subcategory"
+      hidden="true"
+      data-category="paneEnsoLooks">
+<html:h1 data-l10n-id="pane-enso-theme-title"/>
+</hbox>
+
+<groupbox id="ensoThemeGroup" data-category="paneEnsoLooks" hidden="true" class="highlighting-group">
+      <label><html:h2 data-l10n-id="enso-look-and-feel-compact-view-header"/></label>
+      <description class="description-deemphasized" data-l10n-id="enso-look-and-feel-compact-view-description" />
+
+      <vbox class="indent">
+            <checkbox id="ensoLooksAndFeelEnableToolbarFlashPopup"
+                      data-l10n-id="enso-look-and-feel-compact-toolbar-flash-popup"
+                      preference="enso.view.compact.toolbar-flash-popup"/>
+      </vbox>
+</groupbox>
+
+<hbox id="ensoGlanceCategory"
+      class="subcategory"
+      hidden="true"
+      data-category="paneEnsoLooks">
+<html:h1 data-l10n-id="enso-glance-title"/>
+</hbox>
+
+<groupbox id="ensoGlanceGroup" data-category="paneEnsoLooks" hidden="true" class="highlighting-group">
+      <label><html:h2 data-l10n-id="enso-glance-header"/></label>
+      <description class="description-deemphasized" data-l10n-id="enso-glance-description" />
+
+      <checkbox id="ensoLooksAndFeelGlanceEnabled"
+            data-l10n-id="enso-glance-enabled"
+            preference="enso.glance.enabled"/>
+      <hbox align="center">
+            <label id="ensoGlanceTriggerLabel" data-l10n-id="enso-glance-trigger-label"/>
+            <menulist id="ensoGlanceTrigger" preference="enso.glance.activation-method">
+                  <menupopup>
+                        <menuitem data-l10n-id="enso-glance-trigger-ctrl-click" value="ctrl"/>
+                        <menuitem data-l10n-id="enso-glance-trigger-alt-click" value="alt"/>
+                        <menuitem data-l10n-id="enso-glance-trigger-shift-click" value="shift"/>
+#ifdef XP_MACOSX
+                        <menuitem data-l10n-id="enso-glance-trigger-meta-click" value="meta"/>
+#endif
+                  </menupopup>
+            </menulist>
+        </hbox>
+</groupbox>
+
+<hbox id="ensoUrlBarCategory"
+      class="subcategory"
+      hidden="true"
+      data-category="paneEnsoLooks">
+<html:h1 data-l10n-id="enso-urlbar-title"/>
+</hbox>
+
+<groupbox id="ensoUrlbarGroup" data-category="paneEnsoLooks" hidden="true" class="highlighting-group">
+      <label><html:h2 data-l10n-id="enso-urlbar-header"/></label>
+      <description class="description-deemphasized" data-l10n-id="enso-urlbar-description" />
+
+      <hbox align="center">
+            <label data-l10n-id="enso-urlbar-behavior-label"/>
+            <menulist preference="enso.urlbar.behavior">
+                  <menupopup>
+                        <menuitem data-l10n-id="enso-urlbar-behavior-normal" value="normal"/>
+                        <menuitem data-l10n-id="enso-urlbar-behavior-floating-on-type" value="floating-on-type"/>
+                        <menuitem data-l10n-id="enso-urlbar-behavior-float" value="float"/>
+                  </menupopup>
+            </menulist>
+        </hbox>
+</groupbox>
+
+</html:template>

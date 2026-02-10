@@ -7,4 +7,4 @@ index b1f7121a1f3926fe3eb89540edb7dcbb68734039..61c98964cf5efd0a603500cf36559713
  # L10n resources and overrides.
  % override chrome://global/locale/appstrings.properties chrome://browser/locale/appstrings.properties
 +
-+#include content/zen-assets.jar.inc.mn
++#include content/enso-assets.jar.inc.mn

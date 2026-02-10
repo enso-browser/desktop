@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Espais de treball
+enso-panel-ui-spaces-label = 
+    .label = Espais
+enso-panel-ui-workspaces-create = 
+    .label = Crea un espai
+enso-panel-ui-folder-create = 
+    .label = Crea una carpeta
+enso-panel-ui-new-empty-split = 
+    .label = Nova divisió
+enso-workspaces-panel-context-delete = 
+    .label = Suprimeix l'espai de treball
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Canvia el nom
+enso-workspaces-panel-change-icon = 
+    .label = Canvia la icona
+enso-workspaces-panel-context-default-profile = 
+    .label = Estableix el perfil
+enso-workspaces-panel-unload = 
+    .label = Hiberna l'espai
+enso-workspaces-how-to-reorder-title = Com reordenar els espais?
+enso-workspaces-how-to-reorder-desc = Arrossegueu les icones d'espais a la part inferior de la barra lateral per reordenar-les
+enso-workspaces-change-theme = 
+    .label = Edita el tema
+enso-workspaces-panel-context-open = 
+    .label = Obre l'espai de treball
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Edita l'espai de treball
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Espais
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Complementari
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Divideix
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Anàleg
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Triàdic
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Flotant
+enso-panel-ui-gradient-click-to-add = Feu clic per afegir un color
+enso-workspace-creation-name = 
+    .placeholder = Nom de l'espai
+enso-move-tab-to-workspace-button = 
+    .label = Mou a...
+    .tooltiptext = Mou totes les pestanyes d'aquesta finestra a un espai
+enso-workspaces-panel-context-reorder = 
+    .label = Reordena els espais
+enso-workspace-creation-profile = Perfil
+    .tooltiptext = Els perfils s'utilitzen per separar les galetes i les dades del lloc entre espais.
+enso-workspace-creation-header = Creació d'un espai
+enso-workspace-creation-label = Els espais s'utilitzen per organitzar les pestanyes i les sessions.
+enso-workspaces-delete-workspace-title = Voleu suprimir l'espai de treball?
+enso-workspaces-delete-workspace-body = Esteu segur que voleu suprimir { $name }? Aquesta acció no es pot desfer.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Pestanyes tancades. Feu servir <span>{ $shortcut }</span> per desfer-ho.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Esborra
+    .tooltiptext = Tanca totes les pestanyes no fixades
+enso-panel-ui-workspaces-change-forward = 
+    .label = Espai següent
+enso-panel-ui-workspaces-change-back = 
+    .label = Espai anterior

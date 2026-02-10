@@ -6,7 +6,7 @@ index 7d6835b8636f771943b8081b7d56f579812026c2..97227eec4baeffd39b23ed6194ce7fa1
        styleSheets: [
          "chrome://browser/skin/preferences/dialog.css",
          "chrome://browser/skin/preferences/preferences.css",
-+        "chrome://browser/skin/preferences/zen-preferences.css",
++        "chrome://browser/skin/preferences/enso-preferences.css",
        ],
        resizeCallback: async ({ title, frame }) => {
          // Search within main document and highlight matched keyword.
@@ -14,8 +14,8 @@ index 7d6835b8636f771943b8081b7d56f579812026c2..97227eec4baeffd39b23ed6194ce7fa1
    register_module("paneSearch", gSearchPane);
    register_module("panePrivacy", gPrivacyPane);
    register_module("paneContainers", gContainersPane);
-+  register_module("paneZenLooks", gZenLooksAndFeel);
-+  register_module("paneZenTabManagement", gZenWorkspacesSettings);
++  register_module("paneEnsoLooks", gZenLooksAndFeel);
++  register_module("paneZenTabManagement", gEnsoWorkspacesSettings);
 +  register_module("paneZenCKS", gZenCKSSettings);
 +  register_module("paneZenMarketplace", gZenMarketplaceManager);
  

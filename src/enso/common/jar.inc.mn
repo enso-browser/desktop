@@ -1,0 +1,37 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+        content/browser/ensoThemeModifier.js                                     (../../enso/common/ensoThemeModifier.js)
+        content/browser/EnsoPreloadedScripts.js                                  (../../enso/common/EnsoPreloadedScripts.js)
+        content/browser/enso-sets.js                                             (../../enso/common/enso-sets.js)
+
+        content/browser/EnsoStartup.mjs                                          (../../enso/common/modules/EnsoStartup.mjs)
+        content/browser/EnsoUpdates.mjs                                          (../../enso/common/modules/EnsoUpdates.mjs)
+        content/browser/EnsoUIManager.mjs                                        (../../enso/common/modules/EnsoUIManager.mjs)
+        content/browser/enso-components/EnsoCommonUtils.mjs                       (../../enso/common/modules/EnsoCommonUtils.mjs)
+        content/browser/enso-components/EnsoSessionStore.mjs                      (../../enso/common/modules/EnsoSessionStore.mjs)
+        content/browser/enso-components/EnsoHasPolyfill.mjs                       (../../enso/common/modules/EnsoHasPolyfill.mjs)
+        content/browser/enso-components/EnsoSidebarNotification.mjs               (../../enso/common/modules/EnsoSidebarNotification.mjs)
+        content/browser/enso-components/EnsoMenubar.mjs                           (../../enso/common/modules/EnsoMenubar.mjs)
+
+        content/browser/enso-components/EnsoEmojisData.min.mjs                    (../../enso/common/emojis/EnsoEmojisData.min.mjs)
+        content/browser/enso-components/EnsoEmojiPicker.mjs                       (../../enso/common/emojis/EnsoEmojiPicker.mjs)
+
+*       content/browser/enso-styles/enso-theme.css                                (../../enso/common/styles/enso-theme.css)
+        content/browser/enso-styles/enso-buttons.css                              (../../enso/common/styles/enso-buttons.css)
+        content/browser/enso-styles/enso-browser-ui.css                           (../../enso/common/styles/enso-browser-ui.css)
+        content/browser/enso-styles/enso-animations.css                           (../../enso/common/styles/enso-animations.css)
+        content/browser/enso-styles/enso-panel-ui.css                             (../../enso/common/styles/enso-panel-ui.css)
+        content/browser/enso-styles/enso-single-components.css                    (../../enso/common/styles/enso-single-components.css)
+        content/browser/enso-styles/enso-sidebar.css                              (../../enso/common/styles/enso-sidebar.css)
+*       content/browser/enso-styles/enso-toolbar.css                              (../../enso/common/styles/enso-toolbar.css)
+        content/browser/enso-styles/enso-browser-container.css                    (../../enso/common/styles/enso-browser-container.css)
+        content/browser/enso-styles/enso-omnibox.css                              (../../enso/common/styles/enso-omnibox.css)
+        content/browser/enso-styles/enso-popup.css                                (../../enso/common/styles/enso-popup.css)
+        content/browser/enso-styles/enso-branding.css                             (../../enso/common/styles/enso-branding.css)
+        content/browser/enso-styles/enso-sidebar-notification.css                 (../../enso/common/styles/enso-sidebar-notification.css)
+
+        content/browser/enso-styles/enso-panels/bookmarks.css                     (../../enso/common/styles/enso-panels/bookmarks.css)
+        content/browser/enso-styles/enso-panels/print.css                         (../../enso/common/styles/enso-panels/print.css)
+        content/browser/enso-styles/enso-panels/dialog.css                        (../../enso/common/styles/enso-panels/dialog.css)

@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Obszary robocze
+enso-panel-ui-spaces-label = 
+    .label = Obszary robocze
+enso-panel-ui-workspaces-create = 
+    .label = Utwórz Przestrzeń
+enso-panel-ui-folder-create = 
+    .label = Utwórz folder
+enso-panel-ui-new-empty-split = 
+    .label = Nowy podział
+enso-workspaces-panel-context-delete = 
+    .label = Usuń obszar roboczy
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Zmień nazwę
+enso-workspaces-panel-change-icon = 
+    .label = Zmień ikonę
+enso-workspaces-panel-context-default-profile = 
+    .label = Ustaw profil
+enso-workspaces-panel-unload = 
+    .label = Wyładuj przestrzeń
+enso-workspaces-how-to-reorder-title = Jak przesuwać Przestrzenie
+enso-workspaces-how-to-reorder-desc = Przesuwaj ikony Przestrzeni na dole paska, żeby je przeorganizować
+enso-workspaces-change-theme = 
+    .label = Edytuj motyw
+enso-workspaces-panel-context-open = 
+    .label = Otwórz obszar roboczy
+    .accesskey = Pr
+enso-workspaces-panel-context-edit = 
+    .label = Edytuj obszar roboczy
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Obszary robocze
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Uzupełniający
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Podzielony
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Analogiczny
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Triadyczny
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Pływający
+enso-panel-ui-gradient-click-to-add = Kliknij, aby dodać kolor
+enso-workspace-creation-name = 
+    .placeholder = Nazwa Przestrzeni
+enso-move-tab-to-workspace-button = 
+    .label = Przenieś do...
+    .tooltiptext = Przenieś wszystkie karty z tego okna to obszaru roboczego
+enso-workspaces-panel-context-reorder = 
+    .label = Reorganizuj Przestrzenie
+enso-workspace-creation-profile = Profil
+    .tooltiptext = Profile są wykorzystywane do oddzielenia ciasteczek i danych stron pomiędzy Przestrzeniami.
+enso-workspace-creation-header = Utwórz Przestrzeń
+enso-workspace-creation-label = Przestrzenie są wykorzystywane do zorganizowania kart i sesji.
+enso-workspaces-delete-workspace-title = Usunąć Przestrzeń roboczą?
+enso-workspaces-delete-workspace-body = Czy na pewno chcesz usunąć { $name }? Tej czynności nie można cofnąć.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Zamknięto karty! Użyj <span>{ $shortcut }</span> aby przywrócić.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Wyczyść
+    .tooltiptext = Zamknij wszystkie nieprzypięte karty
+enso-panel-ui-workspaces-change-forward = 
+    .label = Następny obszar roboczy
+enso-panel-ui-workspaces-change-back = 
+    .label = Poprzedni obszar roboczy

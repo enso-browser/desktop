@@ -15,7 +15,7 @@ index 646cf238ebfbd5ac1826cf47f578f66aa020199f..ba5a1950f683c4d8cb836ee9cd466c0b
        appearance: auto;
  
 -      #navigator-toolbox,
-+      #zen-main-app-wrapper,
++      #enso-main-app-wrapper,
 +      #enso-browser-background,
        dialog::backdrop {
          border-top-left-radius: env(-moz-gtk-csd-titlebar-radius);
@@ -32,7 +32,7 @@ index 646cf238ebfbd5ac1826cf47f578f66aa020199f..ba5a1950f683c4d8cb836ee9cd466c0b
          body,
 -        dialog::backdrop {
 +        dialog::backdrop,
-+        #zen-main-app-wrapper,
++        #enso-main-app-wrapper,
 +        #enso-browser-background {
            /* Use an uniform clip to allow WebRender to optimize it better */
            border-radius: env(-moz-gtk-csd-titlebar-radius);

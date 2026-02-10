@@ -6,7 +6,7 @@ index 9175fa820ad6bb75cd125fbfda2bf07d6dba4c90..62a1a62f304ec8c83e85919686102534
      features,
      sa
    );
-+  win._zenStartupSyncFlag = Services.prefs.getBoolPref('zen.window-sync.open-link-in-new-unsynced-window') ? 'unsynced' : 'synced';
++  win._ensoStartupSyncFlag = Services.prefs.getBoolPref('enso.window-sync.open-link-in-new-unsynced-window') ? 'unsynced' : 'synced';
  }
  
  function openInCurrentTab(targetBrowser, url, uriObj, params) {
@@ -15,7 +15,7 @@ index 9175fa820ad6bb75cd125fbfda2bf07d6dba4c90..62a1a62f304ec8c83e85919686102534
        // we'll open a new tab instead.
        let tab = w.gBrowser.getTabForBrowser(targetBrowser);
 -      if (tab == w.FirefoxViewHandler.tab) {
-+      if (tab == w.FirefoxViewHandler.tab || tab.hasAttribute("zen-empty-tab")) {
++      if (tab == w.FirefoxViewHandler.tab || tab.hasAttribute("enso-empty-tab")) {
          where = "tab";
          targetBrowser = null;
        } else if (
@@ -24,7 +24,7 @@ index 9175fa820ad6bb75cd125fbfda2bf07d6dba4c90..62a1a62f304ec8c83e85919686102534
          ignoreFragmentWhenComparing
        );
 -      let browsers = aWindow.gBrowser.browsers;
-+      let browsers = aWindow.gZenWorkspaces.allUsedBrowsers;
++      let browsers = aWindow.gEnsoWorkspaces.allUsedBrowsers;
        for (let i = 0; i < browsers.length; i++) {
          let browser = browsers[i];
          let browserCompare = cleanURL(
@@ -33,7 +33,7 @@ index 9175fa820ad6bb75cd125fbfda2bf07d6dba4c90..62a1a62f304ec8c83e85919686102534
  
            if (!doAdopt) {
 -            aWindow.gBrowser.tabContainer.selectedIndex = i;
-+            aWindow.gZenWorkspaces.switchIfNeeded(browser);
++            aWindow.gEnsoWorkspaces.switchIfNeeded(browser);
            }
  
            return true;

@@ -7,7 +7,7 @@ index a28d54bf72c0e6495b9586f220d1859aac794936..66154668b9f85ffbaacea1e835137065
     */
    canGoBack: function HSA_canGoBack() {
 -    return gBrowser.webNavigation.canGoBack;
-+    return gBrowser.webNavigation.canGoBack || gZenCommonActions.shouldCloseTabOnBack();
++    return gBrowser.webNavigation.canGoBack || gEnsoCommonActions.shouldCloseTabOnBack();
    },
  
    /**

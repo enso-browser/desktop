@@ -4,19 +4,19 @@
 
 base_path: locales
 files:
-  - source: en-US/browser/browser/zen-general.ftl
-    translation: browser/browser/zen-general.ftl
-  - source: en-US/browser/browser/zen-split-view.ftl
-    translation: browser/browser/zen-split-view.ftl
-  - source: en-US/browser/browser/zen-menubar.ftl
-    translation: browser/browser/zen-menubar.ftl
-  - source: en-US/browser/browser/zen-vertical-tabs.ftl
-    translation: browser/browser/zen-vertical-tabs.ftl
-  - source: en-US/browser/browser/zen-welcome.ftl
-    translation: browser/browser/zen-welcome.ftl
-  - source: en-US/browser/browser/zen-workspaces.ftl
-    translation: browser/browser/zen-workspaces.ftl
-  - source: en-US/browser/browser/preferences/zen-preferences.ftl
-    translation: browser/browser/preferences/zen-preferences.ftl
-  - source: en-US/browser/browser/zen-folders.ftl
-    translation: browser/browser/zen-folders.ftl
+  - source: en-US/browser/browser/enso-general.ftl
+    translation: browser/browser/enso-general.ftl
+  - source: en-US/browser/browser/enso-split-view.ftl
+    translation: browser/browser/enso-split-view.ftl
+  - source: en-US/browser/browser/enso-menubar.ftl
+    translation: browser/browser/enso-menubar.ftl
+  - source: en-US/browser/browser/enso-vertical-tabs.ftl
+    translation: browser/browser/enso-vertical-tabs.ftl
+  - source: en-US/browser/browser/enso-welcome.ftl
+    translation: browser/browser/enso-welcome.ftl
+  - source: en-US/browser/browser/enso-workspaces.ftl
+    translation: browser/browser/enso-workspaces.ftl
+  - source: en-US/browser/browser/preferences/enso-preferences.ftl
+    translation: browser/browser/preferences/enso-preferences.ftl
+  - source: en-US/browser/browser/enso-folders.ftl
+    translation: browser/browser/enso-folders.ftl

@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = מרחבים
+enso-panel-ui-spaces-label = 
+    .label = מרחבים
+enso-panel-ui-workspaces-create = 
+    .label = יצירת מרחב
+enso-panel-ui-folder-create = 
+    .label = יצירת תיקייה
+enso-panel-ui-new-empty-split = 
+    .label = פיצול חדש
+enso-workspaces-panel-context-delete = 
+    .label = מחיקת מרחב
+    .accesskey = ג
+enso-workspaces-panel-change-name = 
+    .label = שינוי שם
+enso-workspaces-panel-change-icon = 
+    .label = שינוי סמל
+enso-workspaces-panel-context-default-profile = 
+    .label = הגדרת פרופיל
+enso-workspaces-panel-unload = 
+    .label = כיבוי מרחב
+enso-workspaces-how-to-reorder-title = איך לסדר מרחבים מחדש
+enso-workspaces-how-to-reorder-desc = גרירה והזזה של סמלי המרחבים בתחתית סרגל הצד תשנה את הסדר שלהם
+enso-workspaces-change-theme = 
+    .label = עריכת ערכת נושא
+enso-workspaces-panel-context-open = 
+    .label = פתיחת מרחב עבודה
+    .accesskey = ם
+enso-workspaces-panel-context-edit = 
+    .label = עריכת מרחב עבודה
+    .accesskey = ק
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = מרחבים
+    .accesskey = '
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = משלים
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = חצוי
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = אנלוגי
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = טריאדי
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = מרחף
+enso-panel-ui-gradient-click-to-add = יש ללחוץ כדי להוסיף צבע
+enso-workspace-creation-name = 
+    .placeholder = שם מרחב
+enso-move-tab-to-workspace-button = 
+    .label = העברה אל...
+    .tooltiptext = העברת כל הלשוניות בחלון זה למרחב
+enso-workspaces-panel-context-reorder = 
+    .label = שינוי סדר מרחבים
+enso-workspace-creation-profile = פרופיל
+    .tooltiptext = פרופילים משמשים להפרדת קובצי Cookie ונתוני אתר בין מרחבים שונים.
+enso-workspace-creation-header = יצירת מרחב
+enso-workspace-creation-label = המרחבים משמשים לסידור לשוניות והפעלות.
+enso-workspaces-delete-workspace-title = למחוק את המרחב?
+enso-workspaces-delete-workspace-body = למחוק את { $name }? לא ניתן לבטל פעולה זו.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = הלשוניות נסגרו! לחיצה על <span>{ $shortcut }</span> תבטל את הסגירה.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = ניקוי
+    .tooltiptext = סגירת כל הלשוניות שאינן מוצמדות
+enso-panel-ui-workspaces-change-forward = 
+    .label = מרחב הבא
+enso-panel-ui-workspaces-change-back = 
+    .label = מרחב קודם

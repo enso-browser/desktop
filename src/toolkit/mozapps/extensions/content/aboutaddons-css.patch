@@ -7,7 +7,7 @@ index da127019467107973300b4df8d9b95e8bfb0e05c..bcee9583654609bdcba55605eebb97be
    background-image: url("chrome://mozapps/skin/extensions/category-themes.svg");
  }
 +
-+@media -moz-pref('zen.theme.disable-lightweight') {
++@media -moz-pref('enso.theme.disable-lightweight') {
 +  .category[name="theme"] {
 +    display: none;
 +  }

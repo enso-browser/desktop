@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Arbejdsområder
+enso-panel-ui-spaces-label = 
+    .label = Spaces
+enso-panel-ui-workspaces-create = 
+    .label = Opret rum
+enso-panel-ui-folder-create = 
+    .label = Opret mappe
+enso-panel-ui-new-empty-split = 
+    .label = New Split
+enso-workspaces-panel-context-delete = 
+    .label = Slet arbejdsområde
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Skift navn
+enso-workspaces-panel-change-icon = 
+    .label = Skift ikon
+enso-workspaces-panel-context-default-profile = 
+    .label = Indstil profil
+enso-workspaces-panel-unload = 
+    .label = Unload Space
+enso-workspaces-how-to-reorder-title = Sådan omarrangerer du rum
+enso-workspaces-how-to-reorder-desc = Træk rumikonerne nederst i sidepanelet for at omarrangere dem
+enso-workspaces-change-theme = 
+    .label = Rediger tema
+enso-workspaces-panel-context-open = 
+    .label = Åbn arbejdsområde
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Rediger arbejdsområde
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Spaces
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Komplementær
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Split
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Analog
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Triadisk
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Flydende
+enso-panel-ui-gradient-click-to-add = Klik for at tilføje en farve
+enso-workspace-creation-name = 
+    .placeholder = Rumnavn
+enso-move-tab-to-workspace-button = 
+    .label = Move To...
+    .tooltiptext = Move all tabs in this window to a Space
+enso-workspaces-panel-context-reorder = 
+    .label = Omarranger rum
+enso-workspace-creation-profile = Profil
+    .tooltiptext = Profiler bruges til at adskille cookies og webstedsdata mellem forskellige rum.
+enso-workspace-creation-header = Opret et rum
+enso-workspace-creation-label = Rum bruges til at organisere dine faner og sessioner.
+enso-workspaces-delete-workspace-title = Slet arbejdsområde?
+enso-workspaces-delete-workspace-body = Er du sikker på, at du vil slette { $name }? Dette kan ikke fortrydes.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Tabs Closed! Use <span>{ $shortcut }</span> to undo.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Clear
+    .tooltiptext = Close all unpinned tabs
+enso-panel-ui-workspaces-change-forward = 
+    .label = Next Space
+enso-panel-ui-workspaces-change-back = 
+    .label = Previous Space

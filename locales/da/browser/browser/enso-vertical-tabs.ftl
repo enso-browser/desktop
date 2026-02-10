@@ -1,0 +1,39 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-toolbar-context-tabs-right = 
+    .label = Faner til højre
+    .accesskey = R
+enso-toolbar-context-compact-mode = 
+    .label = Kompakt tilstand
+enso-toolbar-context-compact-mode-enable = 
+    .label = Aktivér kompakt tilstand
+    .accesskey = D
+enso-toolbar-context-compact-mode-just-tabs = 
+    .label = Skjul sidepanel
+enso-toolbar-context-compact-mode-just-toolbar = 
+    .label = Skjul værktøjslinje
+enso-toolbar-context-compact-mode-hide-both = 
+    .label = Skjul begge
+    .accesskey = H
+enso-toolbar-context-new-folder = 
+    .label = Ny mappe
+    .accesskey = N
+sidebar-enso-expand = 
+    .label = Udvid Sidepanel
+sidebar-enso-create-new = 
+    .label = Opret ny...
+tabbrowser-unload-tab-button = 
+    .tooltiptext =
+        { $tabCount ->
+            [one] Stop indlæsning og skift til fane
+           *[other] Stop indlæsning af { $tabCount } faner og skift til den første
+        }
+tabbrowser-reset-pin-button = 
+    .tooltiptext =
+        { $tabCount ->
+            [one] Nulstil og fastgør fane
+           *[other] Nulstil og fastgør { $tabCount } faner
+        }
+tab-reset-pin-label = Tilbage til fastgjort URL

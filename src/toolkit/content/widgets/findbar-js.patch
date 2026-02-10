@@ -6,7 +6,7 @@ index b66dce5bea757fdf6a9bbd656551d876e47aa8a3..bdfb6331d7ebfb283290b1c97601b743
       *   e.g. <command name="cmd_find" oncommand="gFindBar.onFindCommand();"/>
       */
      onFindCommand() {
-+      if (gBrowser?.selectedTab?.hasAttribute("zen-empty-tab")) return;
++      if (gBrowser?.selectedTab?.hasAttribute("enso-empty-tab")) return;
        return this.startFind(this.FIND_NORMAL);
      }
  

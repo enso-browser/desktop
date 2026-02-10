@@ -6,7 +6,7 @@ index 939ca497b882b3f4200141ba1b6764fb5c846f45..09eb945215bb26e18c4414850bc4233a
      const where = BrowserUtils.whereToOpenLink(aEvent, false, true);
  
      if (where == "current") {
-+      if (!gBrowser.webNavigation.canGoBack && gZenCommonActions.shouldCloseTabOnBack()) {
++      if (!gBrowser.webNavigation.canGoBack && gEnsoCommonActions.shouldCloseTabOnBack()) {
 +        gBrowser.removeTab(gBrowser.selectedTab, { animate: true });
 +        return;
 +      }
@@ -17,7 +17,7 @@ index 939ca497b882b3f4200141ba1b6764fb5c846f45..09eb945215bb26e18c4414850bc4233a
        }
      }
  
-+    if (gZenUIManager.handleNewTab(werePassedURL, searchClipboard, where)) {
++    if (gEnsoUIManager.handleNewTab(werePassedURL, searchClipboard, where)) {
 +      return;
 +    }
 +
@@ -28,8 +28,8 @@ index 939ca497b882b3f4200141ba1b6764fb5c846f45..09eb945215bb26e18c4414850bc4233a
        return;
      }
  
-+    if (gBrowser.selectedTab.hasAttribute("zen-empty-tab")) {
-+      gZenWorkspaces.handleTabCloseWindow();
++    if (gBrowser.selectedTab.hasAttribute("enso-empty-tab")) {
++      gEnsoWorkspaces.handleTabCloseWindow();
 +      return;
 +    }
 +

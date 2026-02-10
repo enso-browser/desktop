@@ -107,9 +107,9 @@ use std::env;
 use std::fs;
 use std::path::PathBuf;
 
-const STATIC_PREFS: &str = "../engine/modules/libpref/init/zen-static-prefs.inc";
+const STATIC_PREFS: &str = "../engine/modules/libpref/init/enso-static-prefs.inc";
 const FIREFOX_PREFS: &str = "../engine/browser/app/profile/firefox.js";
-const DYNAMIC_PREFS: &str = "../engine/browser/app/profile/zen.js";
+const DYNAMIC_PREFS: &str = "../engine/browser/app/profile/enso.js";
 
 #[derive(Serialize, Deserialize, PartialEq, Debug)]
 struct Preference {
@@ -300,9 +300,9 @@ fn write_preferences(prefs: &[Preference]) {
     fs::write(&dynamic_prefs_path, dynamic_content).expect("Failed to write dynamic prefs");
 }
 
-fn prepare_zen_prefs() {
-    // Add `#include zen.js` to the bottom of the firefox.js file if it doesn't exist
-    let line = "#include zen.js";
+fn prepare_enso_prefs() {
+    // Add `#include enso.js` to the bottom of the firefox.js file if it doesn't exist
+    let line = "#include enso.js";
     let firefox_prefs_path = get_config_path().join(FIREFOX_PREFS);
     if let Ok(mut content) = fs::read_to_string(&firefox_prefs_path) {
         if !content.contains(line) {
@@ -358,7 +358,7 @@ fn main() {
     };
     env::set_current_dir(&root_path).expect("Failed to change directory");
 
-    prepare_zen_prefs();
+    prepare_enso_prefs();
     let mut preferences = load_preferences();
     expand_pref_values(&mut preferences);
     write_preferences(&preferences);

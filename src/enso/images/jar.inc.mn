@@ -1,0 +1,24 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+        content/browser/enso-images/brand-header.svg                             (../../enso/images/brand-header.svg)
+        content/browser/enso-images/layouts/collapsed.png                        (../../enso/images/layouts/collapsed.png)
+        content/browser/enso-images/layouts/multiple-toolbar.png                 (../../enso/images/layouts/multiple-toolbar.png)
+        content/browser/enso-images/layouts/single-toolbar.png                   (../../enso/images/layouts/single-toolbar.png)
+        content/browser/enso-images/grain-bg.png                                 (../../enso/images/grain-bg.png)
+        content/browser/enso-images/note-indicator.svg                           (../../enso/images/note-indicator.svg)
+
+        content/browser/enso-images/downloads/download.svg                       (../../enso/images/downloads/download.svg)
+        content/browser/enso-images/downloads/archive.svg                        (../../enso/images/downloads/archive.svg)
+
+        # FavIcons for startup
+        content/browser/enso-images/favicons/calendar.svg                        (../../enso/images/favicons/calendar.svg)
+        content/browser/enso-images/favicons/discord.svg                         (../../enso/images/favicons/discord.svg)
+        content/browser/enso-images/favicons/figma.svg                           (../../enso/images/favicons/figma.svg)
+        content/browser/enso-images/favicons/github.svg                          (../../enso/images/favicons/github.svg)
+        content/browser/enso-images/favicons/notion.svg                          (../../enso/images/favicons/notion.svg)
+        content/browser/enso-images/favicons/obsidian.svg                        (../../enso/images/favicons/obsidian.svg)
+        content/browser/enso-images/favicons/slack.svg                           (../../enso/images/favicons/slack.svg)
+        content/browser/enso-images/favicons/tuta.svg                            (../../enso/images/favicons/tuta.svg)
+        content/browser/enso-images/favicons/trello.svg                          (../../enso/images/favicons/trello.svg)

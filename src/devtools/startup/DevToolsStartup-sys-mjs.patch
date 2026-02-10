@@ -6,7 +6,7 @@ index 40926f9620bfe8ecc1d295026b219f5b7f83860c..6811d0681c9c9b8555f0c7f72d6cd3cd
      // account (see bug 832984).
      const mainKeyset = doc.getElementById("mainKeyset");
      mainKeyset.parentNode.insertBefore(keyset, mainKeyset);
-+    window.dispatchEvent(new window.Event("zen-devtools-keyset-added"));
++    window.dispatchEvent(new window.Event("enso-devtools-keyset-added"));
    },
  
    /**

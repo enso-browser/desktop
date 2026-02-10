@@ -6,7 +6,7 @@ import os
 import tomllib
 import shutil
 
-BASE_PATH = os.path.join("src", "zen", "tests")
+BASE_PATH = os.path.join("src", "enso", "tests")
 EXTERNAL_TESTS_MANIFEST = os.path.join(BASE_PATH, "manifest.toml")
 EXTERNAL_TESTS_OUTPUT = os.path.join(BASE_PATH, "mochitests")
 

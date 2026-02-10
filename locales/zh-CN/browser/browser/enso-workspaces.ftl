@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = 工作区
+enso-panel-ui-spaces-label = 
+    .label = 工作区
+enso-panel-ui-workspaces-create = 
+    .label = 创建工作区
+enso-panel-ui-folder-create = 
+    .label = 新建文件夹
+enso-panel-ui-new-empty-split = 
+    .label = 新建分屏
+enso-workspaces-panel-context-delete = 
+    .label = 删除工作区
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = 重命名
+enso-workspaces-panel-change-icon = 
+    .label = 更改图标
+enso-workspaces-panel-context-default-profile = 
+    .label = 设置身份
+enso-workspaces-panel-unload = 
+    .label = 卸载工作区
+enso-workspaces-how-to-reorder-title = 如何排序工作区
+enso-workspaces-how-to-reorder-desc = 拖动侧边栏底部的工作区图标以重新排序
+enso-workspaces-change-theme = 
+    .label = 编辑主题
+enso-workspaces-panel-context-open = 
+    .label = 打开工作区
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = 编辑工作区
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = 工作区
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = 互补色
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = 分裂补色
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = 邻近色
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = 三角色
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = 浮动
+enso-panel-ui-gradient-click-to-add = 点击添加颜色
+enso-workspace-creation-name = 
+    .placeholder = 工作区名称
+enso-move-tab-to-workspace-button = 
+    .label = 移动到……
+    .tooltiptext = 将当前窗口的所有标签页移动到一个工作区
+enso-workspaces-panel-context-reorder = 
+    .label = 排序工作区
+enso-workspace-creation-profile = 身份
+    .tooltiptext = 身份用于在工作区之间分隔 Cookie 和站点数据。
+enso-workspace-creation-header = 创建工作区
+enso-workspace-creation-label = 工作区用于组织标签页和会话。
+enso-workspaces-delete-workspace-title = 删除工作区？
+enso-workspaces-delete-workspace-body = 你确定要删除 { $name } 吗？这个操作无法撤销。
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = 标签页已关闭！按下 <span>{ $shortcut }</span> 以恢复关闭的标签页。
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = 清除
+    .tooltiptext = 关闭所有未固定的标签页
+enso-panel-ui-workspaces-change-forward = 
+    .label = 下一个工作区
+enso-panel-ui-workspaces-change-back = 
+    .label = 上一个工作区

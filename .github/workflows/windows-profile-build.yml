@@ -55,7 +55,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: C:\artifact
-          name: ${{ matrix.arch == 'aarch64' && 'arm64' || matrix.arch }}-zen-windows-profile-data-and-jarlog.zip
+          name: ${{ matrix.arch == 'aarch64' && 'arm64' || matrix.arch }}-enso-windows-profile-data-and-jarlog.zip
 
       - name: Unpack artifact
         if: ${{ matrix.arch == 'x86_64' }}
@@ -93,7 +93,7 @@ jobs:
           echo "cd $workspace_dir" '' >> mozilla-build-run.sh
           echo 'export PATH=/c/mozilla-build/msys2/usr/bin:$PATH' '' >> mozilla-build-run.sh
           echo './mach --no-interactive bootstrap --application-choice browser' '' >> mozilla-build-run.sh
-          echo 'LLVM_PROFDATA=/c/Users/runneradmin/.mozbuild/clang/bin/llvm-profdata.exe JARLOG_FILE=en-US.log ./mach python build/pgo/profileserver.py --binary /c/artifact/zen/zen.exe' '' >> mozilla-build-run.sh
+          echo 'LLVM_PROFDATA=/c/Users/runneradmin/.mozbuild/clang/bin/llvm-profdata.exe JARLOG_FILE=en-US.log ./mach python build/pgo/profileserver.py --binary /c/artifact/zen/enso.exe' '' >> mozilla-build-run.sh
           C:\mozilla-build\start-shell.bat $workspace_dir_current\mozilla-build-run.sh
 
       - name: Move profile data

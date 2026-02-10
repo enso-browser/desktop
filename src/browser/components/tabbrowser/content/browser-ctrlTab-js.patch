@@ -7,7 +7,7 @@ index 3330dc133c120e7fbeecd2a36c71f9dfba60b3fb..0243cdfe67e5eb3f68fc7cde66bb3809
  
    get tabList() {
 -    return this._recentlyUsedTabs;
-+    const canShowPending = Services.prefs.getBoolPref("zen.ctrlTab.show-pending-tabs", false);
++    const canShowPending = Services.prefs.getBoolPref("enso.ctrlTab.show-pending-tabs", false);
 +    return this._recentlyUsedTabs.filter(tab => !tab.hasAttribute("pending") || canShowPending);
    },
  
@@ -17,7 +17,7 @@ index 3330dc133c120e7fbeecd2a36c71f9dfba60b3fb..0243cdfe67e5eb3f68fc7cde66bb3809
      // (Normally hidden tabs would be unhidden when selected, but that doesn't
      // happen for Firefox View).
 -    if (aTab.closing || (aTab.hidden && !aTab.selected)) {
-+    if (aTab.closing || (aTab.hidden && !aTab.selected) || aTab.hasAttribute("zen-empty-tab")) {
++    if (aTab.closing || (aTab.hidden && !aTab.selected) || aTab.hasAttribute("enso-empty-tab")) {
        return;
      }
  
@@ -35,7 +35,7 @@ index 3330dc133c120e7fbeecd2a36c71f9dfba60b3fb..0243cdfe67e5eb3f68fc7cde66bb3809
      this._recentlyUsedTabs = Array.prototype.filter.call(
        gBrowser.tabs,
 -      tab => !tab.closing && !tab.hidden
-+      tab => !tab.closing && !tab.hidden && !tab.hasAttribute("zen-empty-tab")
++      tab => !tab.closing && !tab.hidden && !tab.hasAttribute("enso-empty-tab")
      );
      this._sortRecentlyUsedTabs();
    },

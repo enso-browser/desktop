@@ -8,7 +8,7 @@ index 2e502fb075546bab4349f3da97069e764528d763..4ff7f2ee47085c2d2131f54a647468fa
  }
 +
 +#minimize {
-+  background-image: url("chrome://browser/skin/zen-icons/unpin.svg");
++  background-image: url("chrome://browser/skin/enso-icons/unpin.svg");
 +  background-color: rgba(255, 255, 255, .8);
 +  position: absolute;
 +  fill: var(--close-btn-fill-color);

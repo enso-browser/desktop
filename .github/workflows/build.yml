@@ -272,15 +272,15 @@ jobs:
           tar \
             --exclude='./.git' \
             --use-compress-program=zstd \
-            -hcf zen.source.tar.zst \
+            -hcf enso.source.tar.zst \
             -C engine .
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           retention-days: 5
-          name: zen.source.tar.zst
-          path: ./zen.source.tar.zst
+          name: enso.source.tar.zst
+          path: ./enso.source.tar.zst
 
   windows-step-1:
     name: Windows build step 1 (PGO build)
@@ -293,7 +293,7 @@ jobs:
       use-sccache: ${{ inputs.use-sccache }}
       build-version: ${{ needs.build-data.outputs.version }}
       generate-gpo: true
-      profile-data-path-archive: zen-windows-profile-data-and-jarlog.zip
+      profile-data-path-archive: enso-windows-profile-data-and-jarlog.zip
       release-branch: ${{ inputs.update_branch }}
       MOZ_BUILD_DATE: ${{needs.buildid.outputs.buildids}}
 
@@ -306,7 +306,7 @@ jobs:
     needs: [windows-step-1, build-data]
     with:
       build-version: ${{ needs.build-data.outputs.version }}
-      profile-data-path-archive: zen.win64-pgo-stage-1.zip
+      profile-data-path-archive: enso.win64-pgo-stage-1.zip
       release-branch: ${{ inputs.update_branch }}
 
   windows-step-3:
@@ -402,25 +402,25 @@ jobs:
       - name: Download Linux build
         uses: actions/download-artifact@v4
         with:
-          name: zen.linux-${{ matrix.arch }}.tar.xz
+          name: enso.linux-${{ matrix.arch }}.tar.xz
 
       - name: Execute AppImage build
         run: |
           set -eux
           export ARCH=${{ matrix.arch }}
-          UPINFO="gh-releases-zsync|$GITHUB_REPOSITORY_OWNER|desktop|latest|zen-$ARCH.AppImage.zsync"
+          UPINFO="gh-releases-zsync|$GITHUB_REPOSITORY_OWNER|desktop|latest|enso-$ARCH.AppImage.zsync"
           rm build/AppDir/.DirIcon || true
-          cp configs/branding/${{ inputs.update_branch }}/logo128.png build/AppDir/usr/share/icons/hicolor/128x128/apps/zen.png
-          cp configs/branding/${{ inputs.update_branch }}/logo128.png build/AppDir/zen.png && ln -s zen.png build/AppDir/.DirIcon
+          cp configs/branding/${{ inputs.update_branch }}/logo128.png build/AppDir/usr/share/icons/hicolor/128x128/apps/enso.png
+          cp configs/branding/${{ inputs.update_branch }}/logo128.png build/AppDir/enso.png && ln -s enso.png build/AppDir/.DirIcon
 
           if [ "${{ inputs.update_branch }}" = "twilight" ]; then
-            sed -i -e 's/Name=Enso Browser/Name=Enso Twilight/g' build/AppDir/zen.desktop
-            sed -i -e 's/StartupWMClass=zen/StartupWMClass=zen-twilight/g' build/AppDir/zen.desktop
+            sed -i -e 's/Name=Enso Browser/Name=Enso Twilight/g' build/AppDir/enso.desktop
+            sed -i -e 's/StartupWMClass=zen/StartupWMClass=enso-twilight/g' build/AppDir/enso.desktop
           fi
 
           APPDIR=build/AppDir
           tar -xvf *.tar.* && rm -rf *.tar.*
-          mv zen/* $APPDIR/
+          mv enso/* $APPDIR/
           wget "https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage"
           wget "https://github.com/VHSgunzo/uruntime/releases/latest/download/uruntime-appimage-squashfs-lite-$ARCH"
           chmod +x *.AppImage
@@ -434,24 +434,24 @@ jobs:
           ls -al
           find .
           ls -al "$APPDIR"
-          ./appimagetool-x86_64.AppImage -u "$UPINFO" "$APPDIR" zen-"$ARCH".AppImage --runtime-file ./uruntime-appimage-squashfs-lite-"$ARCH"
+          ./appimagetool-x86_64.AppImage -u "$UPINFO" "$APPDIR" enso-"$ARCH".AppImage --runtime-file ./uruntime-appimage-squashfs-lite-"$ARCH"
           mkdir dist
-          mv zen*AppImage* dist/.
+          mv enso*AppImage* dist/.
           unset ARCH
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           retention-days: 5
-          name: zen-${{ matrix.arch }}.AppImage
-          path: ./dist/zen-${{ matrix.arch }}.AppImage
+          name: enso-${{ matrix.arch }}.AppImage
+          path: ./dist/enso-${{ matrix.arch }}.AppImage
 
       - name: Upload artifact (ZSync)
         uses: actions/upload-artifact@v4
         with:
           retention-days: 5
-          name: zen-${{ matrix.arch }}.AppImage.zsync
-          path: ./dist/zen-${{ matrix.arch }}.AppImage.zsync
+          name: enso-${{ matrix.arch }}.AppImage.zsync
+          path: ./dist/enso-${{ matrix.arch }}.AppImage.zsync
 
   stop-self-hosted:
     runs-on: blacksmith-2vcpu-ubuntu-2404
@@ -560,23 +560,23 @@ jobs:
         with:
           body_path: release_notes.md
           files: |
-            ./zen.source.tar.zst/*
-            ./zen.linux-x86_64.tar.xz/*
-            ./zen.linux-aarch64.tar.xz/*
-            ./zen-x86_64.AppImage/*
-            ./zen-x86_64.AppImage.zsync/*
-            ./zen-aarch64.AppImage/*
-            ./zen-aarch64.AppImage.zsync/*
-            ./zen.win-x86_64.zip/*
-            ./zen.win-arm64.zip/*
+            ./enso.source.tar.zst/*
+            ./enso.linux-x86_64.tar.xz/*
+            ./enso.linux-aarch64.tar.xz/*
+            ./enso-x86_64.AppImage/*
+            ./enso-x86_64.AppImage.zsync/*
+            ./enso-aarch64.AppImage/*
+            ./enso-aarch64.AppImage.zsync/*
+            ./enso.win-x86_64.zip/*
+            ./enso.win-arm64.zip/*
             ./linux.mar/*
             ./linux-aarch64.mar/*
             ./windows.mar/*
             ./windows-arm64.mar/*
             ./macos.mar/*
-            ./zen.installer.exe/*
-            ./zen.installer-arm64.exe/*
-            ./zen.macos-universal.dmg/*
+            ./enso.installer.exe/*
+            ./enso.installer-arm64.exe/*
+            ./enso.macos-universal.dmg/*
           tag_name: "twilight"
           name: "Twilight build - ${{ needs.build-data.outputs.version }} (${{ needs.build-data.outputs.build_date }} at ${{ needs.build-data.outputs.build_time }})"
           draft: false
@@ -599,23 +599,23 @@ jobs:
           name: "Release build - ${{ needs.build-data.outputs.version }} (${{ needs.build-data.outputs.build_date }})"
           body_path: release_notes.md
           files: |
-            ./zen.source.tar.zst/*
-            ./zen.linux-x86_64.tar.xz/*
-            ./zen.linux-aarch64.tar.xz/*
-            ./zen-x86_64.AppImage/*
-            ./zen-x86_64.AppImage.zsync/*
-            ./zen-aarch64.AppImage/*
-            ./zen-aarch64.AppImage.zsync/*
-            ./.github/workflows/object/windows-x64-signed-x86_64/zen.win-x86_64.zip
-            ./.github/workflows/object/windows-x64-signed-arm64/zen.win-arm64.zip
+            ./enso.source.tar.zst/*
+            ./enso.linux-x86_64.tar.xz/*
+            ./enso.linux-aarch64.tar.xz/*
+            ./enso-x86_64.AppImage/*
+            ./enso-x86_64.AppImage.zsync/*
+            ./enso-aarch64.AppImage/*
+            ./enso-aarch64.AppImage.zsync/*
+            ./.github/workflows/object/windows-x64-signed-x86_64/enso.win-x86_64.zip
+            ./.github/workflows/object/windows-x64-signed-arm64/enso.win-arm64.zip
             ./linux.mar/*
             ./linux-aarch64.mar/*
             ./.github/workflows/object/windows-x64-signed-x86_64/windows.mar
             ./.github/workflows/object/windows-x64-signed-arm64/windows-arm64.mar
             ./macos.mar/*
-            ./.github/workflows/object/windows-x64-signed-x86_64/zen.installer.exe
-            ./.github/workflows/object/windows-x64-signed-arm64/zen.installer-arm64.exe
-            ./zen.macos-universal.dmg/*
+            ./.github/workflows/object/windows-x64-signed-x86_64/enso.installer.exe
+            ./.github/workflows/object/windows-x64-signed-arm64/enso.installer-arm64.exe
+            ./enso.macos-universal.dmg/*
 
   prepare-flatpak:
     if: ${{ inputs.create_release && inputs.update_branch == 'release' }}
@@ -693,12 +693,12 @@ jobs:
       - name: Download Linux x86_64 build
         uses: actions/download-artifact@v4
         with:
-          name: zen.linux-x86_64.tar.xz
+          name: enso.linux-x86_64.tar.xz
 
       - name: Download Linux aarch64 build
         uses: actions/download-artifact@v4
         with:
-          name: zen.linux-aarch64.tar.xz
+          name: enso.linux-aarch64.tar.xz
 
       - name: Update repository
         uses: actions/checkout@v4
@@ -720,29 +720,29 @@ jobs:
           python3 ./enso-browser/scripts/prepare-flatpak-release.py \
             --flatpak-archive archive.tar \
             --version ${{ needs.build-data.outputs.version }} \
-            --linux-archive zen.linux-x86_64.tar.xz \
-            --linux-aarch64-archive zen.linux-aarch64.tar.xz \
-            --output app.enso_browser.zen.yml \
+            --linux-archive enso.linux-x86_64.tar.xz \
+            --linux-aarch64-archive enso.linux-aarch64.tar.xz \
+            --output app.enso_browser.enso.yml \
             --template-root ./enso-browser/build/flatpak
 
       - name: Commit changes
         run: |
-          git add app.enso_browser.zen.yml
+          git add app.enso_browser.enso.yml
           git commit -m "Update to version ${{ needs.build-data.outputs.version }}"
 
       - name: Clean up
         run: |
           rm -rf enso-browser
           rm -rf archive.tar
-          rm -rf zen.linux-x86_64.tar.xz
-          rm -rf zen.linux-aarch64.tar.xz
+          rm -rf enso.linux-x86_64.tar.xz
+          rm -rf enso.linux-aarch64.tar.xz
 
       - name: Upload Flatpak manifest
         uses: actions/upload-artifact@v4
         with:
           retention-days: 5
-          name: app.enso_browser.zen.yml
-          path: ./app.enso_browser.zen.yml
+          name: app.enso_browser.enso.yml
+          path: ./app.enso_browser.enso.yml
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7

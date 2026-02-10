@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Arbeitsbereiche
+enso-panel-ui-spaces-label = 
+    .label = Arbeitsbereiche
+enso-panel-ui-workspaces-create = 
+    .label = Arbeitsbereich erstellen
+enso-panel-ui-folder-create = 
+    .label = Ordner erstellen
+enso-panel-ui-new-empty-split = 
+    .label = Neuen Split erstellen
+enso-workspaces-panel-context-delete = 
+    .label = Arbeitsbereich löschen
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Namen ändern
+enso-workspaces-panel-change-icon = 
+    .label = Symbol ändern
+enso-workspaces-panel-context-default-profile = 
+    .label = Profil festlegen
+enso-workspaces-panel-unload = 
+    .label = Arbeitsbereich entladen
+enso-workspaces-how-to-reorder-title = So ordnest du Arbeitsbereiche neu an
+enso-workspaces-how-to-reorder-desc = Zieh die Arbeitsbereich-Symbole am unteren Rand der Seitenleiste, um sie neu anzuordnen
+enso-workspaces-change-theme = 
+    .label = Design anpassen
+enso-workspaces-panel-context-open = 
+    .label = Arbeitsbereich öffnen
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Arbeitsbereich bearbeiten
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Arbeitsbereiche
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Komplementär
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Geteilt-Komplementär
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Analog
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Triadisch
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Fließend
+enso-panel-ui-gradient-click-to-add = Klick hier, um eine Farbe hinzuzufügen
+enso-workspace-creation-name = 
+    .placeholder = Name des Arbeitsbereichs
+enso-move-tab-to-workspace-button = 
+    .label = Verschieben nach...
+    .tooltiptext = Alle Tabs in diesem Fenster in einen Arbeitsbereich verschieben
+enso-workspaces-panel-context-reorder = 
+    .label = Arbeitsbereiche neu anordnen
+enso-workspace-creation-profile = Profil
+    .tooltiptext = Profile trennen Cookies und Website-Daten zwischen verschiedenen Arbeitsbereichen.
+enso-workspace-creation-header = Arbeitsbereich erstellen
+enso-workspace-creation-label = Arbeitsbereiche helfen dir, deine Tabs und Sitzungen zu organisieren.
+enso-workspaces-delete-workspace-title = Arbeitsbereich löschen?
+enso-workspaces-delete-workspace-body = Möchtest du { $name } wirklich löschen? Das lässt sich nicht rückgängig machen.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Tabs geschlossen! Nutze <span>{ $shortcut }</span>, um das rückgängig zu machen.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Aufräumen
+    .tooltiptext = Alle nicht angehefteten Tabs schließen
+enso-panel-ui-workspaces-change-forward = 
+    .label = Nächster Arbeitsbereich
+enso-panel-ui-workspaces-change-back = 
+    .label = Vorheriger Arbeitsbereich

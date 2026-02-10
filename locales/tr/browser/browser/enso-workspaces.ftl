@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Alanlar
+enso-panel-ui-spaces-label = 
+    .label = Alanlar
+enso-panel-ui-workspaces-create = 
+    .label = Alan Oluştur
+enso-panel-ui-folder-create = 
+    .label = Klasör Oluştur
+enso-panel-ui-new-empty-split = 
+    .label = Yeni Bölünmüş Görünüm
+enso-workspaces-panel-context-delete = 
+    .label = Çalışma Alanını Sil
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Adı Değiştir
+enso-workspaces-panel-change-icon = 
+    .label = Simgeyi Değiştir
+enso-workspaces-panel-context-default-profile = 
+    .label = Profil Ayarla
+enso-workspaces-panel-unload = 
+    .label = Alanı Boşalt
+enso-workspaces-how-to-reorder-title = Alanlar nasıl yeniden sıralanır
+enso-workspaces-how-to-reorder-desc = Alanları yeniden sıralamak için kenar çubuğunun altındaki alan simgelerini sürükleyin
+enso-workspaces-change-theme = 
+    .label = Temayı Düzenle
+enso-workspaces-panel-context-open = 
+    .label = Çalışma Alanı Aç
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Çalışma Alanını Düzenle
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Alanlar
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Tamamlayıcı
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Böl
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Benzer
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Üçlü
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Kayan
+enso-panel-ui-gradient-click-to-add = Renk eklemek için tıkla
+enso-workspace-creation-name = 
+    .placeholder = Alan Adı
+enso-move-tab-to-workspace-button = 
+    .label = Şuraya Taşı...
+    .tooltiptext = Bu penceredeki tüm sekmeleri bir Alana taşı
+enso-workspaces-panel-context-reorder = 
+    .label = Alanları Yeniden Sırala
+enso-workspace-creation-profile = Profil
+    .tooltiptext = Profiller, alanlar arasındaki çerezleri ve site verilerini ayırmak için kullanılır.
+enso-workspace-creation-header = Bir Alan Oluştur
+enso-workspace-creation-label = Alanlar, sekme ve oturumlarınızı düzenlemek için kullanılır.
+enso-workspaces-delete-workspace-title = Alan Silinsin mi?
+enso-workspaces-delete-workspace-body = { $name } ögesini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Sekmeler Kapatıldı! Geri almak için <span>{ $shortcut }</span> tuşlarını kullan.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Temizle
+    .tooltiptext = Sabitlenmemiş tüm sekmeleri kapat
+enso-panel-ui-workspaces-change-forward = 
+    .label = Sonraki Alan
+enso-panel-ui-workspaces-change-back = 
+    .label = Önceki Alan

@@ -27,7 +27,7 @@ index 6528da245d922e2ccdb59cbf8106055bc34d1e74..b5d5ac633c06d7d9c909ec9456a5f3c1
            "pinned,selected=visuallyselected,multiselected,titlechanged,attention",
          ".tab-icon-stack":
 -          "sharing,pictureinpicture,crashed,busy,soundplaying,soundplaying-scheduledremoval,pinned,muted,blocked,selected=visuallyselected,activemedia-blocked",
-+          "zen-essential,sharing,pictureinpicture,crashed,busy,soundplaying,soundplaying-scheduledremoval,pinned,muted,blocked,selected=visuallyselected,activemedia-blocked",
++          "enso-essential,sharing,pictureinpicture,crashed,busy,soundplaying,soundplaying-scheduledremoval,pinned,muted,blocked,selected=visuallyselected,activemedia-blocked",
          ".tab-throbber":
            "fadein,pinned,busy,progress,selected=visuallyselected",
          ".tab-icon-pending":
@@ -36,10 +36,10 @@ index 6528da245d922e2ccdb59cbf8106055bc34d1e74..b5d5ac633c06d7d9c909ec9456a5f3c1
          ".tab-sharing-icon-overlay": "sharing,selected=visuallyselected,pinned",
          ".tab-icon-overlay":
 -          "sharing,pictureinpicture,crashed,busy,soundplaying,soundplaying-scheduledremoval,pinned,muted,blocked,selected=visuallyselected,activemedia-blocked",
-+          "zen-essential,sharing,pictureinpicture,crashed,busy,soundplaying,soundplaying-scheduledremoval,pinned,muted,blocked,selected=visuallyselected,activemedia-blocked",
++          "enso-essential,sharing,pictureinpicture,crashed,busy,soundplaying,soundplaying-scheduledremoval,pinned,muted,blocked,selected=visuallyselected,activemedia-blocked",
          ".tab-audio-button":
 -          "crashed,soundplaying,soundplaying-scheduledremoval,pinned,muted,activemedia-blocked",
-+          "zen-essential,crashed,soundplaying,soundplaying-scheduledremoval,pinned,muted,activemedia-blocked",
++          "enso-essential,crashed,soundplaying,soundplaying-scheduledremoval,pinned,muted,activemedia-blocked",
          ".tab-label-container":
            "pinned,selected=visuallyselected,labeldirection",
          ".tab-label":
@@ -48,7 +48,7 @@ index 6528da245d922e2ccdb59cbf8106055bc34d1e74..b5d5ac633c06d7d9c909ec9456a5f3c1
  
      set _visuallySelected(val) {
 -      if (val == this.hasAttribute("visuallyselected")) {
-+      if (val == this.hasAttribute("visuallyselected") || (!val && this.linkedBrowser?.closest('.browserSidebarContainer').classList.contains('zen-glance-background'))) {
++      if (val == this.hasAttribute("visuallyselected") || (!val && this.linkedBrowser?.closest('.browserSidebarContainer').classList.contains('enso-glance-background'))) {
          return;
        }
  
@@ -61,7 +61,7 @@ index 6528da245d922e2ccdb59cbf8106055bc34d1e74..b5d5ac633c06d7d9c909ec9456a5f3c1
 -        !this.hidden &&
 -        (!this.group || this.group.isTabVisibleInGroup(this))
 -      );
-+      if (!this.isOpen || this.hidden || this.hasAttribute("zen-empty-tab")) {
++      if (!this.isOpen || this.hidden || this.hasAttribute("enso-empty-tab")) {
 +        return false;
 +      }
 +      // Selected tabs are always visible
@@ -74,7 +74,7 @@ index 6528da245d922e2ccdb59cbf8106055bc34d1e74..b5d5ac633c06d7d9c909ec9456a5f3c1
 +        }
 +        currentParent = currentParent.group;
 +      }
-+      if (this.pinned && !this.hasAttribute("zen-essential") && gZenWorkspaces.activeWorkspaceElement?.hasCollapsedPinnedTabs) {
++      if (this.pinned && !this.hasAttribute("enso-essential") && gEnsoWorkspaces.activeWorkspaceElement?.hasCollapsedPinnedTabs) {
 +        return false;
 +      }
 +      return true;
@@ -86,7 +86,7 @@ index 6528da245d922e2ccdb59cbf8106055bc34d1e74..b5d5ac633c06d7d9c909ec9456a5f3c1
        }
  
 -      return true;
-+      return !this.hasAttribute("zen-empty-tab");
++      return !this.hasAttribute("enso-empty-tab");
      }
  
      get lastAccessed() {
@@ -101,8 +101,8 @@ index 6528da245d922e2ccdb59cbf8106055bc34d1e74..b5d5ac633c06d7d9c909ec9456a5f3c1
 +      if (gBrowser.isTabGroup(this.parentElement?.parentElement)) {
 +        return this.parentElement.parentElement;
 +      }
-+      if (this.pinned && !this.hasAttribute('zen-essential')) {
-+        let collapsiblePins = gZenWorkspaces.workspaceElement(this.getAttribute('zen-workspace-id'))?.collapsiblePins;
++      if (this.pinned && !this.hasAttribute('enso-essential')) {
++        let collapsiblePins = gEnsoWorkspaces.workspaceElement(this.getAttribute('enso-workspace-id'))?.collapsiblePins;
 +        if (collapsiblePins?.collapsed) {
 +          return collapsiblePins;
 +        }
@@ -124,7 +124,7 @@ index 6528da245d922e2ccdb59cbf8106055bc34d1e74..b5d5ac633c06d7d9c909ec9456a5f3c1
      }
  
 +    get glanceTab() {
-+      return this.querySelector("tab[zen-glance-tab]");
++      return this.querySelector("tab[enso-glance-tab]");
 +    }
 +
      on_click(event) {
@@ -136,10 +136,10 @@ index 6528da245d922e2ccdb59cbf8106055bc34d1e74..b5d5ac633c06d7d9c909ec9456a5f3c1
        }
 +
 +      if (event.target.classList.contains("tab-reset-pin-button")) {
-+        gZenPinnedTabManager._onTabResetPinButton(event, this, 'reset');
++        gEnsoPinnedTabManager._onTabResetPinButton(event, this, 'reset');
 +        gBrowser.tabContainer._blockDblClick = true;
 +      } else if (event.target.classList.contains("tab-reset-button")) {
-+        gZenPinnedTabManager.onCloseTabShortcut(event, this);
++        gEnsoPinnedTabManager.onCloseTabShortcut(event, this);
 +        gBrowser.tabContainer._blockDblClick = true;
 +      }
      }
@@ -149,8 +149,8 @@ index 6528da245d922e2ccdb59cbf8106055bc34d1e74..b5d5ac633c06d7d9c909ec9456a5f3c1
            animate: true,
            triggeringEvent: event,
          });
-+      } else if (this.hasAttribute('zen-essential') && !event.target.classList.contains("tab-icon-overlay")) {
-+        gZenPinnedTabManager._onTabResetPinButton(event, this, 'reset');
++      } else if (this.hasAttribute('enso-essential') && !event.target.classList.contains("tab-icon-overlay")) {
++        gEnsoPinnedTabManager._onTabResetPinButton(event, this, 'reset');
        }
      }
  

@@ -1,0 +1,19 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+#include ../../../enso/media/enso-media-controls.inc.xhtml
+
+<toolbar brighttext="true"
+  id="enso-sidebar-foot-buttons"
+  fullscreentoolbar="true"
+  class="browser-toolbar customization-target"
+  data-l10n-id="tabs-toolbar"
+  customizable="true"
+  skipintoolbarset="true"
+  context="toolbar-context-menu"
+  mode="icons">
+  <toolbarbutton removable="true" class="chromeclass-toolbar-additional toolbarbutton-1 enso-sidebar-action-button" id="enso-expand-sidebar-button" command="cmd_ensoToggleSidebar" data-l10n-id="sidebar-enso-expand"></toolbarbutton>
+  <enso-workspace-icons id="enso-workspaces-button" overflows="false" removable="false"></enso-workspace-icons>
+  <toolbarbutton removable="true" class="chromeclass-toolbar-additional toolbarbutton-1 enso-sidebar-action-button" id="enso-create-new-button" context="ensoCreateNewPopup" data-l10n-id="sidebar-enso-create-new"></toolbarbutton>
+</toolbar>

@@ -106,13 +106,13 @@ index f562f19741d882d92365da531b55e2810a0e79ea..a68ce8191314845c589f3a9f14b56028
 +    if(document.documentElement.getAttribute("windowtype") === "Places:Organizer") {
 +      return;
 +    }
-+    const { ZenSessionStore } = ChromeUtils.importESModule(
-+      "resource:///modules/zen/ZenSessionManager.sys.mjs"
++    const { EnsoSessionStore } = ChromeUtils.importESModule(
++      "resource:///modules/enso/EnsoSessionManager.sys.mjs"
 +    );
-+    this._workspaces = ZenSessionStore.getClonedSpaces();
++    this._workspaces = EnsoSessionStore.getClonedSpaces();
 +    const workspaceList = this._workspaceList;
 +    if(aInfo.node?.bookmarkGuid) {
-+      this._selectedWorkspaces = await ZenWorkspaceBookmarksStorage.getBookmarkWorkspaces(aInfo.node.bookmarkGuid);
++      this._selectedWorkspaces = await EnsoWorkspaceBookmarksStorage.getBookmarkWorkspaces(aInfo.node.bookmarkGuid);
 +    }
 +
 +    // Clear existing items

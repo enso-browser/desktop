@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Các không gian làm việc
+enso-panel-ui-spaces-label = 
+    .label = Không gian
+enso-panel-ui-workspaces-create = 
+    .label = Tạo không gian làm việc
+enso-panel-ui-folder-create = 
+    .label = Tạo thư mục thẻ
+enso-panel-ui-new-empty-split = 
+    .label = Chia không gian
+enso-workspaces-panel-context-delete = 
+    .label = Xóa không gian làm việc
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Đổi tên
+enso-workspaces-panel-change-icon = 
+    .label = Đổi biểu tượng không gian làm việc
+enso-workspaces-panel-context-default-profile = 
+    .label = Cài đặt hồ sơ
+enso-workspaces-panel-unload = 
+    .label = Tắt tất cả các trang web trong không gian làm việc
+enso-workspaces-how-to-reorder-title = Cách sắp xếp thứ tự của các không gian làm việc
+enso-workspaces-how-to-reorder-desc = Kéo và thả các biểu tượng của không gian làm việc ở dưới thanh bên để sắp xếp thứ tự của chúng
+enso-workspaces-change-theme = 
+    .label = Chỉnh sửa màu sắc của trình duyệt
+enso-workspaces-panel-context-open = 
+    .label = Mở không gian làm việc
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Tùy chỉnh không gian làm việc
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Không gian
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Bổ sung
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Chia nhỏ
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Tương tự
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Tam sắc
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Nổi
+enso-panel-ui-gradient-click-to-add = Nhấn để thêm màu sắc
+enso-workspace-creation-name = 
+    .placeholder = Tên của không gian làm việc
+enso-move-tab-to-workspace-button = 
+    .label = Di chuyển đến...
+    .tooltiptext = Di chuyển toàn bộ thẻ trong cửa sổ này đến một không gian
+enso-workspaces-panel-context-reorder = 
+    .label = Tái sắp xếp không gian làm việc
+enso-workspace-creation-profile = Hồ sơ
+    .tooltiptext = Các hồ sơ sẽ không sử dụng chung dữ liệu giữa các không gian làm việc.
+enso-workspace-creation-header = Tạo không gian làm việc
+enso-workspace-creation-label = Không gian làm việc sẽ là nơi để bạn chứa các trang web và lượt truy cập của bạn.
+enso-workspaces-delete-workspace-title = Delete Workspace?
+enso-workspaces-delete-workspace-body = Bạn có chắc là bạn muốn xóa { $name }? Thao tác này sẽ không được hoàn lại.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Thẻ đã đóng! Bấm <span>{ $shortcut }</span> để hoàn .
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Dọn sạch
+    .tooltiptext = Tắt tất cả các thẻ không ghim
+enso-panel-ui-workspaces-change-forward = 
+    .label = Next Space
+enso-panel-ui-workspaces-change-back = 
+    .label = Previous Space

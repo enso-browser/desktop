@@ -8,7 +8,7 @@ index 57dd6042d2620dd64c55e0e966913047a6c3502f..40d016a0a13596439046e2bbcfa59daa
  tabpanels > .split-view-splitter,
 -deck > .deck-selected {
 +deck > .deck-selected,
-+tabpanels > [zen-split="true"] {
++tabpanels > [enso-split="true"] {
    -moz-subtree-hidden-only-visually: 0;
    visibility: inherit;
  }

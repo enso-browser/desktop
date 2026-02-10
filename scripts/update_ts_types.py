@@ -24,7 +24,7 @@ GENERATED_FILES = [
 
 ENGINE_PATH = os.path.join("engine", "tools", "@types")
 GENERATED_PATH = os.path.join(ENGINE_PATH, "generated")
-SRC_PATH = os.path.join("src", "zen", "@types")
+SRC_PATH = os.path.join("src", "enso", "@types")
 
 
 def update_ts_types():
@@ -41,10 +41,10 @@ def update_ts_types():
     else:
       print(f"File {src_file} does not exist.")
 
-  # add zen.d.ts to the end of index.d.ts
+  # add enso.d.ts to the end of index.d.ts
   with open(os.path.join(SRC_PATH, "index.d.ts"), "a") as f:
     f.write("\n")
-    f.write('/// <reference types="./zen.d.ts" />\n')
+    f.write('/// <reference types="./enso.d.ts" />\n')
     f.write('\n')
 
 

@@ -7,7 +7,7 @@ index e9f0ea328cde3631ef856f44d47abb9c5cec5ee1..66ec2bc8bb716ad9e87f88f3d93f9516
    margin-inline-end: var(--identity-box-margin-inline);
  
 -  &[pageproxystate="invalid"] {
-+  :root[zen-has-empty-tab='true'] & {
++  :root[enso-has-empty-tab='true'] & {
      pointer-events: none;
      -moz-user-focus: ignore;
    }

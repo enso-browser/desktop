@@ -1,0 +1,57 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+- name: enso.tabs.vertical
+  value: true
+
+- name: enso.tabs.vertical.right-side
+  value: false
+
+- name: enso.tabs.rename-tabs
+  value: true
+
+- name: enso.tabs.essentials.max
+  value: 12
+
+- name: enso.tabs.show-newtab-vertical
+  value: true
+
+- name: enso.tabs.close-window-with-empty
+  value: true
+
+- name: enso.tabs.select-recently-used-on-close
+  value: true
+
+- name: enso.tabs.use-legacy-drag-and-drop
+  value: false
+
+- name: enso.tabs.folder-dragover-threshold-percent
+  value: 20 # Percentage of folder height to trigger dragover
+
+- name: enso.tabs.dnd-switch-space-delay
+  value: 800 # milliseconds
+
+- name: enso.ctrlTab.show-pending-tabs
+  value: false
+
+- name: enso.mediacontrols.enabled
+  value: true
+
+- name: enso.haptic-feedback.enabled
+  value: true
+
+- name: enso.startup.smooth-scroll-in-tabs
+  value: true
+
+- name: enso.tabs.open-pinned-in-new-tab
+  value: true
+
+- name: enso.tabs.close-on-back-with-no-history
+  value: true
+
+- name: enso.tabs.ctrl-tab.ignore-essential-tabs
+  value: false
+
+- name: enso.tabs.ctrl-tab.ignore-pending-tabs
+  value: false

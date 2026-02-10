@@ -7,9 +7,9 @@ body:
         <p align="center">
           <a href="https://enso-browser.app">
             <picture>
-              <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/enso-browser/desktop/dev/docs/assets/zen-light.svg">
-              <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/enso-browser/desktop/dev/docs/assets/zen-dark.svg">
-              <img src="https://raw.githubusercontent.com/enso-browser/desktop/dev/docs/assets/zen-light.svg" alt="Enso Logo" width="64" height="64">
+              <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/enso-browser/desktop/dev/docs/assets/enso-light.svg">
+              <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/enso-browser/desktop/dev/docs/assets/enso-dark.svg">
+              <img src="https://raw.githubusercontent.com/enso-browser/desktop/dev/docs/assets/enso-light.svg" alt="Enso Logo" width="64" height="64">
             </picture>
             <img src="https://raw.githubusercontent.com/enso-browser/desktop/dev/docs/assets/enso-browser.svg" alt="Enso Browser Text" width="156" height="64">
           </a>

@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Erdvės
+enso-panel-ui-spaces-label = 
+    .label = Erdvės
+enso-panel-ui-workspaces-create = 
+    .label = Kurti erdvę
+enso-panel-ui-folder-create = 
+    .label = Kurti aplanką
+enso-panel-ui-new-empty-split = 
+    .label = Naujas skaidymas
+enso-workspaces-panel-context-delete = 
+    .label = Ištrinti erdvę
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Keisti pavadinimą
+enso-workspaces-panel-change-icon = 
+    .label = Keisti piktogramą
+enso-workspaces-panel-context-default-profile = 
+    .label = Nustatyti profilį
+enso-workspaces-panel-unload = 
+    .label = Iškelti erdvę
+enso-workspaces-how-to-reorder-title = Kaip pertvarkyti erdves
+enso-workspaces-how-to-reorder-desc = Nutempkite erdvės piktogramas šoninės juostos apačioje, kad pertvarkytumėte jas.
+enso-workspaces-change-theme = 
+    .label = Redaguoti temą
+enso-workspaces-panel-context-open = 
+    .label = Atverti darbo sritį
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Redaguoti darbo sritį
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Erdvės
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Papildomas
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Skaidymas
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Analoginis
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Triadinis
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Slankusis
+enso-panel-ui-gradient-click-to-add = Spustelėkite, kad pridėtumėte spalvą
+enso-workspace-creation-name = 
+    .placeholder = Erdvės pavadinimas
+enso-move-tab-to-workspace-button = 
+    .label = Perkelti į...
+    .tooltiptext = Perkelti visas korteles šiame lange į erdvę
+enso-workspaces-panel-context-reorder = 
+    .label = Pertvarkyti erdves
+enso-workspace-creation-profile = Profilis
+    .tooltiptext = Profiliai naudojami atskirti slapukus ir svetainės duomenis tarp erdvių.
+enso-workspace-creation-header = Kurti erdvę
+enso-workspace-creation-label = Erdvės naudojamos tvarkyti jūsų korteles ir seansus.
+enso-workspaces-delete-workspace-title = Ištrinti erdvę?
+enso-workspaces-delete-workspace-body = Ar tikrai norite ištrinti „{ $name }“? Šio veiksmo anuliuoti negalima.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Kortelės užvertos! Naudokite <span>{ $shortcut }</span>, kad atšauktumėte.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Valyti
+    .tooltiptext = Užverti visas neprisegtas korteles
+enso-panel-ui-workspaces-change-forward = 
+    .label = Tolesnė erdvė
+enso-panel-ui-workspaces-change-back = 
+    .label = Ankstesnė erdvė

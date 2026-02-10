@@ -25,7 +25,7 @@ index edfe3e05a1b4517a4de6e09221ebdcfb5d8f1fe5..5986f88babf2b8d48ec8a5c0724787b1
  .urlbar[breakout][breakout-extend] {
    height: auto;
 +  align-items: center;
-+  :root:not([zen-single-toolbar='true']) {
++  :root:not([enso-single-toolbar='true']) {
    margin-left: calc(-1 * var(--urlbar-margin-inline));
 +  }
    width: calc(var(--urlbar-width) + 2 * var(--urlbar-margin-inline));

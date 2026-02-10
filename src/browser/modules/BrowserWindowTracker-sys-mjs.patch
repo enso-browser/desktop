@@ -6,7 +6,7 @@ index 0cd9e9630fff20d71dc1dd7367ae6af4f7a53f71..7212c5f4745f3c93c1ede932af1b0e85
      args = null,
      remote = undefined,
      fission = undefined,
-+    zenSyncedWindow = true,
++    ensoSyncedWindow = true,
    } = {}) {
      let windowFeatures = "chrome,dialog=no";
      if (all) {
@@ -14,11 +14,11 @@ index 0cd9e9630fff20d71dc1dd7367ae6af4f7a53f71..7212c5f4745f3c93c1ede932af1b0e85
        windowFeatures,
        args
      );
-+    win._zenStartupSyncFlag = Services.prefs.getBoolPref("zen.window-sync.prefer-unsynced-windows")
-+      ? (zenSyncedWindow ? 'unsynced' : 'synced')
-+      : (zenSyncedWindow ? 'synced' : 'unsynced');
-+    if (win._zenStartupSyncFlag === 'unsynced' && openerWindow) {
-+      win._zenStartupUnsyncedUserContextId = openerWindow.gZenWorkspaces.getCurrentSpaceContainerId();
++    win._ensoStartupSyncFlag = Services.prefs.getBoolPref("enso.window-sync.prefer-unsynced-windows")
++      ? (ensoSyncedWindow ? 'unsynced' : 'synced')
++      : (ensoSyncedWindow ? 'synced' : 'unsynced');
++    if (win._ensoStartupSyncFlag === 'unsynced' && openerWindow) {
++      win._ensoStartupUnsyncedUserContextId = openerWindow.gEnsoWorkspaces.getCurrentSpaceContainerId();
 +    }
      this.registerOpeningWindow(win, isPrivate);
  

@@ -6,7 +6,7 @@ index b4c14233c64dd3515518d3167f8ee2877fe41a93..2b91fa3044794765b8e15c6b66b348de
  
  #include "nsCocoaWindow.h"
  #include "mozilla/StaticPrefs_widget.h"
-+#include "mozilla/StaticPrefs_zen.h"
++#include "mozilla/StaticPrefs_enso.h"
  
  using namespace mozilla;
  
@@ -15,7 +15,7 @@ index b4c14233c64dd3515518d3167f8ee2877fe41a93..2b91fa3044794765b8e15c6b66b348de
    switch (aType) {
      case VibrancyType::Sidebar:
 -      return NSVisualEffectMaterialSidebar;
-+      switch (StaticPrefs::zen_widget_macos_window_material()) {
++      switch (StaticPrefs::enso_widget_macos_window_material()) {
 +        case 1:
 +          return NSVisualEffectMaterialHUDWindow;
 +        case 2:
@@ -47,7 +47,7 @@ index b4c14233c64dd3515518d3167f8ee2877fe41a93..2b91fa3044794765b8e15c6b66b348de
  static constexpr nsLiteralCString kObservedPrefs[] = {
      "widget.macos.sidebar-blend-mode.behind-window"_ns,
      "widget.macos.titlebar-blend-mode.behind-window"_ns,
-+    "zen.widget.macos.window-material"_ns,
++    "enso.widget.macos.window-material"_ns,
  };
  
  VibrancyManager::VibrancyManager(const nsCocoaWindow& aCoordinateConverter,

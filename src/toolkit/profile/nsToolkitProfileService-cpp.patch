@@ -6,7 +6,7 @@ index c9f742dc4588a21db5011b3386999a5832defd33..4a4a6fc28822200c3e254d682d303b38
  #define INSTALL_PREFIX_LENGTH 7
  #define STORE_ID_PREF "toolkit.profiles.storeID"
  
-+#include "zenToolkitProfileServiceDefaultOverride.h"
++#include "ensoToolkitProfileServiceDefaultOverride.h"
 +
  struct KeyValue {
    KeyValue(const char* aKey, const char* aValue) : key(aKey), value(aValue) {}

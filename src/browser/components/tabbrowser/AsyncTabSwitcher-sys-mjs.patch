@@ -6,7 +6,7 @@ index 9c5e92fbd555d328ce09c0cf0ff8078584f68478..2af7a428bc830d8c12b3d3c0af375c97
        this.tabbrowser._printPreviewBrowsers.has(browser) ||
        this.tabbrowser.splitViewBrowsers.includes(browser) ||
        lazy.PictureInPicture.isOriginatingBrowser(browser)
-+      || browser?.zenModeActive
++      || browser?.ensoModeActive
      );
    }
  

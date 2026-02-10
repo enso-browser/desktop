@@ -1,0 +1,8 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+        content/browser/enso-components/EnsoPinnedTabManager.mjs                  (../../enso/tabs/EnsoPinnedTabManager.mjs)
+        content/browser/enso-components/EnsoEssentialsPromo.mjs                   (../../enso/tabs/EnsoEssentialsPromo.mjs)
+*       content/browser/enso-styles/enso-tabs.css                                 (../../enso/tabs/enso-tabs.css)
+        content/browser/enso-styles/enso-tabs/vertical-tabs.css                   (../../enso/tabs/enso-tabs/vertical-tabs.css)

@@ -7,8 +7,8 @@ index 782258420cdce901f182897b796731a1fdf69ecf..a762067169b1cf3cd05147f9e715eb0d
  // don't do that.
  user_pref("geo.prompt.open_system_prefs", false);
 +
-+user_pref("zen.welcome-screen.seen", true);
-+user_pref("zen.watermark.enabled", false);
-+user_pref("zen.testing.enabled", true);
-+user_pref("zen.window-sync.enabled", true);
++user_pref("enso.welcome-screen.seen", true);
++user_pref("enso.watermark.enabled", false);
++user_pref("enso.testing.enabled", true);
++user_pref("enso.window-sync.enabled", true);
 +user_pref("widget.macos.native-context-menus", false);

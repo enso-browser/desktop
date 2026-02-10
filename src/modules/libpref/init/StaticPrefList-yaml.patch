@@ -6,7 +6,7 @@ index cc7fd419035a972bfab1b0e7631b8856e846ce81..b4e6d699f99e7164e62ce20792919420
    mirror: always
  #endif
  
-+#include zen-static-prefs.inc
++#include enso-static-prefs.inc
  #---------------------------------------------------------------------------
  # Prefs starting with "zoom."
  #---------------------------------------------------------------------------

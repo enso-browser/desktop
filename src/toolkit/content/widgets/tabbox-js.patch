@@ -13,13 +13,13 @@ index 7f6e075c818a6aefdcbdfb8ab04df8daa07499d5..9e2d05a9ce02630b8305d5642b6c0d7c
 +  XPCOMUtils.defineLazyPreferenceGetter(
 +    lazyZenPrefs,
 +    "cycleByAttribute",
-+    "zen.tabs.ctrl-tab.ignore-essential-tabs",
++    "enso.tabs.ctrl-tab.ignore-essential-tabs",
 +    false
 +  );
 +  XPCOMUtils.defineLazyPreferenceGetter(
 +    lazyZenPrefs,
 +    "ignorePendingTabs",
-+    "zen.tabs.ctrl-tab.ignore-pending-tabs",
++    "enso.tabs.ctrl-tab.ignore-pending-tabs",
 +    false
 +  );
 +
@@ -31,7 +31,7 @@ index 7f6e075c818a6aefdcbdfb8ab04df8daa07499d5..9e2d05a9ce02630b8305d5642b6c0d7c
        this._inAsyncOperation = false;
        if (oldPanel != this._selectedPanel) {
 -        oldPanel?.classList.remove("deck-selected");
-+        if (!(window.gZenGlanceManager && gZenGlanceManager.shouldShowDeckSelected(this._selectedPanel, oldPanel))) oldPanel?.classList.remove("deck-selected");
++        if (!(window.gEnsoGlanceManager && gEnsoGlanceManager.shouldShowDeckSelected(this._selectedPanel, oldPanel))) oldPanel?.classList.remove("deck-selected");
          this._selectedPanel?.classList.add("deck-selected");
        }
        this.setAttribute("selectedIndex", val);
@@ -40,7 +40,7 @@ index 7f6e075c818a6aefdcbdfb8ab04df8daa07499d5..9e2d05a9ce02630b8305d5642b6c0d7c
          return;
        }
 -      for (let otherTab of this.allTabs) {
-+      for (let otherTab of window.gZenWorkspaces?.allStoredTabs ?? this.allTabs) {
++      for (let otherTab of window.gEnsoWorkspaces?.allStoredTabs ?? this.allTabs) {
          if (otherTab != tab && otherTab.selected) {
            otherTab._selected = false;
          }
@@ -48,7 +48,7 @@ index 7f6e075c818a6aefdcbdfb8ab04df8daa07499d5..9e2d05a9ce02630b8305d5642b6c0d7c
       * @param {MozTab|null} [val]
       */
      set selectedItem(val) {
-+      val = window.gZenGlanceManager?.getTabOrGlanceChild(val) || val;
++      val = window.gEnsoGlanceManager?.getTabOrGlanceChild(val) || val;
        if (val && !val.selected) {
          // The selectedIndex setter ignores invalid values
          // such as -1 if |val| isn't one of our child nodes.
@@ -57,7 +57,7 @@ index 7f6e075c818a6aefdcbdfb8ab04df8daa07499d5..9e2d05a9ce02630b8305d5642b6c0d7c
            return null;
          }
 -        if (filter(tab)) {
-+        if (filter(tab) && !tab.hasAttribute("zen-glance-tab") && !tab.hasAttribute("zen-empty-tab")) {
++        if (filter(tab) && !tab.hasAttribute("enso-glance-tab") && !tab.hasAttribute("enso-empty-tab")) {
            return tab;
          }
        }
@@ -65,12 +65,12 @@ index 7f6e075c818a6aefdcbdfb8ab04df8daa07499d5..9e2d05a9ce02630b8305d5642b6c0d7c
       * @param {boolean} [aWrap]
       */
      advanceSelectedTab(aDir, aWrap) {
-+      if (window?.gZenGlanceManager?._animating) return;
++      if (window?.gEnsoGlanceManager?._animating) return;
        let { ariaFocusedItem } = this;
        let startTab = ariaFocusedItem;
        if (!ariaFocusedItem || !this.allTabs.includes(ariaFocusedItem)) {
 -        startTab = this.selectedItem;
-+        startTab = gZenGlanceManager.getFocusedTab(aDir) || this.selectedItem;
++        startTab = gEnsoGlanceManager.getFocusedTab(aDir) || this.selectedItem;
        }
        let newTab = null;
  
@@ -84,10 +84,10 @@ index 7f6e075c818a6aefdcbdfb8ab04df8daa07499d5..9e2d05a9ce02630b8305d5642b6c0d7c
 +        if (!lazyZenPrefs.cycleByAttribute) {
 +          return true
 +        }
-+        if (startTab.hasAttribute("zen-essential")) {
-+          return tab.hasAttribute("zen-essential")
++        if (startTab.hasAttribute("enso-essential")) {
++          return tab.hasAttribute("enso-essential")
 +        }
-+        return !tab.hasAttribute("zen-essential")
++        return !tab.hasAttribute("enso-essential")
 +      }
 +
        // Handle keyboard navigation for a hidden tab that can be selected, like the Firefox View tab,

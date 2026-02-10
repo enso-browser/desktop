@@ -6,12 +6,12 @@ index d016811caa6c1ecc947fd705f6e1b27e3b5a12a5..89f2a9ec9ebd80e744ed0118e1b3c164
      if (hasKids && !this.navbar.hasAttribute("nonemptyoverflow")) {
        this.navbar.setAttribute("nonemptyoverflow", "true");
        this.overflowPanel.setAttribute("hasfixeditems", "true");
-+      window.document.getElementById("zen-sidebar-top-buttons").setAttribute("nonemptyoverflow", "true");
++      window.document.getElementById("enso-sidebar-top-buttons").setAttribute("nonemptyoverflow", "true");
      } else if (!hasKids && this.navbar.hasAttribute("nonemptyoverflow")) {
        PanelMultiView.hidePopup(this.overflowPanel);
        this.overflowPanel.removeAttribute("hasfixeditems");
        this.navbar.removeAttribute("nonemptyoverflow");
-+      window.document.getElementById("zen-sidebar-top-buttons").removeAttribute("nonemptyoverflow");
++      window.document.getElementById("enso-sidebar-top-buttons").removeAttribute("nonemptyoverflow");
      }
    },
  
@@ -20,7 +20,7 @@ index d016811caa6c1ecc947fd705f6e1b27e3b5a12a5..89f2a9ec9ebd80e744ed0118e1b3c164
        });
  
 -    this.notificationPanel.openPopup(anchor, "bottomright topright");
-+    this.notificationPanel.openPopup(anchor, gZenUIManager.panelUIPosition(this.notificationPanel, anchor));
++    this.notificationPanel.openPopup(anchor, gEnsoUIManager.panelUIPosition(this.notificationPanel, anchor));
    },
  
    _clearNotificationPanel() {

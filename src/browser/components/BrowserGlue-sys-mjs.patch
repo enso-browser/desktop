@@ -6,7 +6,7 @@ index 8acc1e5a97f769dc76d30ca0534f28b0a4511ab5..bd54169f976d3abe7d122b0efc0fa0d0
  const lazy = {};
  
  ChromeUtils.defineESModuleGetters(lazy, {
-+  gZenUIMigration: "resource:///modules/ZenUIMigration.sys.mjs",
++  gEnsoUIMigration: "resource:///modules/EnsoUIMigration.sys.mjs",
    AboutHomeStartupCache: "resource:///modules/AboutHomeStartupCache.sys.mjs",
    AWToolbarButton: "resource:///modules/aboutwelcome/AWToolbarUtils.sys.mjs",
    ASRouter: "resource:///modules/asrouter/ASRouter.sys.mjs",
@@ -24,7 +24,7 @@ index 8acc1e5a97f769dc76d30ca0534f28b0a4511ab5..bd54169f976d3abe7d122b0efc0fa0d0
        lazy.ProfileDataUpgrader.upgrade(profileDataVersion, APP_DATA_VERSION);
      }
 +
-+    lazy.gZenUIMigration.init(this._isNewProfile);
++    lazy.gEnsoUIMigration.init(this._isNewProfile);
    },
  
    async _showUpgradeDialog() {

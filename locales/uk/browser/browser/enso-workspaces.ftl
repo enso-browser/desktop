@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Простори
+enso-panel-ui-spaces-label = 
+    .label = Простори
+enso-panel-ui-workspaces-create = 
+    .label = Створити простір
+enso-panel-ui-folder-create = 
+    .label = Створити теку
+enso-panel-ui-new-empty-split = 
+    .label = Нове розділення
+enso-workspaces-panel-context-delete = 
+    .label = Видалити простір
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Змінити назву
+enso-workspaces-panel-change-icon = 
+    .label = Змінити значок
+enso-workspaces-panel-context-default-profile = 
+    .label = Встановити профіль
+enso-workspaces-panel-unload = 
+    .label = Вивантажити простір
+enso-workspaces-how-to-reorder-title = Як впорядкувати простори
+enso-workspaces-how-to-reorder-desc = Перетягніть значок простору в нижній частині панелі для зміни їхнього порядку
+enso-workspaces-change-theme = 
+    .label = Змінити тему
+enso-workspaces-panel-context-open = 
+    .label = Відкрити робочу область
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Редагувати простір
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Простори
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Додатковий
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Роздільний
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Аналоговий
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Трійковий
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Плавучий
+enso-panel-ui-gradient-click-to-add = Клацніть, щоби додати колір
+enso-workspace-creation-name = 
+    .placeholder = Назва простору
+enso-move-tab-to-workspace-button = 
+    .label = Перемістити до...
+    .tooltiptext = Перемістити всі вкладки в цьому вікні в простір
+enso-workspaces-panel-context-reorder = 
+    .label = Упорядкувати області
+enso-workspace-creation-profile = Профіль
+    .tooltiptext = Профілі використовуються для розділення файлів cookie і даних сайту між просторами.
+enso-workspace-creation-header = Створити простір
+enso-workspace-creation-label = Простори використовуються для організації ваших вкладок та сеансів.
+enso-workspaces-delete-workspace-title = Видалити простір?
+enso-workspaces-delete-workspace-body = Упевнені, що хочете видалити { $name }? Цю дію неможливо скасувати.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Вкладки закрито! Скористайтеся <span>{ $shortcut }</span>, аби повернути їх.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Очистити
+    .tooltiptext = Закрити всі відкріплені вкладки
+enso-panel-ui-workspaces-change-forward = 
+    .label = Наступний простір
+enso-panel-ui-workspaces-change-back = 
+    .label = Попередній простір

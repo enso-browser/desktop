@@ -6,7 +6,7 @@ index 9d3d3db9761cf5b2fde1f70992e82b1733241863..3dc64dc395d5237bf2c290cb8588cf46
          "drmContentPlaying",
          aBrowser
        )
-+      || true // zen: We have some issues with this currently, so never show it
++      || true // enso: We have some issues with this currently, so never show it
      ) {
        return;
      }

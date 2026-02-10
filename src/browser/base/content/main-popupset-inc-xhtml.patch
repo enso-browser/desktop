@@ -6,8 +6,8 @@ index 79b604c5965ba03762acbf085c9288c73001ec24..d75d5481e5de93c592850e39d4b0b4fd
             hidden="true"
             tabspecific="true"
             aria-labelledby="editBookmarkPanelTitle">
-+    <html:div id="zenEditBookmarkPanelFaviconContainer">
-+      <html:img id="zenEditBookmarkPanelFavicon"/>
++    <html:div id="ensoEditBookmarkPanelFaviconContainer">
++      <html:img id="ensoEditBookmarkPanelFavicon"/>
 +    </html:div>
 +    <vbox>
        <box class="panel-header">
@@ -25,7 +25,7 @@ index 79b604c5965ba03762acbf085c9288c73001ec24..d75d5481e5de93c592850e39d4b0b4fd
  
  #include popup-notifications.inc.xhtml
  
-+#include zen-popupset.inc.xhtml
++#include enso-popupset.inc.xhtml
 +
  #include ../../components/customizableui/content/panelUI.inc.xhtml
  #include ../../components/controlcenter/content/identityPanel.inc.xhtml

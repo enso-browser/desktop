@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = スペース
+enso-panel-ui-spaces-label = 
+    .label = スペース
+enso-panel-ui-workspaces-create = 
+    .label = スペースを作成
+enso-panel-ui-folder-create = 
+    .label = フォルダーを作成
+enso-panel-ui-new-empty-split = 
+    .label = 新しい分割表示
+enso-workspaces-panel-context-delete = 
+    .label = スペースを削除する
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = 名前を変更する
+enso-workspaces-panel-change-icon = 
+    .label = アイコンを変更する
+enso-workspaces-panel-context-default-profile = 
+    .label = プロファイルを設定する
+enso-workspaces-panel-unload = 
+    .label = スペースをアンロードする
+enso-workspaces-how-to-reorder-title = 並べ替える方法
+enso-workspaces-how-to-reorder-desc = サイドバーの下部にあるスペースアイコンをドラッグして並べ替えます
+enso-workspaces-change-theme = 
+    .label = テーマを編集する
+enso-workspaces-panel-context-open = 
+    .label = ワークスペースを開く
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = ワークスペースを編集する
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = スペース
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = 補完的
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = 分割
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = 類推的
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = トライド的
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = フローティング
+enso-panel-ui-gradient-click-to-add = クリックして色を追加する
+enso-workspace-creation-name = 
+    .placeholder = スペース名
+enso-move-tab-to-workspace-button = 
+    .label = 移動先…
+    .tooltiptext = このウィンドウ内のすべてのタブをスペースに移動する
+enso-workspaces-panel-context-reorder = 
+    .label = スペースの順序を変更する
+enso-workspace-creation-profile = プロファイル
+    .tooltiptext = プロファイルはスペース間でクッキーとサイトデータを分離するために使用されます。
+enso-workspace-creation-header = スペースを作成する
+enso-workspace-creation-label = スペースはタブやセッションを整理するために使用されます。
+enso-workspaces-delete-workspace-title = スペースを削除しますか？
+enso-workspaces-delete-workspace-body = { $name }を削除してもよろしいですか？この操作は元に戻せません。
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = タブを閉じました！元に戻すには、 <span>{ $shortcut }</span>を使用してください。
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = 削除する
+    .tooltiptext = すべての固定しなかったタブを閉じる
+enso-panel-ui-workspaces-change-forward = 
+    .label = 次のスペースに移動
+enso-panel-ui-workspaces-change-back = 
+    .label = 前のスペースに移動

@@ -76,13 +76,13 @@ index 615efa4238a3c0084354383a128e0dd8712c720e..29e9dbe7039ba3dc1413da45908ca841
    }
  
 +  async updateBookmarkWorkspaces(bookmarkGuid, workspaces) {
-+    await lazy.PlacesUtils.withConnectionWrapper('ZenWorkspaceBookmarksStorage.updateBookmarkWorkspaces', async (db) => {
++    await lazy.PlacesUtils.withConnectionWrapper('EnsoWorkspaceBookmarksStorage.updateBookmarkWorkspaces', async (db) => {
 +      const now = Date.now();
 +
 +      await db.executeTransaction(async () => {
 +        const rows = await db.execute(`
 +          SELECT workspace_uuid
-+          FROM zen_bookmarks_workspaces
++          FROM enso_bookmarks_workspaces
 +          WHERE bookmark_guid = :bookmark_guid
 +        `, { bookmark_guid: bookmarkGuid });
 +
@@ -94,7 +94,7 @@ index 615efa4238a3c0084354383a128e0dd8712c720e..29e9dbe7039ba3dc1413da45908ca841
 +        if (workspacesToRemove.length > 0) {
 +          const placeholders = workspacesToRemove.map(() => '?').join(',');
 +          await db.execute(`
-+          DELETE FROM zen_bookmarks_workspaces
++          DELETE FROM enso_bookmarks_workspaces
 +          WHERE bookmark_guid = :bookmark_guid
 +          AND workspace_uuid IN (${placeholders})
 +        `, [bookmarkGuid, ...workspacesToRemove]);
@@ -108,7 +108,7 @@ index 615efa4238a3c0084354383a128e0dd8712c720e..29e9dbe7039ba3dc1413da45908ca841
 +        // Add only new associations
 +        for (const workspaceUuid of workspacesToAdd) {
 +          await db.execute(`
-+            INSERT INTO zen_bookmarks_workspaces (
++            INSERT INTO enso_bookmarks_workspaces (
 +              bookmark_guid, workspace_uuid, created_at, updated_at
 +            ) VALUES (
 +                       :bookmark_guid, :workspace_uuid, :now, :now
@@ -131,7 +131,7 @@ index 615efa4238a3c0084354383a128e0dd8712c720e..29e9dbe7039ba3dc1413da45908ca841
 +  async _recordChange(db, bookmarkGuid, workspaceUuid, changeType) {
 +    const now = Date.now();
 +    await db.execute(`
-+      INSERT OR REPLACE INTO zen_bookmarks_workspaces_changes (
++      INSERT OR REPLACE INTO enso_bookmarks_workspaces_changes (
 +        bookmark_guid, workspace_uuid, change_type, timestamp
 +      ) VALUES (
 +        :bookmark_guid, :workspace_uuid, :change_type, :timestamp
@@ -150,7 +150,7 @@ index 615efa4238a3c0084354383a128e0dd8712c720e..29e9dbe7039ba3dc1413da45908ca841
 +    const now = Date.now();
 +    await db.execute(`
 +      INSERT OR REPLACE INTO moz_meta (key, value)
-+      VALUES ('zen_bookmarks_workspaces_last_change', :now)
++      VALUES ('enso_bookmarks_workspaces_last_change', :now)
 +    `, { now });
 +  }
 +

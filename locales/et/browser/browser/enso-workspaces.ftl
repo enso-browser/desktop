@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Tööruumid
+enso-panel-ui-spaces-label = 
+    .label = Spaces
+enso-panel-ui-workspaces-create = 
+    .label = Uus tööruum
+enso-panel-ui-folder-create = 
+    .label = Uus kaust
+enso-panel-ui-new-empty-split = 
+    .label = Uus jaotatud vaade
+enso-workspaces-panel-context-delete = 
+    .label = Kustuta tööruum
+    .accesskey = K
+enso-workspaces-panel-change-name = 
+    .label = Nimeta ümber
+enso-workspaces-panel-change-icon = 
+    .label = Muuda ikooni
+enso-workspaces-panel-context-default-profile = 
+    .label = Määra profiil
+enso-workspaces-panel-unload = 
+    .label = Tööruumi mälust eemaldamine
+enso-workspaces-how-to-reorder-title = Kuidas vahetada tööruumide järjestust
+enso-workspaces-how-to-reorder-desc = Lohista tööruumide ikoone külgriba alumises servas, et nende järjestust muuta
+enso-workspaces-change-theme = 
+    .label = Muuda teemat
+enso-workspaces-panel-context-open = 
+    .label = Ava tööruum
+    .accesskey = A
+enso-workspaces-panel-context-edit = 
+    .label = Muuda tööruumi
+    .accesskey = M
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Spaces
+    .accesskey = T
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Täiendvärvid
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Täiendvärvide kolmik
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Lähedased värvid
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Kolmkõla
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Hõljuv
+enso-panel-ui-gradient-click-to-add = Klõpsa värvi lisamiseks
+enso-workspace-creation-name = 
+    .placeholder = Tööruumi nimi
+enso-move-tab-to-workspace-button = 
+    .label = Move To...
+    .tooltiptext = Move all tabs in this window to a Space
+enso-workspaces-panel-context-reorder = 
+    .label = Muuda tööruumide järjestust
+enso-workspace-creation-profile = Profiil
+    .tooltiptext = Profiile kasutatakse küpsiste ning saidi andmete eraldamiseks tööruumide vahel.
+enso-workspace-creation-header = Loo uus tööruum
+enso-workspace-creation-label = Tööruume kasutatakse kaartide ja sessioonide organiseerimiseks.
+enso-workspaces-delete-workspace-title = Delete Workspace?
+enso-workspaces-delete-workspace-body = Kas oled kindel, et soovid kustutada tööruumi { $name }? Seda tegevust ei saa tagasi võtta.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Tabs Closed! Use <span>{ $shortcut }</span> to undo.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Clear
+    .tooltiptext = Close all unpinned tabs
+enso-panel-ui-workspaces-change-forward = 
+    .label = Next Space
+enso-panel-ui-workspaces-change-back = 
+    .label = Previous Space

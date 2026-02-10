@@ -1,0 +1,71 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+&:not([enso-single-toolbar='true']) {
+  & #navigator-toolbox {
+    --enso-toolbox-top-align: var(--enso-element-separation);
+  }
+
+  @media -moz-pref('enso.view.compact.hide-tabbar') {
+    & #titlebar {
+      margin-top: var(--enso-element-separation) !important;
+    }
+  }
+
+  &[enso-right-side='true'][enso-window-buttons-reversed='true'] #titlebar,
+  &:not([enso-right-side='true']):not([enso-window-buttons-reversed='true']) #titlebar {
+    /* The same as the expression above */
+    margin-top: var(--enso-element-separation) !important;
+  }
+
+  & #enso-appcontent-wrapper {
+    z-index: 3 !important;
+  }
+
+  & #enso-appcontent-navbar-wrapper {
+    & .enso-toolbar-background {
+      display: flex;
+    }
+    transition: height var(--enso-hidden-toolbar-transition);
+    
+    height: var(--enso-element-separation);
+    overflow: clip;
+
+    & #urlbar:not([breakout-extend='true']) {
+      /* Sometimes, "opacity: 1" is forced elsewhere */
+      opacity: 0 !important;
+      pointer-events: none;
+      transition: opacity var(--enso-hidden-toolbar-transition);
+    }
+
+%include windows-captions-fix-default.inc.css
+
+    & #enso-appcontent-navbar-container {
+      opacity: 0;
+      transition: opacity var(--enso-hidden-toolbar-transition);
+    }
+  }
+
+  & #enso-appcontent-navbar-wrapper:is(
+    [enso-has-hover],
+    [has-popup-menu],
+    [enso-compact-mode-active]
+  ) {
+    height: var(--enso-toolbar-height-with-bookmarks);
+    overflow: inherit;
+
+%include windows-captions-fix-active.inc.css
+
+    & #urlbar {
+      opacity: 1 !important;
+      pointer-events: auto;
+    }
+
+    & #enso-appcontent-navbar-container {
+      opacity: 1;
+    }
+  }
+}

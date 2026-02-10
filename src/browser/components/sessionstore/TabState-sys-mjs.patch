@@ -6,22 +6,22 @@ index 82721356d191055bec0d4b0ca49e481221988801..68437e6f9fa54fc75ca9e24d738e8afc
        tabData.groupId = tab.group.id;
      }
  
-+    tabData.zenWorkspace = tab.getAttribute("zen-workspace-id");
-+    tabData.zenSyncId = tab.getAttribute("id");
-+    tabData.zenEssential = tab.getAttribute("zen-essential") === "true";
-+    tabData.pinned = tabData.pinned || tabData.zenEssential;
-+    tabData.zenDefaultUserContextId = tab.getAttribute("zenDefaultUserContextId");
-+    tabData.zenPinnedIcon = tab.getAttribute("zen-pinned-icon");
-+    tabData.zenIsEmpty = tab.hasAttribute("zen-empty-tab");
-+    tabData.zenStaticLabel = tab.zenStaticLabel;
-+    tabData.zenHasStaticIcon = !!tab.zenStaticIcon;
-+    tabData.zenGlanceId = tab.getAttribute("glance-id");
-+    tabData.zenIsGlance = tab.hasAttribute("zen-glance-tab");
-+    tabData._zenPinnedInitialState = tab._zenPinnedInitialState;
-+    tabData._zenIsActiveTab = tab._zenContentsVisible;
++    tabData.ensoWorkspace = tab.getAttribute("enso-workspace-id");
++    tabData.ensoSyncId = tab.getAttribute("id");
++    tabData.ensoEssential = tab.getAttribute("enso-essential") === "true";
++    tabData.pinned = tabData.pinned || tabData.ensoEssential;
++    tabData.ensoDefaultUserContextId = tab.getAttribute("ensoDefaultUserContextId");
++    tabData.zenPinnedIcon = tab.getAttribute("enso-pinned-icon");
++    tabData.ensoIsEmpty = tab.hasAttribute("enso-empty-tab");
++    tabData.ensoStaticLabel = tab.ensoStaticLabel;
++    tabData.ensoHasStaticIcon = !!tab.ensoStaticIcon;
++    tabData.ensoGlanceId = tab.getAttribute("glance-id");
++    tabData.ensoIsGlance = tab.hasAttribute("enso-glance-tab");
++    tabData._ensoPinnedInitialState = tab._ensoPinnedInitialState;
++    tabData._ensoIsActiveTab = tab._ensoContentsVisible;
 +
      tabData.searchMode = tab.ownerGlobal.gURLBar.getSearchMode(browser, true);
-+    if (tabData.searchMode?.source === tab.ownerGlobal.UrlbarUtils.RESULT_SOURCE.ZEN_ACTIONS) {
++    if (tabData.searchMode?.source === tab.ownerGlobal.UrlbarUtils.RESULT_SOURCE.ENSO_ACTIONS) {
 +      delete tabData.searchMode;
 +    }
  

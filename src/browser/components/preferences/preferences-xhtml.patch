@@ -6,7 +6,7 @@ index a1aec823d6266d69ff02aa8523d2da999a0871b9..559f2ea12e53dd19f24e7953db438845
    <link rel="stylesheet" href="chrome://browser/content/preferences/widgets/setting-pane.css" />
    <link rel="stylesheet" href="chrome://browser/content/preferences/widgets/setting-control.css" />
  
-+#include zen-preferences-links.xhtml
++#include enso-preferences-links.xhtml
 +
    <link rel="localization" href="branding/brand.ftl"/>
    <link rel="localization" href="browser/browser.ftl"/>
@@ -27,48 +27,48 @@ index a1aec823d6266d69ff02aa8523d2da999a0871b9..559f2ea12e53dd19f24e7953db438845
            <label class="category-name" flex="1" data-l10n-id="pane-general-title"></label>
          </richlistitem>
  
-+        <richlistitem id="category-zen-looks"
++        <richlistitem id="category-enso-looks"
 +                      class="category"
-+                      value="paneZenLooks"
++                      value="paneEnsoLooks"
 +                      helpTopic="prefs-main"
-+                      data-l10n-id="category-zen-looks"
++                      data-l10n-id="category-enso-looks"
 +                      data-l10n-attrs="tooltiptext"
 +                      align="center">
 +          <image class="category-icon"/>
-+          <label class="category-name" flex="1" data-l10n-id="pane-zen-looks-title"></label>
++          <label class="category-name" flex="1" data-l10n-id="pane-enso-looks-title"></label>
 +        </richlistitem>
 +
-+        <richlistitem id="category-zen-tabs-management"
++        <richlistitem id="category-enso-tabs-management"
 +                      class="category"
 +                      value="paneZenTabManagement"
 +                      helpTopic="prefs-main"
-+                      data-l10n-id="category-zen-workspaces"
++                      data-l10n-id="category-enso-workspaces"
 +                      data-l10n-attrs="tooltiptext"
 +                      align="center">
 +          <image class="category-icon"/>
-+          <label class="category-name" flex="1" data-l10n-id="pane-zen-tabs-title"></label>
++          <label class="category-name" flex="1" data-l10n-id="pane-enso-tabs-title"></label>
 +        </richlistitem>
 +
-+        <richlistitem id="category-zen-CKS"
++        <richlistitem id="category-enso-CKS"
 +                      class="category"
 +                      value="paneZenCKS"
 +                      helpTopic="prefs-main"
-+                      data-l10n-id="category-zen-CKS"
++                      data-l10n-id="category-enso-CKS"
 +                      data-l10n-attrs="tooltiptext"
 +                      align="center">
 +          <image class="category-icon"/>
-+          <label class="category-name" flex="1" data-l10n-id="pane-zen-CKS-title"></label>
++          <label class="category-name" flex="1" data-l10n-id="pane-enso-CKS-title"></label>
 +        </richlistitem>
 +
-+        <richlistitem id="category-zen-marketplace"
++        <richlistitem id="category-enso-marketplace"
 +                      class="category"
 +                      value="paneZenMarketplace"
 +                      helpTopic="prefs-main"
-+                      data-l10n-id="category-zen-marketplace"
++                      data-l10n-id="category-enso-marketplace"
 +                      data-l10n-attrs="tooltiptext"
 +                      align="center">
 +          <image class="category-icon"/>
-+          <label class="category-name" flex="1" data-l10n-id="pane-zen-marketplace-title"></label>
++          <label class="category-name" flex="1" data-l10n-id="pane-enso-marketplace-title"></label>
 +        </richlistitem>
 +
          <richlistitem id="category-home"
@@ -90,10 +90,10 @@ index a1aec823d6266d69ff02aa8523d2da999a0871b9..559f2ea12e53dd19f24e7953db438845
  #include sync.inc.xhtml
  #include experimental.inc.xhtml
  #include moreFromMozilla.inc.xhtml
-+#include zenLooksAndFeel.inc.xhtml
-+#include zenKeyboardShortcuts.inc.xhtml
-+#include zenTabsManagement.inc.xhtml
-+#include zenMarketplace.inc.xhtml
++#include ensoLooksAndFeel.inc.xhtml
++#include ensoKeyboardShortcuts.inc.xhtml
++#include ensoTabsManagement.inc.xhtml
++#include ensoMarketplace.inc.xhtml
          </vbox>
        </vbox>
      </vbox>

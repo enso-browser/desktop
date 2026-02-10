@@ -6,7 +6,7 @@ index 1870bfc3735255f2d41356b00dc52faf95d9d9f2..59ad4fb11c7d48d9ba84dceef09a67a4
      "-moz-window-opacity",                // chrome-only internal properties
      "-moz-window-transform",              // chrome-only internal properties
      "-moz-window-shadow",                 // chrome-only internal properties
-+    "-zen-window-transform-origin",       // chrome-only internal properties
++    "-enso-window-transform-origin",       // chrome-only internal properties
  };
  
  inline int is_inaccessible(const char* aPropName) {

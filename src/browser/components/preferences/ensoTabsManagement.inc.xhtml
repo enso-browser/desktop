@@ -1,0 +1,82 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+<html:template id="template-paneEnsoTabManagement">
+<hbox id="EnsoWorkspacesCategory"
+      class="subcategory"
+      hidden="true"
+      data-category="paneEnsoTabManagement">
+</hbox>
+
+<hbox id="ensoTabManagementCategory"
+      class="subcategory"
+      hidden="true"
+      data-category="paneEnsoTabManagement">
+<html:h1 data-l10n-id="pane-settings-workspaces-title"/>
+</hbox>
+
+<groupbox id="ensoWorkspacesGroup" data-category="paneEnsoTabManagement" hidden="true" class="highlighting-group">
+      <label><html:h2 data-l10n-id="enso-settings-workspaces-header"/></label>
+      <description class="description-deemphasized" data-l10n-id="enso-settings-workspaces-description" />
+
+      <checkbox id="ensoWorkspacesSyncUnpinnedTabs"
+            data-l10n-id="enso-settings-workspaces-sync-unpinned-tabs"
+            preference="enso.window-sync.sync-only-pinned-tabs"/>
+      <checkbox id="ensoWorkspacesHideDefaultContainer"
+            data-l10n-id="enso-settings-workspaces-hide-default-container-indicator"
+            preference="enso.workspaces.hide-default-container-indicator"/>
+      <checkbox id="ensoWorkspacesForceContainerTabsToWorkspace"
+            data-l10n-id="enso-settings-workspaces-force-container-tabs-to-workspace"
+            preference="enso.workspaces.force-container-workspace"/>
+      <checkbox id="ensoTabsCloseOnBackWithNoHistory"
+            data-l10n-id="enso-tabs-close-on-back-with-no-history"
+            preference="enso.tabs.close-on-back-with-no-history"/>
+      <checkbox data-l10n-id="enso-tabs-cycle-ignore-pending-tabs"
+            preference="enso.tabs.ctrl-tab.ignore-pending-tabs"/>
+      <checkbox data-l10n-id="enso-tabs-cycle-by-attribute"
+            preference="enso.tabs.ctrl-tab.ignore-essential-tabs"/>
+      <description id="ensoTabsCycleByAttributeWarning"
+            class="description-deemphasized"
+            data-l10n-id="enso-tabs-cycle-by-attribute-warning"
+            hidden="true"/>
+      <checkbox data-l10n-id="enso-tabs-select-recently-used-on-close"
+            preference="enso.tabs.select-recently-used-on-close"/>
+</groupbox>
+
+<hbox id="ensoPinnedTabsManagerCategory"
+      class="subcategory"
+      hidden="true"
+      data-category="paneEnsoTabManagement">
+      <html:h1 data-l10n-id="pane-enso-pinned-tab-manager-title"/>
+</hbox>
+
+<groupbox id="ensoPinnedTabsManagerGroup" data-category="paneEnsoTabManagement" hidden="true" class="highlighting-group">
+      <label><html:h2 data-l10n-id="enso-pinned-tab-manager-header"/></label>
+      <description class="description-deemphasized" data-l10n-id="enso-pinned-tab-manager-description" />
+
+      <checkbox id="ensoPinnedTabRestorePinnedTabsToPinnedUrl"
+                data-l10n-id="enso-pinned-tab-manager-restore-pinned-tabs-to-pinned-url"
+                preference="enso.pinned-tab-manager.restore-pinned-tabs-to-pinned-url"/>
+      <checkbox id="ensoPinnedTabContainerSpecificEssentials"
+                data-l10n-id="enso-pinned-tab-manager-container-specific-essentials-enabled"
+                preference="enso.workspaces.separate-essentials"/>
+
+      <hbox align="center">
+            <label id="ensoPinnedTabCloseShortcutBehaviorLabel" data-l10n-id="enso-pinned-tab-manager-close-shortcut-behavior-label"/>
+            <menulist id="ensoPinnedTabCloseShortcutBehavior" preference="enso.pinned-tab-manager.close-shortcut-behavior">
+                  <menupopup>
+                        <menuitem data-l10n-id="enso-pinned-tab-manager-reset-unload-switch-close-shortcut-option" value="reset-unload-switch"/>
+                        <menuitem data-l10n-id="enso-pinned-tab-manager-unload-switch-close-shortcut-option" value="unload-switch"/>
+                        <menuitem data-l10n-id="enso-pinned-tab-manager-reset-switch-close-shortcut-option" value="reset-switch"/>
+                        <menuitem data-l10n-id="enso-pinned-tab-manager-switch-close-shortcut-option" value="switch"/>
+                        <menuitem data-l10n-id="enso-pinned-tab-manager-reset-close-shortcut-option" value="reset"/>
+                        <menuitem data-l10n-id="enso-pinned-tab-manager-close-close-shortcut-option" value="close"/>
+                  </menupopup>
+            </menulist>
+      </hbox>
+</groupbox>
+
+</html:template>
+
+

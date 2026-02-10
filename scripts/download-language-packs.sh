@@ -87,8 +87,8 @@ rm -rf ~/tools
 rm -rf ~/.git-cinnabar
 
 for lang in $(cat ./locales/supported-languages); do
-  # remove every file except if it starts with "zen"
-  find ./locales/$lang -type f -not -name "zen*" -delete
+  # remove every file except if it starts with "enso"
+  find ./locales/$lang -type f -not -name "enso*" -delete
 done
 
 rm -rf ./locales/firefox-l10n

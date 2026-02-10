@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Ruang Kerja Lainnya
+enso-panel-ui-spaces-label = 
+    .label = Ruang
+enso-panel-ui-workspaces-create = 
+    .label = Buat Ruang
+enso-panel-ui-folder-create = 
+    .label = Buat Folder
+enso-panel-ui-new-empty-split = 
+    .label = Split Baru
+enso-workspaces-panel-context-delete = 
+    .label = Hapus Ruang
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Ubah Nama
+enso-workspaces-panel-change-icon = 
+    .label = Ubah Ikon
+enso-workspaces-panel-context-default-profile = 
+    .label = Atur Profil
+enso-workspaces-panel-unload = 
+    .label = Lepaskan Ruang
+enso-workspaces-how-to-reorder-title = Cara Mengurutkan Ulang Ruang
+enso-workspaces-how-to-reorder-desc = Seret ikon ruang di bagian bawah bilah sisi untuk menyusun ulang urutannya
+enso-workspaces-change-theme = 
+    .label = Edit Tema
+enso-workspaces-panel-context-open = 
+    .label = Buka Ruang Kerja
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Edit Ruang
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Ruang
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Komplementer
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Pisahkan
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Analog
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Triadik
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Melayang
+enso-panel-ui-gradient-click-to-add = Klik untuk menambahkan warna
+enso-workspace-creation-name = 
+    .placeholder = Nama Ruang
+enso-move-tab-to-workspace-button = 
+    .label = Pindahkan ke...
+    .tooltiptext = Pindahkan semua tab di jendela ini ke sebuah Ruang
+enso-workspaces-panel-context-reorder = 
+    .label = Urutkan Ruang
+enso-workspace-creation-profile = Profil
+    .tooltiptext = Profil (Kontainer) digunakan untuk memisahkan cookie dan data situs antar Ruang.
+enso-workspace-creation-header = Buat sebuah Ruang
+enso-workspace-creation-label = Ruang digunakan untuk mengorganisasikan tab dan sesi Anda.
+enso-workspaces-delete-workspace-title = Delete Workspace?
+enso-workspaces-delete-workspace-body = Apakah Anda yakin ingin menghapus { $name }? Tindakan ini tidak bisa dibatalkan.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Tab Ditutup! Gunakan <span>{ $shortcut }</span> untuk membatalkan.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Bersihkan
+    .tooltiptext = Tutup semua tab yang tidak disematkan
+enso-panel-ui-workspaces-change-forward = 
+    .label = Ruang Selanjutnya
+enso-panel-ui-workspaces-change-back = 
+    .label = Ruang Sebelumnya

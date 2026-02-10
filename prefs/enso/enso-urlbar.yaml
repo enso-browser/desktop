@@ -1,0 +1,41 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+- name: enso.urlbar.replace-newtab
+  value: true
+
+- name: enso.urlbar.show-protections-icon
+  value: false
+
+- name: enso.urlbar.show-contextual-id
+  value: false
+
+- name: enso.urlbar.behavior
+  value: floating-on-type
+
+- name: enso.urlbar.wait-to-clear
+  value: 45000
+
+- name: enso.urlbar.show-domain-only-in-sidebar
+  value: true
+
+- name: enso.urlbar.hide-one-offs
+  value: true
+
+- name: enso.urlbar.enable-overrides
+  value: false
+
+- name: enso.urlbar.single-toolbar-show-copy-url
+  value: true
+
+- name: enso.urlbar.show-pip-button
+  value: false
+
+- name: enso.urlbar.open-on-startup
+  value: true
+
+# Mark: Enso suggestions controls
+
+- name: enso.urlbar.suggestions.quick-actions
+  value: true

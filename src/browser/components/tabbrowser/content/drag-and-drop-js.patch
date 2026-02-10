@@ -17,7 +17,7 @@ index 57800333445ec7850742145527e04ae8d504b0bb..a13875436a72f89178455a09c8665b9a
  
        let draggedTab = event.dataTransfer.mozGetDataAt(TAB_DROP_TYPE, 0);
 +      if (draggedTab && dropEffect === "move") {
-+        gZenViewSplitter.onBrowserDragEndToSplit(event);
++        gEnsoViewSplitter.onBrowserDragEndToSplit(event);
 +      }
        if (
          (dropEffect == "move" || dropEffect == "copy") &&
@@ -39,7 +39,7 @@ index 57800333445ec7850742145527e04ae8d504b0bb..a13875436a72f89178455a09c8665b9a
        event.stopPropagation();
 +      if (draggedTab && dropEffect == "move") {
 +        this.handle_drop_transition?.(draggedTab._dragData.dropElement, draggedTab, movingTabs, draggedTab._dragData.dropBefore);
-+        gZenPinnedTabManager.moveToAnotherTabContainerIfNecessary(event, draggedTab, movingTabs, this._getDropIndex(event));
++        gEnsoPinnedTabManager.moveToAnotherTabContainerIfNecessary(event, draggedTab, movingTabs, this._getDropIndex(event));
 +      }
        if (draggedTab && dropEffect == "copy") {
          let duplicatedDraggedTab;
@@ -52,7 +52,7 @@ index 57800333445ec7850742145527e04ae8d504b0bb..a13875436a72f89178455a09c8665b9a
 -        let numPinned = gBrowser.pinnedTabCount;
 +        let isPinned = draggedTab?.group ? draggedTab.group.pinned : draggedTab.pinned;
 +        let numPinned = gBrowser._numVisiblePinTabsWithoutCollapsed;
-+        let essential = draggedTab.hasAttribute("zen-essential");
++        let essential = draggedTab.hasAttribute("enso-essential");
  
          if (this._isContainerVerticalPinnedGrid(draggedTab)) {
            // Update both translate axis for pinned vertical expanded tabs
@@ -135,7 +135,7 @@ index 57800333445ec7850742145527e04ae8d504b0bb..a13875436a72f89178455a09c8665b9a
  
            let nextItem = this._tabbrowserTabs.dragAndDropElements[newIndex];
            let tabGroup = isTab(nextItem) && nextItem.group;
-+          if (gZenViewSplitter.handleTabDrop(event, urls, replace, inBackground)) return;
++          if (gEnsoViewSplitter.handleTabDrop(event, urls, replace, inBackground)) return;
            gBrowser.loadTabs(urls, {
              inBackground,
              replace,
@@ -145,14 +145,14 @@ index 57800333445ec7850742145527e04ae8d504b0bb..a13875436a72f89178455a09c8665b9a
        this._resetTabsAfterDrop(draggedTab.ownerDocument);
 -
 +      if (!dt.mozUserCancelled && dt.dropEffect == "none" && !this._isCustomizing) {
-+        const moved = gZenViewSplitter.moveTabToSplitView(event, draggedTab);
++        const moved = gEnsoViewSplitter.moveTabToSplitView(event, draggedTab);
 +        if (moved) {
 +          delete draggedTab._dragData;
 +          return;
 +        }
 +      } else if (dt.mozUserCancelled) {
-+        gZenViewSplitter.onBrowserDragEndToSplit(event, true);
-+        if (gZenViewSplitter._lastOpenedTab) gZenViewSplitter._lastOpenedTab._visuallySelected = false;
++        gEnsoViewSplitter.onBrowserDragEndToSplit(event, true);
++        if (gEnsoViewSplitter._lastOpenedTab) gEnsoViewSplitter._lastOpenedTab._visuallySelected = false;
 +      }
        if (
          dt.mozUserCancelled ||
@@ -184,8 +184,8 @@ index 57800333445ec7850742145527e04ae8d504b0bb..a13875436a72f89178455a09c8665b9a
          this._tabbrowserTabs.verticalMode &&
 -        tab.pinned &&
 -        this._tabbrowserTabs.hasAttribute("expanded") &&
-+        tab.hasAttribute("zen-essential") &&
-+        (this._tabbrowserTabs.hasAttribute("expanded") || document.documentElement.hasAttribute("zen-sidebar-expanded")) &&
++        tab.hasAttribute("enso-essential") &&
++        (this._tabbrowserTabs.hasAttribute("expanded") || document.documentElement.hasAttribute("enso-sidebar-expanded")) &&
          !this._tabbrowserTabs.expandOnHover
        );
      }
@@ -195,7 +195,7 @@ index 57800333445ec7850742145527e04ae8d504b0bb..a13875436a72f89178455a09c8665b9a
        ) {
 -        draggedTab.group.collapsed = false;
 +        draggedTab.group.collapsed = draggedTab.group.hasAttribute("has-active");
-+        gZenFolders.animateGroupMove(draggedTab.group, true);
++        gEnsoFolders.animateGroupMove(draggedTab.group, true);
        }
      }
  
@@ -237,7 +237,7 @@ index 57800333445ec7850742145527e04ae8d504b0bb..a13875436a72f89178455a09c8665b9a
  
            if (collapseTabGroupDuringDrag) {
              tab.group.collapsed = true;
-+            gZenFolders.animateGroupMove(tab.group);
++            gEnsoFolders.animateGroupMove(tab.group);
            }
          }
        }

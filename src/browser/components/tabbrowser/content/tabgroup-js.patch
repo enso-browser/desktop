@@ -12,7 +12,7 @@ index 9abf115062e7c86196d7cb6b8ac82a9bb63b5a65..9a38d7dc10403c1ee721b6abf33d525a
        </vbox>
 -      <html:slot/>
 +      <html:div class="tab-group-container">
-+        <html:div class="zen-tab-group-start"/>
++        <html:div class="enso-tab-group-start"/>
 +      </html:div>
        <vbox class="tab-group-overflow-count-container" pack="center">
          <label class="tab-group-overflow-count" role="button" />
@@ -70,7 +70,7 @@ index 9abf115062e7c86196d7cb6b8ac82a9bb63b5a65..9a38d7dc10403c1ee721b6abf33d525a
 +      this.appendChild = function (child) {
 +        this.groupContainer.appendChild(child);
 +        for (let tab of this.tabs) {
-+          if (tab.hasAttribute("zen-empty-tab") && tab.group === this) {
++          if (tab.hasAttribute("enso-empty-tab") && tab.group === this) {
 +            this.groupStartElement.after(tab);
 +          }
 +        }
@@ -156,7 +156,7 @@ index 9abf115062e7c86196d7cb6b8ac82a9bb63b5a65..9a38d7dc10403c1ee721b6abf33d525a
 +    }
 +
 +    get groupStartElement() {
-+      return this.querySelector(".zen-tab-group-start");
++      return this.querySelector(".enso-tab-group-start");
 +    }
 +
 +    get childGroupsAndTabs() {

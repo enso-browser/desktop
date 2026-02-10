@@ -7,4 +7,4 @@ index 086b462e706bb46727d0fed85b4c98debaeaf721..44a4fcb9b8181678667ee11b0443eed6
  
  JAR_MANIFESTS += ["jar.mn"]
 +
-+DIRS += ["../../zen"]
++DIRS += ["../../enso"]

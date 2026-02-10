@@ -166,24 +166,24 @@ jobs:
         run: |
           echo "Tarballing DMG"
           set -ex
-          mv ./dist/*.dmg ./zen-${{ matrix.arch }}-apple-darwin-dist.dmg
-          mv ./engine/obj-${{ matrix.arch }}-apple-darwin/dist/host/bin/mar ./zen-macos-host-mar
+          mv ./dist/*.dmg ./enso-${{ matrix.arch }}-apple-darwin-dist.dmg
+          mv ./engine/obj-${{ matrix.arch }}-apple-darwin/dist/host/bin/mar ./enso-macos-host-mar
           mv ./engine/obj-${{ matrix.arch }}-apple-darwin/dist/bin/platform.ini ./platform.ini
 
       - name: Upload dist dmg
         uses: actions/upload-artifact@v4
         with:
           retention-days: 1
-          name: zen-${{ matrix.arch }}-apple-darwin-dist.dmg
-          path: ./zen-${{ matrix.arch }}-apple-darwin-dist.dmg
+          name: enso-${{ matrix.arch }}-apple-darwin-dist.dmg
+          path: ./enso-${{ matrix.arch }}-apple-darwin-dist.dmg
 
       - name: Upload host mar
         uses: actions/upload-artifact@v4
         if: matrix.arch == 'aarch64'
         with:
           retention-days: 1
-          name: zen-macos-host-mar
-          path: ./zen-macos-host-mar
+          name: enso-macos-host-mar
+          path: ./enso-macos-host-mar
 
       - name: Upload platform.ini
         uses: actions/upload-artifact@v4

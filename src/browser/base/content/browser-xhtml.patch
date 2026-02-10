@@ -6,7 +6,7 @@ index ac82dcd286b5502d1ba38ed740813db08941eb7b..c26b3f0468ee6acd7716d4e8a24ad8cc
          sizemode="normal"
          retargetdocumentfocus="urlbar-input"
          scrolling="false"
-+        zen-before-loaded="true"
++        enso-before-loaded="true"
          persist="screenX screenY width height sizemode"
          data-l10n-sync="true">
  <head>
@@ -14,10 +14,10 @@ index ac82dcd286b5502d1ba38ed740813db08941eb7b..c26b3f0468ee6acd7716d4e8a24ad8cc
  
    <title data-l10n-id="browser-main-window-default-title"></title>
  
-+#include zen-preloaded.inc.xhtml
++#include enso-preloaded.inc.xhtml
    <script src="chrome://browser/content/global-scripts.js"></script>
    <script src="chrome://browser/content/browser-main.js"></script>
-+#include zen-assets.inc.xhtml
++#include enso-assets.inc.xhtml
  </head>
  <html:body xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
  # All sets except for popupsets (commands, keys, and stringbundles)
@@ -25,7 +25,7 @@ index ac82dcd286b5502d1ba38ed740813db08941eb7b..c26b3f0468ee6acd7716d4e8a24ad8cc
      </vbox>
    </html:template>
  
-+<hbox id="zen-main-app-wrapper" flex="1" class="browser-toolbox-background">
++<hbox id="enso-main-app-wrapper" flex="1" class="browser-toolbox-background">
  #include navigator-toolbox.inc.xhtml
  
  #include browser-box.inc.xhtml

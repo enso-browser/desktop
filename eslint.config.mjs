@@ -10,7 +10,7 @@ import json from "@eslint/json";
 import lit from "eslint-plugin-lit";
 import mozilla from "eslint-plugin-mozilla";
 import reactHooks from "eslint-plugin-react-hooks";
-import zenGlobals from "./src/zen/zen.globals.mjs";
+import ensoGlobals from "./src/enso/enso.globals.mjs";
 
 import globals from "globals";
 import path from "path";
@@ -35,13 +35,13 @@ const httpTestingPaths = [
 
 globals.browser = {
   ...globals.browser,
-  ...zenGlobals.reduce((obj, key) => {
+  ...ensoGlobals.reduce((obj, key) => {
     obj[key] = "readonly";
     return obj;
   }, {}),
 };
 
-testPaths.browser = testPaths.browser.concat("src/zen/tests/");
+testPaths.browser = testPaths.browser.concat("src/enso/tests/");
 
 /**
  * Takes each path in the paths array, and expands it with the list of extensions
@@ -97,7 +97,7 @@ let config = [
   },
   {
     name: "ignores",
-    ignores: [...globalIgnores, "src/zen/vendor/*"],
+    ignores: [...globalIgnores, "src/enso/vendor/*"],
   },
   {
     name: "all-files",
@@ -452,7 +452,7 @@ let config = [
     },
   },
   ...wrapPathsInConfig(rollouts),
-  globalIgnoresPath(["src/zen/tests/"]),
+  globalIgnoresPath(["src/enso/tests/"]),
 ];
 
 // The various places we get our globals from use true/false rather than

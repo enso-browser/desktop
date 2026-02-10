@@ -6,4 +6,4 @@ index 139f7c2617f5e4843e0072435818c859def2f6bb..6ac1467b4117e2d76102d6977f132688
           internal="true"/>
  #endif
    </keyset>
-+#include zen-keysets.inc.xhtml
++#include enso-keysets.inc.xhtml

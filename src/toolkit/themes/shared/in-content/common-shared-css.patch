@@ -7,7 +7,7 @@ index c1acf2d6ab3c9a260e73d43af027f34a807e01dc..223afae5c36c98d3b09c001f91e07e90
     */
    :root[dialogroot] {
 -    --background-color-canvas: #42414d;
-+    --background-color-canvas: var(--zen-dialog-background);
++    --background-color-canvas: var(--enso-dialog-background);
    }
  }
  

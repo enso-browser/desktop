@@ -14,7 +14,7 @@ index c12d875172650dddfe7de623a776149517c83302..66e923ed2c84e350dd7ba7a20e362666
        usedLimits.maxResultCount++;
      }
  
-+    if (!(result.heuristic && result.source == UrlbarUtils.RESULT_SOURCE.ZEN_ACTIONS)) {
++    if (!(result.heuristic && result.source == UrlbarUtils.RESULT_SOURCE.ENSO_ACTIONS)) {
      state.usedResultSpan += span;
 +    }
      this._updateStatePostAdd(result, state);

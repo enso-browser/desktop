@@ -16,7 +16,7 @@ index d218a04e0ab44e6a55e368566c97df95e939565b..59f038e59fe1a8554a8b112c5ac33e70
                languages-customize-add.label,
              " />
    </hbox>
-+  <label class="zenLanguageWarning-label"><html:b data-l10n-id="zen-warning-language"/></label>
++  <label class="zenLanguageWarning-label"><html:b data-l10n-id="enso-warning-language"/></label>
  
    <checkbox id="useSystemLocale" hidden="true"
              data-l10n-id="use-system-locale"

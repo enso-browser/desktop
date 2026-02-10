@@ -6,7 +6,7 @@ index b09252fd60beb10d5865d226c39ee0c8a9c22d87..91f68161209c6ca3f3bac22997d4e206
   * You can obtain one at http://mozilla.org/MPL/2.0/. */
  
  #include "SwipeTracker.h"
-+#include "mozilla/StaticPrefs_zen.h"
++#include "mozilla/StaticPrefs_enso.h"
  
  #include "InputData.h"
  #include "mozilla/FlushType.h"
@@ -15,7 +15,7 @@ index b09252fd60beb10d5865d226c39ee0c8a9c22d87..91f68161209c6ca3f3bac22997d4e206
    return (mGestureAmount * targetValue +
            mCurrentVelocity * targetValue *
 -              StaticPrefs::widget_swipe_success_velocity_contribution()) >=
-+              (StaticPrefs::zen_swipe_is_fast_swipe() ? 0.5 : StaticPrefs::widget_swipe_success_velocity_contribution())) >=
++              (StaticPrefs::enso_swipe_is_fast_swipe() ? 0.5 : StaticPrefs::widget_swipe_success_velocity_contribution())) >=
           kSwipeSuccessThreshold;
  }
  

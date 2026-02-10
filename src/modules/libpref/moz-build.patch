@@ -6,7 +6,7 @@ index 46034d8d99ba227f85824d472933ec556f54ba81..42f7f68aba60ca9c8f85f5fe13ffb56f
      "view_source",
      "webgl",
      "widget",
-+    "zen",
++    "enso",
      "zoom",
  ]
  if CONFIG["OS_TARGET"] == "Android":

@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Spazi
+enso-panel-ui-spaces-label = 
+    .label = Spaces
+enso-panel-ui-workspaces-create = 
+    .label = Crea Spazio
+enso-panel-ui-folder-create = 
+    .label = Crea Cartella
+enso-panel-ui-new-empty-split = 
+    .label = Nuova Divisione
+enso-workspaces-panel-context-delete = 
+    .label = Elimina lo Spazio
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Cambia Nome
+enso-workspaces-panel-change-icon = 
+    .label = Cambia Icona
+enso-workspaces-panel-context-default-profile = 
+    .label = Imposta Profilo
+enso-workspaces-panel-unload = 
+    .label = Scarica Spazio
+enso-workspaces-how-to-reorder-title = Come riordinare gli spazi
+enso-workspaces-how-to-reorder-desc = Trascina le icone degli spazi in fondo alla barra laterale per riordinarle
+enso-workspaces-change-theme = 
+    .label = Modifica Tema
+enso-workspaces-panel-context-open = 
+    .label = Apri Spazio
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Modifica Spazio
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Spaces
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Complementare
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Dividi
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Analogo
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Triadico
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Fluttuante
+enso-panel-ui-gradient-click-to-add = Clicca per aggiungere un colore
+enso-workspace-creation-name = 
+    .placeholder = Nome dello Spazio
+enso-move-tab-to-workspace-button = 
+    .label = Move To...
+    .tooltiptext = Move all tabs in this window to a Space
+enso-workspaces-panel-context-reorder = 
+    .label = Riordina Spazi
+enso-workspace-creation-profile = Profilo
+    .tooltiptext = I profili vengono usati per separare i cookie e i dati dei siti tra gli spazi.
+enso-workspace-creation-header = Crea uno Spazio
+enso-workspace-creation-label = Gli Spazi sono usati per organizzare le tue schede e sessioni.
+enso-workspaces-delete-workspace-title = Eliminare Spazio?
+enso-workspaces-delete-workspace-body = Sei sicuro di voler cancellare { $name }? Questa azione non può essere annullata.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Scheda chiusa! Usa <span>{ $shortcut }</span> per riaprirla.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Pulisci
+    .tooltiptext = Chiudi tutte le schede non bloccate
+enso-panel-ui-workspaces-change-forward = 
+    .label = Next Space
+enso-panel-ui-workspaces-change-back = 
+    .label = Previous Space

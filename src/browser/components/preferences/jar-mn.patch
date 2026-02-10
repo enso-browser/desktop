@@ -7,4 +7,4 @@ index 5e53352fdbd25d2aed40d0117c3ad7072b9acf8c..0f400864ba7cc850d212ddeeefb71a06
     content/browser/preferences/widgets/sync-engines-list.mjs          (widgets/sync-engine-list/sync-engines-list.mjs)
     content/browser/preferences/widgets/sync-engines-list.css          (widgets/sync-engine-list/sync-engines-list.css)
 +
-+   content/browser/preferences/zen-settings.js
++   content/browser/preferences/enso-settings.js

@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Spásanna
+enso-panel-ui-spaces-label = 
+    .label = Spásanna
+enso-panel-ui-workspaces-create = 
+    .label = Cruthaigh Spás
+enso-panel-ui-folder-create = 
+    .label = Cruthaigh Fillteán
+enso-panel-ui-new-empty-split = 
+    .label = Scoilt Nua
+enso-workspaces-panel-context-delete = 
+    .label = Scrios Spás
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Athraigh Ainm
+enso-workspaces-panel-change-icon = 
+    .label = Athraigh Deilbhín
+enso-workspaces-panel-context-default-profile = 
+    .label = Socraigh Próifíl
+enso-workspaces-panel-unload = 
+    .label = Díluchtaigh Spás
+enso-workspaces-how-to-reorder-title = Conas spásanna a athordú
+enso-workspaces-how-to-reorder-desc = Tarraing na deilbhíní spáis ag bun an bharra taoibh chun iad a athordú
+enso-workspaces-change-theme = 
+    .label = Cuir an Téama in Eagar
+enso-workspaces-panel-context-open = 
+    .label = Oscail Spás Oibre
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Cuir Spás in Eagar
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Spásanna
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Comhlántach
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Scoilt
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Analógach
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Triadach
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Ar snámh
+enso-panel-ui-gradient-click-to-add = Cliceáil chun dath a chur leis
+enso-workspace-creation-name = 
+    .placeholder = Ainm an Spáis
+enso-move-tab-to-workspace-button = 
+    .label = Bog go...
+    .tooltiptext = Bog gach cluaisín sa fhuinneog seo go Spás
+enso-workspaces-panel-context-reorder = 
+    .label = Athordaigh Spásanna
+enso-workspace-creation-profile = Próifíl
+    .tooltiptext = Úsáidtear próifílí chun fianáin agus sonraí suímh a dheighilt idir spásanna.
+enso-workspace-creation-header = Cruthaigh Spás
+enso-workspace-creation-label = Úsáidtear spásanna chun do chluaisíní agus do sheisiúin a eagrú.
+enso-workspaces-delete-workspace-title = Scrios an spás?
+enso-workspaces-delete-workspace-body = An bhfuil tú cinnte gur mian leat { $name } a scriosadh? Ní féidir an gníomh seo a chealú.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Cluaisíní Dúnta! Úsáid <span>{ $shortcut }</span> chun é a chealú.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Glan
+    .tooltiptext = Dún gach cluaisín neamhphionáilte
+enso-panel-ui-workspaces-change-forward = 
+    .label = An Chéad Spás Eile
+enso-panel-ui-workspaces-change-back = 
+    .label = Spás Roimhe Seo

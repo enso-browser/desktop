@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Työtilat
+enso-panel-ui-spaces-label = 
+    .label = Spaces
+enso-panel-ui-workspaces-create = 
+    .label = Luo työtila
+enso-panel-ui-folder-create = 
+    .label = Luo kansio
+enso-panel-ui-new-empty-split = 
+    .label = Uusi Jako
+enso-workspaces-panel-context-delete = 
+    .label = Poista Työtila
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Vaihda nimi
+enso-workspaces-panel-change-icon = 
+    .label = Vaihda kuvake
+enso-workspaces-panel-context-default-profile = 
+    .label = Aseta Profiili
+enso-workspaces-panel-unload = 
+    .label = Poista Työtila
+enso-workspaces-how-to-reorder-title = Kuinka järjestää työtiloja
+enso-workspaces-how-to-reorder-desc = Vedä työtilan kuvakkeet sivupalkin alareunaan järjestääksesi ne uudelleen
+enso-workspaces-change-theme = 
+    .label = Muokkaa teemaa
+enso-workspaces-panel-context-open = 
+    .label = Avaa Työtila
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Muokkaa Työtilaa
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Spaces
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Täydentävä
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Jaa osiin
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Analoginen
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Triadiikki
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Kelluva
+enso-panel-ui-gradient-click-to-add = Klikkaa lisätäksesi väri
+enso-workspace-creation-name = 
+    .placeholder = Työtilan nimi
+enso-move-tab-to-workspace-button = 
+    .label = Move To...
+    .tooltiptext = Move all tabs in this window to a Space
+enso-workspaces-panel-context-reorder = 
+    .label = Järjestä Työtilat Uudelleen
+enso-workspace-creation-profile = Profiili
+    .tooltiptext = Profiileja käytetään erottamaan evästeet ja sivustontiedot tiloihin.
+enso-workspace-creation-header = Luo työtila
+enso-workspace-creation-label = Työtiloja käytetään järjestämään sinun välilehtiä ja istuntoja.
+enso-workspaces-delete-workspace-title = Poista Työtila?
+enso-workspaces-delete-workspace-body = Oletko varma, että haluat poistaa { $name }? Tätä toimintoa ei voi peruuttaa.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Välilehdet suljettu! Peruuta toiminto käyttämällä <span>{ $shortcut }</span>.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Tyhjennä
+    .tooltiptext = Sulje kaikki kiinnittämättömät välilehdet
+enso-panel-ui-workspaces-change-forward = 
+    .label = Next Space
+enso-panel-ui-workspaces-change-back = 
+    .label = Previous Space

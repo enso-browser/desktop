@@ -6,7 +6,7 @@ index f6cd7b4599ab74fbdc301f316fd7ecc2e2eb841c..8279a943803ca75fe0a231606ae26a67
        "transform-origin",
        "translate",
        "-moz-window-transform",
-+      "-zen-window-transform-origin",
++      "-enso-window-transform-origin",
        "-webkit-line-clamp",
      ]),
    ],

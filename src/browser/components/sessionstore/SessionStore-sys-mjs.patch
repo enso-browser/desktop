@@ -16,8 +16,8 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
    TabStateCache: "resource:///modules/sessionstore/TabStateCache.sys.mjs",
    TabStateFlusher: "resource:///modules/sessionstore/TabStateFlusher.sys.mjs",
    setTimeout: "resource://gre/modules/Timer.sys.mjs",
-+  ZenSessionStore: "resource:///modules/zen/ZenSessionManager.sys.mjs",
-+  ZenWindowSync: "resource:///modules/zen/ZenWindowSync.sys.mjs",
++  EnsoSessionStore: "resource:///modules/enso/EnsoSessionManager.sys.mjs",
++  EnsoWindowSync: "resource:///modules/enso/EnsoWindowSync.sys.mjs",
  });
  
  ChromeUtils.defineLazyGetter(lazy, "blankURI", () => {
@@ -47,7 +47,7 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
        this._windows[aWindow.__SSi].isTaskbarTab = true;
      }
  
-+    if (aWindow.document.documentElement.hasAttribute("zen-unsynced-window")) {
++    if (aWindow.document.documentElement.hasAttribute("enso-unsynced-window")) {
 +      this._windows[aWindow.__SSi].isZenUnsynced = true;
 +    }
 +
@@ -67,7 +67,7 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
            null,
            "sessionstore-one-or-no-tab-restored"
          );
-+        lazy.ZenSessionStore.onNewEmptySession(aWindow);
++        lazy.EnsoSessionStore.onNewEmptySession(aWindow);
          this._deferredAllWindowsRestored.resolve();
        }
        // this window was opened by _openWindowWithState
@@ -83,7 +83,7 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
          }
  
          if (newWindowState) {
-+          lazy.ZenSessionStore.onRestoringClosedWindow(newWindowState);
++          lazy.EnsoSessionStore.onRestoringClosedWindow(newWindowState);
            // Ensure that the window state isn't hidden
            this._restoreCount = 1;
            let state = { windows: [newWindowState] };
@@ -97,7 +97,7 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
 +        windowPromises.push(lazy.TabStateFlusher.flushWindow(window));
 +      }
 +      Promise.all(windowPromises).finally(() => {
-+        lazy.ZenSessionStore.restoreNewWindow(aWindow, this);
++        lazy.EnsoSessionStore.restoreNewWindow(aWindow, this);
 +      });
 +    }
  
@@ -108,7 +108,7 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
      var tabbrowser = aWindow.gBrowser;
  
 -    let browsers = Array.from(tabbrowser.browsers);
-+    let browsers = aWindow.gZenWorkspaces.allUsedBrowsers;
++    let browsers = aWindow.gEnsoWorkspaces.allUsedBrowsers;
  
      TAB_EVENTS.forEach(function (aEvent) {
        tabbrowser.tabContainer.removeEventListener(aEvent, this, true);
@@ -138,7 +138,7 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
          // least one saveable tab or are the last window.
 -        if (!winData.isPrivate && !winData.isTaskbarTab) {
 -          this.maybeSaveClosedWindow(winData, isLastWindow);
-+        lazy.ZenWindowSync.on_WindowCloseAndBrowserFlushed(browsers);
++        lazy.EnsoWindowSync.on_WindowCloseAndBrowserFlushed(browsers);
 +        if (!winData.isPrivate && !winData.isTaskbarTab && !winData.isZenUnsynced) {
 +          this.maybeSaveClosedWindow(winData, isLastWindow, isLastRegularWindow);
  
@@ -157,7 +157,7 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
        // _closedWindows from a previous call to this function.
        let winIndex = this._closedWindows.indexOf(winData);
        let alreadyStored = winIndex != -1;
-+      lazy.ZenSessionStore.maybeSaveClosedWindow(winData, isLastRegularWindow);
++      lazy.EnsoSessionStore.maybeSaveClosedWindow(winData, isLastRegularWindow);
        // If sidebar command is truthy, i.e. sidebar is open, store sidebar settings
        let shouldStore = hasSaveableTabs || isLastWindow;
  
@@ -166,7 +166,7 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
        return;
      }
 -    if (aTab == aWindow.FirefoxViewHandler.tab) {
-+    if (aTab == aWindow.FirefoxViewHandler.tab || aTab.hasAttribute("zen-empty-tab")) {
++    if (aTab == aWindow.FirefoxViewHandler.tab || aTab.hasAttribute("enso-empty-tab")) {
        return;
      }
  
@@ -174,12 +174,12 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
          Math.min(tabState.index, tabState.entries.length)
        );
        tabState.pinned = false;
-+      tabState.zenEssential = false;
-+      tabState.zenSyncId = null;
-+      tabState.zenIsGlance = false;
-+      tabState.zenGlanceId = null;
-+      tabState.zenHasStaticLabel = false;
-+      tabState.zenWorkspace = aWindow.gZenWorkspaces.activeWorkspace;
++      tabState.ensoEssential = false;
++      tabState.ensoSyncId = null;
++      tabState.ensoIsGlance = false;
++      tabState.ensoGlanceId = null;
++      tabState.ensoHasStaticLabel = false;
++      tabState.ensoWorkspace = aWindow.gEnsoWorkspaces.activeWorkspace;
  
        if (inBackground === false) {
          aWindow.gBrowser.selectedTab = newTab;
@@ -187,8 +187,8 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
        // Append the tab if we're opening into a different window,
        tabIndex: aSource == aTargetWindow ? pos : Infinity,
        pinned: state.pinned,
-+      essential: state.zenEssential,
-+      zenWorkspaceId: state.zenWorkspace,
++      essential: state.ensoEssential,
++      ensoWorkspaceId: state.ensoWorkspace,
        userContextId: state.userContextId,
        skipLoad: true,
        preferredRemoteType,
@@ -197,7 +197,7 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
      for (let i = tabbrowser.pinnedTabCount; i < tabbrowser.tabs.length; i++) {
        let tab = tabbrowser.tabs[i];
 -      if (homePages.includes(tab.linkedBrowser.currentURI.spec)) {
-+      if (homePages.includes(tab.linkedBrowser.currentURI.spec) && !tab.hasAttribute("zen-empty-tab")) {
++      if (homePages.includes(tab.linkedBrowser.currentURI.spec) && !tab.hasAttribute("enso-empty-tab")) {
          removableTabs.push(tab);
        }
      }
@@ -215,12 +215,12 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
  
      let tabbrowser = aWindow.gBrowser;
 -    let tabs = tabbrowser.tabs;
-+    let tabs = aWindow.gZenWorkspaces.allStoredTabs;
++    let tabs = aWindow.gEnsoWorkspaces.allStoredTabs;
      /** @type {WindowStateData} */
      let winData = this._windows[aWindow.__SSi];
      let tabsData = (winData.tabs = []);
  
-+    winData.splitViewData = aWindow.gZenViewSplitter?.storeDataForSessionStore();
++    winData.splitViewData = aWindow.gEnsoViewSplitter?.storeDataForSessionStore();
      // update the internal state data for this window
      for (let tab of tabs) {
        if (tab == aWindow.FirefoxViewHandler.tab) {
@@ -228,9 +228,9 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
        tabsData.push(tabData);
      }
  
-+    winData.folders = aWindow.gZenFolders?.storeDataForSessionStore() || [];
-+    winData.activeZenSpace = aWindow.gZenWorkspaces?.activeWorkspace || null;
-+    winData.spaces = aWindow.gZenWorkspaces?.getWorkspacesForSessionStore();
++    winData.folders = aWindow.gEnsoFolders?.storeDataForSessionStore() || [];
++    winData.activeEnsoSpace = aWindow.gEnsoWorkspaces?.activeWorkspace || null;
++    winData.spaces = aWindow.gEnsoWorkspaces?.getWorkspacesForSessionStore();
      // update tab group state for this window
      winData.groups = [];
      for (let tabGroup of aWindow.gBrowser.tabGroups) {
@@ -258,7 +258,7 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
      if (overwriteTabs) {
        for (let i = tabbrowser.browsers.length - 1; i >= 0; i--) {
          if (!tabbrowser.tabs[i].selected) {
-+          aWindow.gZenWorkspaces._shouldOverrideTabs = true;
++          aWindow.gEnsoWorkspaces._shouldOverrideTabs = true;
            tabbrowser.removeTab(tabbrowser.tabs[i]);
          }
        }
@@ -267,11 +267,11 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
        );
      }
 +    if (winData.isZenUnsynced) {
-+      aWindow.document.documentElement.setAttribute("zen-unsynced-window", "true");
++      aWindow.document.documentElement.setAttribute("enso-unsynced-window", "true");
 +    }
-+    aWindow.gZenFolders?.restoreDataFromSessionStore(winData.folders);
-+    aWindow.gZenWorkspaces?.restoreWorkspacesFromSessionStore(winData);
-+    aWindow.gZenViewSplitter?.restoreDataFromSessionStore(winData.splitViewData);
++    aWindow.gEnsoFolders?.restoreDataFromSessionStore(winData.folders);
++    aWindow.gEnsoWorkspaces?.restoreWorkspacesFromSessionStore(winData);
++    aWindow.gEnsoViewSplitter?.restoreDataFromSessionStore(winData.splitViewData);
  
      // Move the originally open tabs to the end.
      if (initialTabs) {
@@ -279,24 +279,24 @@ index 2a055f0c5f34f0a2667f659185120c07d38f4e41..2061ef7ac60371a563b4e4cd77ceab58
  
      // Most of tabData has been restored, now continue with restoring
      // attributes that may trigger external events.
-+    if (tabData.zenEssential) {
-+      tab.setAttribute("zen-essential", "true");
++    if (tabData.ensoEssential) {
++      tab.setAttribute("enso-essential", "true");
 +      tabData.pinned = true; // Essential tabs are always pinned.
 +    }
-+    if (tabData.zenIsEmpty) {
-+      tab.setAttribute("zen-empty-tab", "true");
++    if (tabData.ensoIsEmpty) {
++      tab.setAttribute("enso-empty-tab", "true");
 +    }
-+    if (typeof tabData.zenStaticLabel === "string") {
-+      tab.zenStaticLabel = tabData.zenStaticLabel;
++    if (typeof tabData.ensoStaticLabel === "string") {
++      tab.ensoStaticLabel = tabData.ensoStaticLabel;
 +    }
-+    if (tabData.zenHasStaticIcon && tabData.image) {
-+      tab.zenStaticIcon = tabData.image;
++    if (tabData.ensoHasStaticIcon && tabData.image) {
++      tab.ensoStaticIcon = tabData.image;
 +    }
-+    if (tabData.zenDefaultUserContextId) {
-+      tab.setAttribute("zenDefaultUserContextId", true);
++    if (tabData.ensoDefaultUserContextId) {
++      tab.setAttribute("ensoDefaultUserContextId", true);
 +    }
-+    if (tabData.zenWorkspace) {
-+      tab.setAttribute("zen-workspace-id", tabData.zenWorkspace);
++    if (tabData.ensoWorkspace) {
++      tab.setAttribute("enso-workspace-id", tabData.ensoWorkspace);
 +    }
  
      if (tabData.pinned) {

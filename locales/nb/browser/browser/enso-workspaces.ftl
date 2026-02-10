@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Områder
+enso-panel-ui-spaces-label = 
+    .label = Områder
+enso-panel-ui-workspaces-create = 
+    .label = Opprett Område
+enso-panel-ui-folder-create = 
+    .label = Opprett Mappe
+enso-panel-ui-new-empty-split = 
+    .label = Ny Splitt
+enso-workspaces-panel-context-delete = 
+    .label = Slett Område
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Endre navn
+enso-workspaces-panel-change-icon = 
+    .label = Endre ikon
+enso-workspaces-panel-context-default-profile = 
+    .label = Sett Profil
+enso-workspaces-panel-unload = 
+    .label = Frigjør Område
+enso-workspaces-how-to-reorder-title = Hvordan endre rekkefølge på områder
+enso-workspaces-how-to-reorder-desc = Dra områdeikoner nederst på sidepanelet for å endre rekkefølgen på dem
+enso-workspaces-change-theme = 
+    .label = Rediger Tema
+enso-workspaces-panel-context-open = 
+    .label = Åpne Område
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Rediger Område
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Områder
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Komplimentære
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Splitt
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Analogisk
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Triadisk
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Flytende
+enso-panel-ui-gradient-click-to-add = Klikk for å legge til en farge
+enso-workspace-creation-name = 
+    .placeholder = Områdenavn
+enso-move-tab-to-workspace-button = 
+    .label = Flytt til...
+    .tooltiptext = Flytt alle faner i dette vinduet til et Område
+enso-workspaces-panel-context-reorder = 
+    .label = Omordne Områder
+enso-workspace-creation-profile = Profil
+    .tooltiptext = Profiler er brukt til å separere informasjonskapsler og nettstedsdata mellom områder.
+enso-workspace-creation-header = Opprett et Område
+enso-workspace-creation-label = Områder er brukt til å organisere fanene og øktene dine.
+enso-workspaces-delete-workspace-title = Slett Område?
+enso-workspaces-delete-workspace-body = Er du sikker på at du vil slette { $name }? Denne handlingen kan ikke angres.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Faner lukket! Bruk <span>{ $shortcut }</span> for å angre.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Tøm
+    .tooltiptext = Lukk alle ufestede faner
+enso-panel-ui-workspaces-change-forward = 
+    .label = Neste område
+enso-panel-ui-workspaces-change-back = 
+    .label = Forrige område

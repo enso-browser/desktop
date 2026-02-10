@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Prostory
+enso-panel-ui-spaces-label = 
+    .label = Prostory
+enso-panel-ui-workspaces-create = 
+    .label = Vytvořit prostor
+enso-panel-ui-folder-create = 
+    .label = Vytvořit složku
+enso-panel-ui-new-empty-split = 
+    .label = Nové rozdělení
+enso-workspaces-panel-context-delete = 
+    .label = Odstranit pracovní prostor
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Změnit název
+enso-workspaces-panel-change-icon = 
+    .label = Změnit ikonu
+enso-workspaces-panel-context-default-profile = 
+    .label = Nastavit profil
+enso-workspaces-panel-unload = 
+    .label = Uspat prostor
+enso-workspaces-how-to-reorder-title = Jak změnit pořadí prostorů
+enso-workspaces-how-to-reorder-desc = Pořadí prostorů změníte přetažením jejich ikon dole v postranním panelu
+enso-workspaces-change-theme = 
+    .label = Upravit motiv
+enso-workspaces-panel-context-open = 
+    .label = Otevřít pracovní prostor
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Upravit prostor
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Prostory
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Protilehlé
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Rozdělené
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Příbuzné
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Trojbarevné
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Plovoucí
+enso-panel-ui-gradient-click-to-add = Kliknutím přidáte barvu
+enso-workspace-creation-name = 
+    .placeholder = Název prostoru
+enso-move-tab-to-workspace-button = 
+    .label = Přesunout do...
+    .tooltiptext = Přesunout všechny panely v tomto okně do pracovního prostoru
+enso-workspaces-panel-context-reorder = 
+    .label = Změnit pořadí prostorů
+enso-workspace-creation-profile = Profil
+    .tooltiptext = Profily se používají k oddělení cookies a údajů webových stránek mezi prostory.
+enso-workspace-creation-header = Vytvořte si prostor
+enso-workspace-creation-label = Prostory slouží k organizaci Vašich karet a relací.
+enso-workspaces-delete-workspace-title = Odstranit prostor?
+enso-workspaces-delete-workspace-body = Opravdu chcete smazat { $name }? Tuto akci nelze vrátit zpět.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Panely byly zavřeny! Použijte <span>{ $shortcut }</span> pro zrušení.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Vyčistit
+    .tooltiptext = Zavřít všechny nepřipnuté panely
+enso-panel-ui-workspaces-change-forward = 
+    .label = Další prostor
+enso-panel-ui-workspaces-change-back = 
+    .label = Předchozí prostor

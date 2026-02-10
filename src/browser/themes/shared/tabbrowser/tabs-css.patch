@@ -16,7 +16,7 @@ index 310e7866b942df5c3c34815f4612a2a2ad8c42a6..d4931a0184209951ced288c894613dcc
    --tab-icon-end-margin: 5.5px;
    --tab-label-line-height: 1.7;
 -  --tab-loading-fill: #0a84ff;
-+  --tab-loading-fill: var(--zen-primary-color);
++  --tab-loading-fill: var(--enso-primary-color);
    --tab-hover-background-color: color-mix(in srgb, currentColor 11%, transparent);
 -  --tab-selected-textcolor: var(--toolbar-color);
 +  --tab-selected-textcolor: currentColor;
@@ -84,7 +84,7 @@ index 310e7866b942df5c3c34815f4612a2a2ad8c42a6..d4931a0184209951ced288c894613dcc
    }
  
 -  &[pinned]:is([soundplaying], [muted], [activemedia-blocked]),
-+  &[zen-essential]:is([soundplaying], [muted], [activemedia-blocked]),
++  &[enso-essential]:is([soundplaying], [muted], [activemedia-blocked]),
    &[crashed] {
      display: revert;
    }
@@ -93,7 +93,7 @@ index 310e7866b942df5c3c34815f4612a2a2ad8c42a6..d4931a0184209951ced288c894613dcc
        removed from root such as when toggling the sidebar to expand with the toolbar button. */
      #tabbrowser-tabs[orient="horizontal"] &:not([pinned]):not([crashed]),
 -    :root:not([sidebar-expand-on-hover]) #tabbrowser-tabs[orient="vertical"][expanded] &:not([pinned]):not([crashed]) {
-+    :root:not([sidebar-expand-on-hover]) #tabbrowser-tabs[orient="vertical"][expanded] &:not([zen-essential]):not([crashed]) {
++    :root:not([sidebar-expand-on-hover]) #tabbrowser-tabs[orient="vertical"][expanded] &:not([enso-essential]):not([crashed]) {
        &:is([soundplaying], [muted], [activemedia-blocked]) {
          display: flex;
        }

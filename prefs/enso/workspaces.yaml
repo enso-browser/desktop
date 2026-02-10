@@ -1,0 +1,52 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+- name: enso.workspaces.continue-where-left-off
+  value: false
+
+- name: enso.workspaces.hide-default-container-indicator
+  value: true
+
+- name: enso.workspaces.force-container-workspace
+  value: false
+
+- name: enso.workspaces.open-new-tab-if-last-unpinned-tab-is-closed
+  value: false
+
+- name: enso.workspaces.swipe-actions
+  value: true
+
+- name: enso.workspaces.wrap-around-navigation
+  value: true
+
+- name: enso.workspaces.natural-scroll
+  value: false
+
+- name: enso.workspaces.scroll-modifier-key
+  value: ctrl
+
+- name: services.sync.engine.workspaces
+  value: false
+
+- name: enso.workspaces.separate-essentials
+  value: true
+
+- name: enso.workspaces.dnd-switch-padding
+  value: 5
+
+- name: enso.workspaces.debug
+  value: "@cond"
+  condition: "!defined(MOZILLA_OFFICIAL)" # Section: Pinned tabs management
+
+- name: enso.pinned-tab-manager.wheel-close-if-pending
+  value: true
+
+- name: enso.pinned-tab-manager.debug
+  value: false
+
+- name: enso.pinned-tab-manager.restore-pinned-tabs-to-pinned-url
+  value: false
+
+- name: enso.pinned-tab-manager.close-shortcut-behavior
+  value: reset-unload-switch

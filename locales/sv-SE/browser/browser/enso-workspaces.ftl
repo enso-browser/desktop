@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Arbetsytor
+enso-panel-ui-spaces-label = 
+    .label = Arbetsytor
+enso-panel-ui-workspaces-create = 
+    .label = Skapa arbetsyta
+enso-panel-ui-folder-create = 
+    .label = Skapa mapp
+enso-panel-ui-new-empty-split = 
+    .label = Ny delad vy
+enso-workspaces-panel-context-delete = 
+    .label = Ta bort arbetsyta
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Ändra namn
+enso-workspaces-panel-change-icon = 
+    .label = Ändra ikon
+enso-workspaces-panel-context-default-profile = 
+    .label = Ange profil
+enso-workspaces-panel-unload = 
+    .label = Frigör arbetsyta
+enso-workspaces-how-to-reorder-title = Hur man flyttar runt arbetsytor
+enso-workspaces-how-to-reorder-desc = Dra arbetsyta ikoner längst ner i sidofältet för att ändra ordningen på dem
+enso-workspaces-change-theme = 
+    .label = Redigera tema
+enso-workspaces-panel-context-open = 
+    .label = Öppen arbetsyta
+    .accesskey = O
+enso-workspaces-panel-context-edit = 
+    .label = Redigera arbetsyta
+    .accesskey = E
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Arbetsytor
+    .accesskey = W
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Komplementär
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Delad vy
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Analog
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Triadisk
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Flytande
+enso-panel-ui-gradient-click-to-add = Klicka för att lägga till en färg
+enso-workspace-creation-name = 
+    .placeholder = Namn på arbetsyta
+enso-move-tab-to-workspace-button = 
+    .label = Flytta till...
+    .tooltiptext = Flytta alla flikar i detta fönster till en arbetsyta
+enso-workspaces-panel-context-reorder = 
+    .label = Flytta om arbetsytor
+enso-workspace-creation-profile = Profil
+    .tooltiptext = Profiler används för att separera kakor och webbplatsdata mellan arbetsytor.
+enso-workspace-creation-header = Skapa en arbetsyta
+enso-workspace-creation-label = Arbetsytor används för att organisera dina flikar och sessioner.
+enso-workspaces-delete-workspace-title = Ta bort arbetsyta?
+enso-workspaces-delete-workspace-body = Är du säker på att du vill radera { $name }? den här åtgärden kan inte ångras.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Flikar stängda! Använd <span>{ $shortcut }</span> för att ångra.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Rensa
+    .tooltiptext = Stäng alla flikar som inte är fästa
+enso-panel-ui-workspaces-change-forward = 
+    .label = Nästa arbetsyta
+enso-panel-ui-workspaces-change-back = 
+    .label = Föregående arbetsyta

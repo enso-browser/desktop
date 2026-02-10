@@ -7,7 +7,7 @@ index 00da33bc11189db17b6a2e656acb3a778531197c..bdca62e9ed5513e1e1922f1f9498755f
          action && this.urlbarButtonNodeIDForActionID(action.id)
        ),
 -      document.getElementById(this.mainButtonNode.id),
-+      document.getElementById("zen-site-data-icon-button"),
++      document.getElementById("enso-site-data-icon-button"),
        document.getElementById("identity-icon"),
      ];
      for (let node of potentialAnchorNodes) {

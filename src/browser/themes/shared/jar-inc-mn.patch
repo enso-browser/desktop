@@ -7,5 +7,5 @@ index ab8601e76409ad1a026763379a395dd52f503f27..3b32198dfa770d29f4e2f2b0faed5f3f
    skin/classic/browser/illustrations/market-opt-in.svg         (../shared/illustrations/market-opt-in.svg)
    skin/classic/browser/illustrations/yelpRealtime-opt-in.svg   (../shared/illustrations/yelpRealtime-opt-in.svg)
 +
-+#include zen-sources.inc.mn
++#include enso-sources.inc.mn
 \ No newline at end of file

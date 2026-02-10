@@ -17,7 +17,7 @@ index b114781254018a27cd559c28d5d469fbab8673b5..79e6e21dd6e0a63237850bd315558540
 -@media (-moz-windows-accent-color-in-titlebar) {
 -  :root[customtitlebar][sizemode="normal"] #navigator-toolbox {
 +  :root[customtitlebar][sizemode="normal"] #browser {
-+    --zen-sidebar-compact-top-offset: 1px;
++    --enso-sidebar-compact-top-offset: 1px;
      border-top: 0.5px solid ActiveBorder;
      &:-moz-window-inactive {
        border-top-color: InactiveBorder;

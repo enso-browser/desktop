@@ -1,0 +1,71 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+enso-panel-ui-workspaces-text = Gofodau Gwaith
+enso-panel-ui-spaces-label = 
+    .label = Gofodau
+enso-panel-ui-workspaces-create = 
+    .label = Creu Gofod
+enso-panel-ui-folder-create = 
+    .label = Creu Ffolder
+enso-panel-ui-new-empty-split = 
+    .label = Hollt Newydd
+enso-workspaces-panel-context-delete = 
+    .label = Dileu Gofod Gwaith
+    .accesskey = D
+enso-workspaces-panel-change-name = 
+    .label = Newid Enw
+enso-workspaces-panel-change-icon = 
+    .label = Newid Eicon
+enso-workspaces-panel-context-default-profile = 
+    .label = Gosod Proffil
+enso-workspaces-panel-unload = 
+    .label = Dadlwytho Gofod
+enso-workspaces-how-to-reorder-title = Sut i aildrefnu gofodau
+enso-workspaces-how-to-reorder-desc = Llusgwch yr eiconau gofod ar waelod y bar ochr i'w haildrefnu
+enso-workspaces-change-theme = 
+    .label = Golygu Thema
+enso-workspaces-panel-context-open = 
+    .label = Agor Gofod Gwaith
+    .accesskey = G
+enso-workspaces-panel-context-edit = 
+    .label = Golygu Gofod
+    .accesskey = G
+enso-bookmark-edit-panel-workspace-selector = 
+    .value = Gofodau
+    .accesskey = o
+enso-panel-ui-gradient-generator-algo-complementary = 
+    .label = Cyflenwol
+enso-panel-ui-gradient-generator-algo-splitComplementary = 
+    .label = Hollti
+enso-panel-ui-gradient-generator-algo-analogous = 
+    .label = Cyfatebol
+enso-panel-ui-gradient-generator-algo-triadic = 
+    .label = Triadig
+enso-panel-ui-gradient-generator-algo-floating = 
+    .label = Arnofiol
+enso-panel-ui-gradient-click-to-add = Cliciwch i ychwanegu lliw
+enso-workspace-creation-name = 
+    .placeholder = Enw'r Gofod
+enso-move-tab-to-workspace-button = 
+    .label = Symud I...
+    .tooltiptext = Symud pob tab yn y ffenestr hon i Ofod
+enso-workspaces-panel-context-reorder = 
+    .label = Aildrefnu Gofodau
+enso-workspace-creation-profile = Proffil
+    .tooltiptext = Mae proffiliau'n cael eu defnyddio i wahanu cwcis a data gwefan rhwng gofodau.
+enso-workspace-creation-header = Creu Gofod
+enso-workspace-creation-label = Mae gofodau'n cael eu defnyddio i drefnu eich tabiau a'ch sesiynau.
+enso-workspaces-delete-workspace-title = Dileu Gofod Gwaith?
+enso-workspaces-delete-workspace-body = Ydych chi'n siŵr eich bod chi eisiau dileu { $name }? Does dim modd dadwneud y weithred hon.
+# Note that the html tag MUST not be changed or removed, as it is used to better
+# display the shortcut in the toast notification.
+enso-workspaces-close-all-unpinned-tabs-toast = Tabiau wedi'u Cau! Defnyddiwch <span>{ $shortcut }</span> i'w hailagor.
+enso-workspaces-close-all-unpinned-tabs-title = 
+    .label = Clirio
+    .tooltiptext = Cau pob tab heb ei binio
+enso-panel-ui-workspaces-change-forward = 
+    .label = Gofod Nesaf
+enso-panel-ui-workspaces-change-back = 
+    .label = Gofod Blaenorol

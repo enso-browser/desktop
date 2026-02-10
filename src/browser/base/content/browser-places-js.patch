@@ -16,7 +16,7 @@ index 925d74575827340960706718a29426bdf079b47c..921feb0e4229706b4691a43c9fc1005c
    },
  
 +  _setIconAndPreviewImage() {
-+    let faviconImage = this._element("zenEditBookmarkPanelFavicon");
++    let faviconImage = this._element("ensoEditBookmarkPanelFavicon");
 +    faviconImage.removeAttribute("iconloadingprincipal");
 +    faviconImage.removeAttribute("src");
 +
@@ -37,7 +37,7 @@ index 925d74575827340960706718a29426bdf079b47c..921feb0e4229706b4691a43c9fc1005c
        document.getElementById("context-bookmarkpage"),
        PanelMultiView.getViewNode(document, "panelMenuBookmarkThisPage"),
        document.getElementById("pageAction-panel-bookmark"),
-+      document.getElementById("zen-site-data-icon-button"),
++      document.getElementById("enso-site-data-icon-button"),
      ]) {
        if (!element) {
          // The page action panel element may not have been created yet.

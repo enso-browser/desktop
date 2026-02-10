@@ -14,7 +14,7 @@ index bff93996b42aa1f88f1bfcbd813c3af4a5806f13..1252727b4811248e138cf7a38f8d1fd4
                });
              }
  
-+            window.gZenCompactModeManager._nextTimeWillBeActive = active;
++            window.gEnsoCompactModeManager._nextTimeWillBeActive = active;
              let nativeTab = window.gBrowser.addTab(url, options);
  
              if (active) {
