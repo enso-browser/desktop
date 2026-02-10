@@ -22,13 +22,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Parse issue form
-        uses: stefanbuck/github-issue-parser@v3
+        uses: stefanbuck/github-issue-parser@10dcc54158ba4c137713d9d69d70a2da63b6bda3 # v3
         id: issue-parser
         with:
           template-path: .github/ISSUE_TEMPLATE/bug_report.yml
 
       - name: Set labels based on animals field
-        uses: redhat-plumbers-in-action/advanced-issue-labeler@v2
+        uses: redhat-plumbers-in-action/advanced-issue-labeler@9e55064634b67244f7deb4211452b4a7217b93de # v2
         with:
           issue-form: ${{ steps.issue-parser.outputs.jsonString }}
           token: ${{ secrets.DEPLOY_KEY }}

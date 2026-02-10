@@ -177,7 +177,7 @@ jobs:
           echo "buildtime=$(date +"%H:%M:%S")" >> $GITHUB_OUTPUT
 
       - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
         if: ${{ inputs.update_version }}
         with:
           commit_message: 🔖 Update version to ${{ steps.data.outputs.version }}
@@ -529,7 +529,7 @@ jobs:
           cp -a ../macos_update_manifest/.  updates/
 
       - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
         with:
           commit_message: 🚀 Update update manifests
           commit_user_name: Enso Browser Robot
@@ -544,7 +544,7 @@ jobs:
         # If we are on Twilight, we want to just update the Twilight tag's release
       - name: Update Twilight tag
         if: ${{ inputs.update_branch == 'twilight' }}
-        uses: softprops/action-gh-release@v2.2.2
+        uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631 # v2.2.2
         with:
           body_path: release_notes.md
           files: |
@@ -576,7 +576,7 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
 
       - name: Release
-        uses: softprops/action-gh-release@v2.2.2
+        uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631 # v2.2.2
         if: ${{ inputs.update_branch == 'release' }}
         with:
           token: ${{ secrets.DEPLOY_KEY }}
@@ -631,7 +631,7 @@ jobs:
             --version ${{ needs.build-data.outputs.version }}
 
       - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
         with:
           commit_message: 🚀 Update releases for Flatpak
           commit_user_name: Enso Browser Robot
@@ -654,7 +654,7 @@ jobs:
           echo -n ${{ needs.build-data.outputs.version }} > ./flatpak/version
 
       - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
         with:
           commit_message: "[release]: Update Flatpak manifest"
           commit_user_name: Enso Browser Robot
@@ -733,7 +733,7 @@ jobs:
           path: ./app.enso_browser.zen.yml
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
         env:
           GIT_TRACE: 1
           GIT_CURL_VERBOSE: 1

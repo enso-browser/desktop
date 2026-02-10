@@ -50,7 +50,7 @@ jobs:
           node-version-file: ".nvmrc"
 
       - name: Run sccache-cache
-        uses: mozilla-actions/sccache-action@main
+        uses: mozilla-actions/sccache-action@bafd42bd91680affe190f697cac6ef3ad958ecba # main
         if: ${{ inputs.use-sccache }}
         with:
           disable_annotations: true

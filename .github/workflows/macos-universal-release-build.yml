@@ -168,7 +168,7 @@ jobs:
           echo "Merged aaarch64 into x86_64!"
 
       - name: Import APPLE DEVELOPER ID CERTIFICATE for .app
-        uses: Apple-Actions/import-codesign-certs@v3
+        uses: Apple-Actions/import-codesign-certs@63fff01cd422d4b7b855d40ca1e9d34d2de9427d # v3
         with:
           p12-file-base64: ${{ secrets.macOS_CERTIFICATES_P12_For_App_BASE64 }}
           p12-password: ${{ secrets.macOS_CERTIFICATES_P12_PASSWORD }}
